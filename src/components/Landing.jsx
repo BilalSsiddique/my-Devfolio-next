@@ -52,8 +52,8 @@ const Landing = ({ setSelectedPage }) => {
             Bilal {""}
             <span className="relative">
               <span
-                className="  xs:text-deep-blue xs:font-semibold z-20 xs:before:content-brush
-              before:absolute before:-left-[25px] before:-top-[90px] before:z-[-1] "
+                className=" relative xs:text-deep-blue xs:font-semibold z-20 xs:before:content-brush
+              before:absolute before:-left-[25px] before:-top-[90px] before:z-[-5] "
               >
                 Siddique
               </span>
