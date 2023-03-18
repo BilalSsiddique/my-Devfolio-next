@@ -48,7 +48,7 @@ const Landing = ({ setSelectedPage }) => {
             visible: { opacity: 1, x: 0 },
           }}
         >
-          <p className="max-[420px]:text-start max-[420px]:text-[40px]   text-6xl  font-playfair z-10 text-center md:text-start">
+          <p className="max-[420px]:m-2 max-[420px]:text-[40px]   text-6xl  font-playfair z-10 text-center ss:text-start">
             Bilal {""}
             <span className="relative">
               <span
@@ -60,7 +60,7 @@ const Landing = ({ setSelectedPage }) => {
             </span>
           </p>
 
-          <p className="max-[420px]:text-start max-[420px]:text-[13px] mt-11 mb-2 text-sm text-center md:w-3/5 md:text-start">
+          <p className="max-[420px]:px-4 max-[420px]:text-[13px] mt-11 mb-2 text-sm text-center w-full ss:w-3/5 ss:text-start">
             An Undergraduate Software Engineer , Certified Meta Front-end
             Engineer & Aspiring Full-Stack & Block Chain Engineer.
           </p>
@@ -68,7 +68,7 @@ const Landing = ({ setSelectedPage }) => {
 
         {/* CALL TO ACTIONS */}
         <motion.div
-          className="max-[420px]:justify-start flex mt-5 justify-center md:justify-start"
+          className=" flex mt-5 justify-center ss:justify-start"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
@@ -79,7 +79,7 @@ const Landing = ({ setSelectedPage }) => {
           }}
         >
           <AnchorLink
-            className="text-sm xs:text-lg bg-gradient-rainblue text-deep-blue rounded-sm max-w-[160px] py-3 px-7 font-semibold
+            className="text-sm xs:text-lg bg-gradient-rainblue text-deep-blue rounded-sm  xs:max-w-[160px] py-3 px-5 xs:px-7 font-semibold
               hover:bg-blue hover:text-white transition duration-500"
             onClick={() => setSelectedPage("contact")}
             href="#contact"
@@ -87,18 +87,18 @@ const Landing = ({ setSelectedPage }) => {
             Contact Me
           </AnchorLink>
           <AnchorLink
-            className="rounded-r-sm bg-gradient-rainblue py-0.5 pr-0.5 max-w-[160px]"
+            className="rounded-r-sm bg-gradient-rainblue py-0.5 pr-0.5 xs:max-w-[160px]"
             onClick={() => setSelectedPage("contact")}
             href="#contact"
           >
-            <div className="text-sm xs:text-lg bg-deep-blue hover:text-red transition duration-500 w-full h-full flex items-center justify-center px-10 font-playfair">
+            <div className="text-sm xs:text-lg bg-deep-blue hover:text-red transition duration-500 w-full h-full flex items-center justify-center px-7 xs:px-10 font-playfair">
               Let&#39;s talk.
             </div>
           </AnchorLink>
         </motion.div>
 
         <motion.div
-          className="max-[420px]:justify-start flex mt-5 justify-center md:justify-start"
+          className="ss:justify-start flex mt-5 justify-center md:justify-start"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}

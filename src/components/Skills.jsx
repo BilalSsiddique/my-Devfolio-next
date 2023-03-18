@@ -33,12 +33,12 @@ const Skills = () => {
 
   return (
     <div
-      className="  flex   flex-wrap justify-center  xs:justify-between items-center h-auto gap-x-2 md:gap-x-10 gap-y-14 w-full"
+      className="  flex   flex-wrap justify-center  xs:justify-between  items-center h-auto gap-x-3 xs:gap-x-4 md:gap-x-8 gap-y-14 w-full"
     >
       {tectStackIcons.map((iconImage, index) => {
         return (
           <div
-            className=" relative flex flex-col glass flex-wrap text-center gap-3 items-center h-[130px] w-[200px]  justify-center  p-5"
+            className=" relative flex flex-col glass flex-wrap text-center gap-3 items-center h-[130px] w-[170px] max-[535px]:w-[200px] max-[667px]:w-[230px] md:w-[200px]   justify-center  p-5"
             key={index}
           >
             <p className="text-[20px] font-playfair font-bold mb-1">

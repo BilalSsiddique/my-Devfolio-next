@@ -50,7 +50,7 @@ export default function Home() {
           <Landing setSelectedPage={setSelectedPage} />
         </div>
         <LineGradient />
-        <div className=" ss:w-5/6 pb-20 mx-5 ss:mx-auto h-full mt-32 xs:mt-52">
+        <div className=" ss:w-5/6 pb-20 mx-5 ss:mx-auto h-full mt-44 xs:mt-52">
           <div className="b-gradient-rainbow-bg"></div>
           <Skills />
         </div>
