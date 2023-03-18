@@ -11,7 +11,7 @@ import python from "/src/assets/certificates/introduction-to-python.png";
 import interpython from "/src/assets/certificates/intermediate-python.png";
 import kagglepython from "/src/assets/certificates/kaggle-python.png";
 import kagglepandas from "/src/assets/certificates/kaggle-pandas.png";
-import datascience from "/src/assets/certificates/introduction-to-data-science.png";
+import datascience from "/src/assets/certificates/Introduction-to-data-science.png";
 import javascript from "/src/assets/certificates/programming-with-js.png";
 import manipluation from "/src/assets/certificates/data-manipulation.png";
 import {motion} from 'framer-motion'
