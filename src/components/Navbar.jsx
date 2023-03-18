@@ -75,7 +75,7 @@ const Navbar = ({ selectedPage, setSelectedPage }) => {
 
         {/* MOBILE MENU POPUP */}
         {!isAboveSmallScreens && isMenuToggled && (
-          <div className="   fixed  z-80 right-0 bottom-0 h-full glass w-[300px]">
+          <div className="   fixed  z-80 right-0 bottom-0 h-[100dvh] glass w-[300px]">
             {/* CLOSE ICON FOR MOBILE MENU POPUP */}
             <div className="flex justify-end p-12">
               <button
