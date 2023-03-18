@@ -63,7 +63,7 @@ export default function Home() {
               <CustomToggleIcon gridSwitch={gridSwitch} setGridSwitch={setGridSwitch}  />
           </div>
 
-          <div className={`md:w-[100%] xs:w-full  glass h-auto ${ !gridSwitch ? 'h-[600px]' : '' }  mx-auto`}>
+          <div className={`md:w-[100%] xs:w-full  glass h-auto ${isAboveMediumScreens || !gridSwitch ? 'h-[580px]' : '' }  mx-auto`}>
             <ImageSlider gridSwitch={gridSwitch} />
           </div>
         </div>
