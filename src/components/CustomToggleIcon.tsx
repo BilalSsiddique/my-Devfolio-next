@@ -5,10 +5,11 @@ const CustomToggleIcon = ({ gridSwitch, setGridSwitch }: any) => {
 
   const isAboveMediumScreens = useMediaQuery("(min-width:1060px)");
 
-  const handleGridViewToggle = (e: any) => {
-    // e.preventDefault()
-    setGridSwitch(!gridSwitch);
-    console.log("switch", gridSwitch);
+  console.log("switch", gridSwitch);
+
+  const handleGridViewToggle = () => {
+    
+    setGridSwitch(!gridSwitch)
   };
 
   return (

@@ -50,20 +50,20 @@ export default function Home() {
           <Landing setSelectedPage={setSelectedPage} />
         </div>
         <LineGradient />
-        <div className=" ss:w-5/6 pb-20 mx-5 ss:mx-auto md:h-full mt-32 xs:mt-52">
+        <div className=" ss:w-5/6 pb-20 mx-5 ss:mx-auto h-full mt-32 xs:mt-52">
           <div className="b-gradient-rainbow-bg"></div>
           <Skills />
         </div>
 
         <LineGradient ID="certifications" section="Certifications" />
-        <div className="ss:w-5/6 pb-20 mx-5 ss:mx-auto md:h-full mt-32 xs:mt-36 ">
+        <div className="ss:w-5/6 pb-20 mx-5 ss:mx-auto h-full mt-32 xs:mt-36 ">
           {/* GRID VIEW SWITCH */}
-          <div className=" flex items-center gap-3 justify-start w-full mb-20">
+          <div className=" flex items-center gap-3 justify-center xs:justify-start w-full mb-20">
             <p className="text-[22px] font-playfair">Grid View</p>
               <CustomToggleIcon gridSwitch={gridSwitch} setGridSwitch={setGridSwitch}  />
           </div>
 
-          <div className={`md:w-[100%] xs:w-full  glass h-auto ${isAboveMediumScreens || !gridSwitch ? 'h-[580px]' : '' }  mx-auto`}>
+          <div className={`md:w-full xs:w-full  glass  ${(isAboveMediumScreens && gridSwitch===false) && 'h-[600px]' }  mx-auto`}>
             <ImageSlider gridSwitch={gridSwitch} />
           </div>
         </div>
