@@ -11,7 +11,7 @@ const Link = ({ page, selectedPage, setSelectedPage }) => {
   const lowerCasePage = page.toLowerCase();
   return (
     <AnchorLink
-      className={`font-extrabold ${selectedPage === lowerCasePage ? "text-yellow " : ""}
+      className={`font-bold ${selectedPage === lowerCasePage ? "text-yellow " : ""}
         hover:text-yellow transition duration-500`}
       href={`#${lowerCasePage}`}
       onClick={() => setSelectedPage(lowerCasePage)}
@@ -26,7 +26,7 @@ const Navbar = ({ selectedPage, setSelectedPage }) => {
   const isAboveSmallScreens = useMediaQuery("(min-width:768px)");
 
   return (
-    <nav className={`z-40 w-full fixed  top-0 py-6 `}>
+    <nav className={`z-40 w-full fixed top-0 py-6 `}>
       <div className="flex items-center justify-between mx-auto w-5/6 ">
         <h4 className="font-playfair text-3xl font-bold">BS</h4>
 
@@ -75,7 +75,7 @@ const Navbar = ({ selectedPage, setSelectedPage }) => {
 
         {/* MOBILE MENU POPUP */}
         {!isAboveSmallScreens && isMenuToggled && (
-          <div className="   fixed  z-80 right-0 bottom-0 h-full glass w-[300px]">
+          <div className="   fixed  z-50 right-0 bottom-0 h-full glass w-[300px]">
             {/* CLOSE ICON FOR MOBILE MENU POPUP */}
             <div className="flex justify-end p-12">
               <button
