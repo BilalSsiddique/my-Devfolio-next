@@ -2,9 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import SocialMediaIcons from '../components/SocialMediaIcons'
-import Image from "next/image";
 import useMediaQuery from "@/hooks/useMediaQuery";
-import dev from '../assets/dev.png'
 
 const Landing = ({ setSelectedPage }) => {
   const isAboveLargeScreen = useMediaQuery("(min-width:1060px)");

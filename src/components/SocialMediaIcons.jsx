@@ -1,9 +1,9 @@
 import React from "react";
-import linkedin from '../assets/linkedin.png'
-import twitter from '../assets/twitter.png'
-import facebook from '../assets/facebook.png'
-import instagram from '../assets/instagram.png'
-import Image from "next/image";
+import {FaFacebook} from 'react-icons/fa'
+import {FaInstagram} from 'react-icons/fa'
+import { FaTwitter } from "react-icons/fa";
+import {FaLinkedin} from 'react-icons/fa'
+
 const SocialMediaIcons = () => {
   return (
     <div className="flex justify-center md:justify-start my-2 gap-7">
@@ -13,7 +13,9 @@ const SocialMediaIcons = () => {
         target="_blank"
         rel="noreferrer"
       >
-        <Image src={linkedin} alt="Linkedin-link" />
+        <button>
+          <FaLinkedin size={32} />
+        </button>
       </a>
       <a
         href="https://twitter.com/Bilalsiddique_"
@@ -21,7 +23,9 @@ const SocialMediaIcons = () => {
         target="_blank"
         rel="noreferrer"
       >
-        <Image src={twitter} alt="twitter-link" />
+        <button>
+          <FaTwitter size={32}/>
+        </button>
       </a>
       <a
         href="https://web.facebook.com/BilalsSiddique/"
@@ -29,7 +33,9 @@ const SocialMediaIcons = () => {
         target="_blank"
         rel="noreferrer"
       >
-        <Image src={facebook} alt="facebook-link" />
+        <button>
+          <FaFacebook size={32} />
+        </button>
       </a>
       <a
         href="# "
@@ -37,7 +43,9 @@ const SocialMediaIcons = () => {
         target="_blank"
         rel="noreferrer"
       >
-        <Image src={instagram} alt="instagram-link" />
+        <button>
+          <FaInstagram size={32} />
+        </button>
       </a>
     </div>
   );

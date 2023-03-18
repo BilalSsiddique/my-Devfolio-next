@@ -1,7 +1,5 @@
 import Head from "next/head";
-import Image from "next/image";
-import { Inter } from "next/font/google";
-import styles from "@/styles/Home.module.css";
+
 import Navbar from "../components/Navbar";
 import DotGroup from "../components/DotGroup";
 import Landing from "../components/Landing";
@@ -11,7 +9,8 @@ import ImageSlider from '../components/Certification'
 import useMediaQuery from "../hooks/useMediaQuery";
 import CustomToggleIcon from "@/components/CustomToggleIcon";
 
-const inter = Inter({ subsets: ["latin"] });
+
+
 import { useState, useEffect } from "react";
 
 export default function Home() {

@@ -11,7 +11,7 @@ const Link = ({ page, selectedPage, setSelectedPage }) => {
   const lowerCasePage = page.toLowerCase();
   return (
     <AnchorLink
-      className={`${selectedPage === lowerCasePage ? "text-yellow" : ""}
+      className={`font-extrabold ${selectedPage === lowerCasePage ? "text-yellow " : ""}
         hover:text-yellow transition duration-500`}
       href={`#${lowerCasePage}`}
       onClick={() => setSelectedPage(lowerCasePage)}
@@ -44,7 +44,7 @@ const Navbar = ({ selectedPage, setSelectedPage }) => {
               setSelectedPage={setSelectedPage}
             />
             <Link
-              page="certifications"
+              page="Certifications"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
