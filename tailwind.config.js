@@ -33,7 +33,7 @@ module.exports = {
         opensans: ["Open Sans", "sans-serif"],
       },
       content: {
-        brush: "url('../assets/brush.png')",
+        brush: "url('/brush.png')",
       },
     },
     screens: {
