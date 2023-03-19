@@ -34,7 +34,7 @@ const Projects = () => {
                 <p className=" max-[480px]:pb-2 max-[480px]:font-playfair font-opensans text max-[850px]:text-[12px] sm:text-[13px] md:text-[15px]">
                   {project.description}
                 </p>
-                <div className="max-[480px]:font-playfair font-opensans max-[850px]:text-[12px] sm:text-[13px]  md:text-[15px] /*h-[35%] md:h-[55%]*/  flex items-center gap-4 sm:gap-12 md:gap-24 ">
+                <div className="max-[480px]:font-playfair font-opensans max-[850px]:text-[12px] sm:text-[13px]  md:text-[15px] /*h-[35%] md:h-[55%]*/  flex items-center gap-4 sm:gap-12 md:gap-36 ">
                   <div className="flex items-center ml-10 ss:ml-0  max-[480px]:pb-2 gap-1">
                     <Image width={30} src={linkrepo} alt="next" />
                     <Link target="_blank" href={project.repo}>
