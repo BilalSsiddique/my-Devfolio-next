@@ -60,6 +60,7 @@ export const projects: Array<{
   description: string;
   repo: string;
   stack: icons;
+  live: string;
 }> = [
   {
     name: "DASHBOARD",
@@ -68,6 +69,7 @@ export const projects: Array<{
       "An Admin Dashboard developed with react and Industry recommended packages.",
     repo: '"https://github.com/BilalSsiddique/react-admin-dashboard"',
     stack: [react, framer, materialui, github, git],
+    live: "https://react-admin-learn.vercel.app",
   },
   {
     name: "AUTHENTICATION",
@@ -76,5 +78,6 @@ export const projects: Array<{
       "A Product-Development Internship Project offered at Radical-X, developed with react, firebase & toastify.",
     repo: "https://github.com/BilalSsiddique/test-login",
     stack: [react, firebase, github, git],
+    live:"https://authentication-inky.vercel.app",
   },
 ];
