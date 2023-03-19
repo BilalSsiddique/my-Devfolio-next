@@ -65,7 +65,7 @@ export const projects: Array<{
     name: "DASHBOARD",
     url: reactdashboard,
     description:
-      "An Admin Dashboard developed with react & Industry recommended packages.",
+      "An Admin Dashboard developed with react and Industry recommended packages.",
     repo: '"https://github.com/BilalSsiddique/react-admin-dashboard"',
     stack: [react, framer, materialui, github, git],
   },

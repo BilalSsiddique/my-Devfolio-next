@@ -21,21 +21,21 @@ const Projects = () => {
           key={idx}
         >
           <Image
-            className=" w-full sm:w-[62%] order-2 border-black border-2  sm:border-2 sm:border-black  sm:rounded-r-lg  h-auto bg-cover bg-center object-cover"
+            className=" w-full sm:w-[62%] order-2 max-[480px]:border-0 border-black border-2  sm:border-2 sm:border-black max-[480px]:rounded-bl-lg max-[480px]:rounded-br-lg  sm:rounded-r-lg  h-auto bg-cover bg-center object-cover"
             src={project.url}
             alt="images"
           />
-          <div className="  sm:border-b-2 sm:border-t-2 sm:border-r-2 border-b-6    border-black font-playfair h-auto  sm:rounded-l-lg w-full sm:w-[38%]   flex justify-center ">
+          <div className="  sm:border-b-2 sm:border-t-2 sm:border-r-2 border-b-2    border-black font-playfair h-auto  sm:rounded-l-lg w-full sm:w-[38%]   flex justify-center ">
             <div className="flex flex-col w-full   items-start  ">
-              <p className="bg-black font-opensans w-full rounded-tr-lg sm:rounded-tr-none rounded-tl-lg text-center md:text-left  md:pl-10 pt-3 ss:pt-6  text-[18px] sm:text-[20px] md:text-[27px] font-bold ">
+              <p className="glass-navbar max-[480px]:font-playfair  xs:bg-black font-opensans w-full rounded-tr-lg sm:rounded-tr-none rounded-tl-lg text-center md:text-left  md:pl-10 max-[480px]:pb-4 pt-3 ss:pt-6  text-[18px] sm:text-[20px] md:text-[27px] font-bold ">
                 {project.name}
               </p>
-              <div className="flex flex-col  rounded-bl-none sm:rounded-bl-lg h-full bg-black w-full md:text-left text-center  justify-between ss:py-2 md:py-5 pl-2 md:pl-10 pb-5 items-center md:items-start ">
-                <p className="  font-opensans text max-[850px]:text-[12px] sm:text-[13px] md:text-[15px]">
+              <div className="flex flex-col  rounded-bl-none sm:rounded-bl-lg h-full glass-navbar xs:bg-black w-full md:text-left text-center  justify-between ss:py-2 md:py-5 pl-2 md:pl-10 pb-5 items-center md:items-start ">
+                <p className=" max-[480px]:pb-2 max-[480px]:font-playfair font-opensans text max-[850px]:text-[12px] sm:text-[13px] md:text-[15px]">
                   {project.description}
                 </p>
-                <div className="font-opensans max-[850px]:text-[12px] sm:text-[13px]  md:text-[15px] h-[35%] md:h-[55%] flex items-end">
-                  <div className="flex items-center -ml-6 ss:ml-0  gap-1">
+                <div className="max-[480px]:font-playfair font-opensans max-[850px]:text-[12px] sm:text-[13px]  md:text-[15px] h-[35%] md:h-[55%] flex items-end">
+                  <div className="flex items-center -ml-6 ss:ml-0 max-[480px]:pb-2 gap-1">
                     <Image width={30} src={linkrepo} alt="next" />
                     <Link target="_blank" href={project.repo}>
                       Github Repo
