@@ -7,7 +7,7 @@ import material from "../assets/projects/material-ui-1.svg";
 import tailwind from "../assets/projects/tailwindcss.svg";
 import redux from "../assets/redux.svg" 
 import firebase from "../assets/projects/firebase-1.svg";
-import git from "../assets/Projects/git-icon.svg"
+import git from "../assets/projects/git-icon.svg"
 import mongo from  "../assets/projects/mongodb-icon-1.svg"
 
 
