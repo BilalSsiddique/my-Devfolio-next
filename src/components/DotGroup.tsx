@@ -1,10 +1,11 @@
 import React from "react";
 import AnchorLink from "react-anchor-link-smooth-scroll";
+import PropTypes, { InferProps } from "prop-types";
 
 
 
+const DotGroup = ({ selectedPage, setSelectedPage }:{selectedPage:string,setSelectedPage:React.Dispatch<React.SetStateAction<string>>}) => {
 
-const DotGroup = ({ selectedPage, setSelectedPage }) => {
     const selectedStyles = `bg-gradient-rainbow relative  before:absolute before:w-6 before:h-6 before:rounded-full
     before:border-2 before:border-yellow before:left-[-50%] before:top-[-50%]`;
 
@@ -24,14 +25,7 @@ const DotGroup = ({ selectedPage, setSelectedPage }) => {
         href={"#skills"}
         onClick={() => setSelectedPage("skills")}
       />
-      <AnchorLink
-        className={`${
-          selectedPage === "certifications" ? selectedStyles : "bg-dark-grey"
-        }
-        w-3 h-3 rounded-full`}
-        href={"#certifications"}
-        onClick={() => setSelectedPage("certifications")}
-      />
+
       <AnchorLink
         className={`${
           selectedPage === "projects" ? selectedStyles : "bg-dark-grey"
@@ -39,6 +33,14 @@ const DotGroup = ({ selectedPage, setSelectedPage }) => {
         w-3 h-3 rounded-full`}
         href={"#projects"}
         onClick={() => setSelectedPage("projects")}
+      />
+      <AnchorLink
+        className={`${
+          selectedPage === "certifications" ? selectedStyles : "bg-dark-grey"
+        }
+        w-3 h-3 rounded-full`}
+        href={"#certifications"}
+        onClick={() => setSelectedPage("certifications")}
       />
       <AnchorLink
         className={`${

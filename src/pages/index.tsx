@@ -5,11 +5,10 @@ import DotGroup from "../components/DotGroup";
 import Landing from "../components/Landing";
 import LineGradient from "../components/LineGradient";
 import Skills from "../components/Skills";
-import ImageSlider from '../components/Certification'
+import ImageSlider from "../components/Certification";
 import useMediaQuery from "../hooks/useMediaQuery";
 import CustomToggleIcon from "@/components/CustomToggleIcon";
-
-
+import Projects from "@/components/Projects";
 
 import { useState, useEffect } from "react";
 
@@ -19,7 +18,6 @@ export default function Home() {
   const [gridSwitch, setGridSwitch] = useState(false);
   const isAboveMediumScreens = useMediaQuery("(min-width:1060px)");
 
-  
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY === 0) setisTopOfPage(true);
@@ -37,37 +35,58 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="" />
       </Head>
+
       <main className={`app bg-deep-blue `}>
+        {/* NAVBAR */}
         <Navbar selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
         <div className="xs:w-5/6 xs:mx-auto md:h-full ">
+          {/* SIDE DOTS BAR */}
           {isAboveMediumScreens && (
             <DotGroup
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
           )}
+
+          {/* INTRO SECTION */}
           <Landing setSelectedPage={setSelectedPage} />
         </div>
+
+        {/* Linear Gradient Skills Section (by Default skills) w-full */}
         <LineGradient />
         <div className=" ss:w-5/6 pb-20 mx-5 ss:mx-auto h-full mt-44 xs:mt-52">
           <div className="b-gradient-rainbow-bg"></div>
           <Skills />
         </div>
 
+        {/* PROJECT SECTION */}
+        <LineGradient ID="projects" section="Projects" />
+        <div className=" ss:w-5/6 pb-20 mx-5 ss:mx-auto h-full mt-44 xs:mt-52">
+          {/* <div className="b-gradient-rainbow-bg"></div> */}
+          <Projects/>
+        </div>
+
+        {/* Linear Gradient Certifications Section w-full */}
         <LineGradient ID="certifications" section="Certifications" />
         <div className="ss:w-5/6 pb-20 mx-5 ss:mx-auto h-full mt-32 xs:mt-36 ">
           {/* GRID VIEW SWITCH */}
           <div className=" flex items-center gap-3 justify-center xs:justify-start w-full mb-20">
             <p className="text-[22px] font-playfair">Grid View</p>
-              <CustomToggleIcon gridSwitch={gridSwitch} setGridSwitch={setGridSwitch}  />
+            <CustomToggleIcon
+              gridSwitch={gridSwitch}
+              setGridSwitch={setGridSwitch}
+            />
           </div>
 
-          <div className={`md:w-full xs:w-full  glass  ${(isAboveMediumScreens && gridSwitch===false) && 'h-[600px]' }  mx-auto`}>
+          {/* CERTIFICATION SECTION CONTINUE WITH IMAGE SLIDER */}
+          <div
+            className={`md:w-full xs:w-full  glass  ${
+              isAboveMediumScreens && gridSwitch === false && "h-[600px]"
+            }  mx-auto`}
+          >
             <ImageSlider gridSwitch={gridSwitch} />
           </div>
         </div>
-
-
       </main>
     </>
   );
