@@ -1,5 +1,5 @@
 import React from "react";
-import AnchorLink from "react-anchor-link-smooth-scroll";
+import Link from "next/link";
 import PropTypes, { InferProps } from "prop-types";
 
 
@@ -11,13 +11,13 @@ const DotGroup = ({ selectedPage, setSelectedPage }:{selectedPage:string,setSele
 
   return (
     <div className=" flex flex-col gap-6 fixed top-[60%] right-7">
-      <AnchorLink
+      <Link
         className={`${selectedPage === "home" ? selectedStyles : "bg-dark-grey"}
         w-3 h-3 rounded-full`}
         href={"#home"}
         onClick={() => setSelectedPage("home")}
       />
-      <AnchorLink
+      <Link
         className={`${
           selectedPage === "skills" ? selectedStyles : "bg-dark-grey"
         }
@@ -26,7 +26,7 @@ const DotGroup = ({ selectedPage, setSelectedPage }:{selectedPage:string,setSele
         onClick={() => setSelectedPage("skills")}
       />
 
-      <AnchorLink
+      <Link
         className={`${
           selectedPage === "projects" ? selectedStyles : "bg-dark-grey"
         }
@@ -34,7 +34,7 @@ const DotGroup = ({ selectedPage, setSelectedPage }:{selectedPage:string,setSele
         href={"#projects"}
         onClick={() => setSelectedPage("projects")}
       />
-      <AnchorLink
+      <Link
         className={`${
           selectedPage === "certifications" ? selectedStyles : "bg-dark-grey"
         }
@@ -42,7 +42,7 @@ const DotGroup = ({ selectedPage, setSelectedPage }:{selectedPage:string,setSele
         href={"#certifications"}
         onClick={() => setSelectedPage("certifications")}
       />
-      <AnchorLink
+      <Link
         className={`${
           selectedPage === "testimonials" ? selectedStyles : "bg-dark-grey"
         }
@@ -50,7 +50,7 @@ const DotGroup = ({ selectedPage, setSelectedPage }:{selectedPage:string,setSele
         href={"#testimonials"}
         onClick={() => setSelectedPage("testimonials")}
       />
-      <AnchorLink
+      <Link
         className={`${
           selectedPage === "contact" ? selectedStyles : "bg-dark-grey"
         }
