@@ -3,11 +3,12 @@ import {FaFacebook} from 'react-icons/fa'
 import {FaInstagram} from 'react-icons/fa'
 import { FaTwitter } from "react-icons/fa";
 import {FaLinkedin} from 'react-icons/fa'
+import Link from "next/link";
 
 const SocialMediaIcons = () => {
   return (
     <div className="flex justify-center md:justify-start my-2 gap-7">
-      <a
+      <Link
         href="https://www.linkedin.com/in/bilal-siddiquee/"
         className="hover:opacity-50 transition duration-500"
         target="_blank"
@@ -16,8 +17,8 @@ const SocialMediaIcons = () => {
         <button>
           <FaLinkedin size={32} />
         </button>
-      </a>
-      <a
+      </Link>
+      <Link
         href="https://twitter.com/Bilalsiddique_"
         className="hover:opacity-50 transition duration-500"
         target="_blank"
@@ -26,8 +27,8 @@ const SocialMediaIcons = () => {
         <button>
           <FaTwitter size={32}/>
         </button>
-      </a>
-      <a
+      </Link>
+      <Link
         href="https://web.facebook.com/BilalsSiddique/"
         className="hover:opacity-50 transition duration-500"
         target="_blank"
@@ -36,8 +37,8 @@ const SocialMediaIcons = () => {
         <button>
           <FaFacebook size={32} />
         </button>
-      </a>
-      <a
+      </Link>
+      <Link
         href="# "
         className="hover:opacity-50 transition duration-500"
         target="_blank"
@@ -46,7 +47,7 @@ const SocialMediaIcons = () => {
         <button>
           <FaInstagram size={32} />
         </button>
-      </a>
+      </Link>
     </div>
   );
 };
