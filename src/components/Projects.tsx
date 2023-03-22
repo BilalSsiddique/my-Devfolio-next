@@ -17,11 +17,11 @@ const Projects = () => {
     <div className="flex flex-wrap  gap-y-5   justify-center md:justify-between    h-full w-full">
       {projects.map((project, idx) => (
         <div
-          className="flex flex-col sm:flex-row w-[100%]    rounded-lg"
+          className="flex  flex-col hover:relative sm:flex-row w-[100%]    rounded-lg"
           key={idx}
         >
           <Image
-            className=" w-full sm:w-[62%] xs:order-2 max-[480px]:border-0 border-black border-2  sm:border-2 sm:border-black  max-[480px]:rounded-tl-lg max-[480px]:rounded-tr-lg  sm:rounded-r-lg  h-auto bg-cover bg-center object-fill"
+            className=" sm:hover:w-auto sm:hover:h-auto sm:hover:z-50  sm:hover:absolute  sm:hover:left-0 sm:hover:right-0   sm:hover:ml-auto sm:hover:mr-auto sm:hover:bg-cover sm:hover:object-cover      w-full sm:w-[62%] xs:order-2 max-[480px]:border-0 border-black border-2  sm:border-2 sm:border-black  max-[480px]:rounded-tl-lg max-[480px]:rounded-tr-lg  sm:rounded-r-lg  h-auto bg-cover bg-center object-fill"
             src={project.url}
             alt="images"
           />
@@ -30,7 +30,7 @@ const Projects = () => {
               <p className="glass-navbar max-[480px]:font-playfair  xs:bg-black font-opensans w-full xs:rounded-tr-lg sm:rounded-tr-none xs:rounded-tl-lg text-center md:text-left  md:pl-10 max-[480px]:pb-4 pt-3 ss:pt-6  text-[18px] sm:text-[20px] md:text-[27px] font-bold ">
                 {project.name}
               </p>
-              <div className="flex flex-col max-[480px]:rounded-b-lg rounded-bl-none sm:rounded-bl-lg h-full glass-navbar xs:bg-black w-full md:text-left text-center  justify-between ss:py-2 md:py-5 pl-2 md:pl-10 pb-5 gap-1 xs:gap-2 items-center md:items-start ">
+              <div className="flex flex-col max-[480px]:rounded-b-lg rounded-bl-none sm:rounded-bl-lg h-full glass-navbar xs:bg-black w-full md:text-left text-center  justify-between ss:py-2 md:py-5 pl-2 md:pl-10 pb-5 gap-2 xs:gap-2 items-center md:items-start ">
                 <p className=" max-[480px]:pb-2 max-[480px]:font-playfair font-opensans text max-[850px]:text-[12px] sm:text-[13px] md:text-[15px]">
                   {project.description}
                 </p>
