@@ -76,10 +76,7 @@ body,
 }
 
 
-.close-icon {
-  filter: invert(41%) sepia(31%) saturate(2414%) hue-rotate(293deg)
-    brightness(89%) contrast(93%);
-}
+
 
 .text-gradient{
                      

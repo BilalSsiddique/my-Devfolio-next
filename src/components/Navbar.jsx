@@ -26,7 +26,11 @@ const Navbar = ({ selectedPage, setSelectedPage }) => {
   const isAboveSmallScreens = useMediaQuery("(min-width:950px)");
 
   return (
-    <nav className={`${!isMenuToggled && 'backdrop-blur-xl'  } z-50  w-full glass-navbar  fixed top-0 py-6 `}>
+    <nav
+      className={`${
+        !isMenuToggled && "backdrop-blur-xl"
+      } z-50  w-full glass-navbar  fixed top-0 py-6 `}
+    >
       <div className="flex items-center justify-between mx-auto w-5/6 ">
         <h4 className="font-playfair text-3xl font-extrabold ">BS</h4>
 
@@ -84,10 +88,10 @@ const Navbar = ({ selectedPage, setSelectedPage }) => {
                 onClick={() => setIsMenuToggled(!isMenuToggled)}
               >
                 <Image
-                  className="close-icon shadow-2xl"
+                  className="close-icon rounded-full bg-red p-2"
                   src={closeIcon}
-                  width={25}
-                  height={25}
+                  width={35}
+                  
                   alt="close-icon"
                 />
               </button>
