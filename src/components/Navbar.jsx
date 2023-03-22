@@ -26,7 +26,7 @@ const Navbar = ({ selectedPage, setSelectedPage }) => {
   const isAboveSmallScreens = useMediaQuery("(min-width:950px)");
 
   return (
-    <nav className={`${!isMenuToggled && 'backdrop-blur-xl'  } z-40  w-full glass-navbar  fixed top-0 py-6 `}>
+    <nav className={`${!isMenuToggled && 'backdrop-blur-xl'  } z-50  w-full glass-navbar  fixed top-0 py-6 `}>
       <div className="flex items-center justify-between mx-auto w-5/6 ">
         <h4 className="font-playfair text-3xl font-extrabold ">BS</h4>
 
