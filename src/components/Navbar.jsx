@@ -23,16 +23,16 @@ const Link = ({ page, selectedPage, setSelectedPage }) => {
 
 const Navbar = ({ selectedPage, setSelectedPage }) => {
   const [isMenuToggled, setIsMenuToggled] = useState(false);
-  const isAboveSmallScreens = useMediaQuery("(min-width:768px)");
+  const isAboveSmallScreens = useMediaQuery("(min-width:950px)");
 
   return (
-    <nav className={`z-40 w-full fixed top-0 py-6 `}>
+    <nav className={`${!isMenuToggled && 'backdrop-blur-xl'  } z-40  w-full glass-navbar  fixed top-0 py-6 `}>
       <div className="flex items-center justify-between mx-auto w-5/6 ">
         <h4 className="font-playfair text-3xl font-extrabold ">BS</h4>
 
         {/* DESKTOP NAVBAR */}
         {isAboveSmallScreens ? (
-          <div className="flex  gap-16 font-opensans text-sm font-semibold ">
+          <div className="flex gap-12 md:gap-16 font-opensans text-sm font-semibold ">
             <Link
               page="Home"
               selectedPage={selectedPage}
@@ -43,13 +43,14 @@ const Navbar = ({ selectedPage, setSelectedPage }) => {
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
+
             <Link
-              page="Certifications"
+              page="Projects"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
             <Link
-              page="Projects"
+              page="Certifications"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
