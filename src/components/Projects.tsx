@@ -21,7 +21,7 @@ const Projects = () => {
           key={idx}
         >
           <Image
-            className=" sm:hover:w-auto sm:hover:h-auto sm:hover:z-50  sm:hover:absolute  sm:hover:left-0 sm:hover:right-0   sm:hover:ml-auto sm:hover:mr-auto sm:hover:bg-cover sm:hover:object-cover      w-full sm:w-[62%] xs:order-2 max-[480px]:border-0 border-black border-2  sm:border-2 sm:border-black  max-[480px]:rounded-tl-lg max-[480px]:rounded-tr-lg  sm:rounded-r-lg  h-auto bg-cover bg-center object-fill"
+            className=" sm:hover:scale-125 sm:hover:z-50  sm:hover:absolute  sm:hover:left-0 sm:hover:right-0   sm:hover:ml-auto sm:hover:mr-auto sm:hover:bg-cover sm:hover:object-cover      w-full sm:w-[62%] xs:order-2 max-[480px]:border-0 border-black border-2  sm:border-2 sm:border-black  max-[480px]:rounded-tl-lg max-[480px]:rounded-tr-lg  sm:rounded-r-lg  h-auto bg-cover bg-center object-fill"
             src={project.url}
             alt="images"
           />
