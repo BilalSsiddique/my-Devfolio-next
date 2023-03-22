@@ -5,19 +5,19 @@ import useMediaQuery from "../hooks/useMediaQuery";
 import menuIcon from "../assets/menu-icon.svg";
 import closeIcon from "../assets/close-icon.svg";
 import Image from "next/image";
+import Link from "next/link";
 
-
-const Link = ({ page, selectedPage, setSelectedPage }) => {
+const LinkC = ({ page, selectedPage, setSelectedPage }) => {
   const lowerCasePage = page.toLowerCase();
   return (
-    <AnchorLink
+    <Link
       className={`font-bold ${selectedPage === lowerCasePage ? "text-yellow " : ""}
         hover:text-yellow transition duration-500`}
       href={`#${lowerCasePage}`}
       onClick={() => setSelectedPage(lowerCasePage)}
     >
       {page}
-    </AnchorLink>
+    </Link>
   );
 };
 
@@ -33,33 +33,33 @@ const Navbar = ({ selectedPage, setSelectedPage }) => {
         {/* DESKTOP NAVBAR */}
         {isAboveSmallScreens ? (
           <div className="flex gap-12 md:gap-16 font-opensans text-sm font-semibold ">
-            <Link
+            <LinkC
               page="Home"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
-            <Link
+            <LinkC
               page="Skills"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
 
-            <Link
+            <LinkC
               page="Projects"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
-            <Link
+            <LinkC
               page="Certifications"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
-            <Link
+            <LinkC
               page="Testimonials"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
-            <Link
+            <LinkC
               page="Contact"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
@@ -95,27 +95,27 @@ const Navbar = ({ selectedPage, setSelectedPage }) => {
 
             {/* MENU ITEMS */}
             <div className="flex flex-col gap-9 ml-[33%] text-[20px] text-white">
-              <Link
+              <LinkC
                 page="Home"
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
               />
-              <Link
+              <LinkC
                 page="Skills"
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
               />
-              <Link
+              <LinkC
                 page="Projects"
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
               />
-              <Link
+              <LinkC
                 page="Testimonials"
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
               />
-              <Link
+              <LinkC
                 page="Contact"
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}

@@ -41,14 +41,15 @@ const Projects = () => {
                       Github Repo
                     </Link>
                   </div>
-                  <AnchorLink
+                  <Link
                     className="text-white rounded-r-sm bg-gradient-rainblue font-playfair   py-0.5 px-0.5 text-center  flex items-center justify-center   border-1   border-deep-blue w-auto"
                     href={project.live}
+                    target="_blank"
                   >
                     <div className="text-[13px] sm:justify-end  sm:text-[15px] bg-deep-blue hover:text-red transition duration-500 w-[60px] sm:w-[60px] sm:h-[25px] h-full flex items-center justify-center  xs:px-2.5 font-playfair">
                       Demo
                     </div>
-                  </AnchorLink>
+                  </Link>
                   {/* <AnchorLink
                     className="rounded-r-sm text-[0px] bg-gradient-rainblue py-0.5 pl-0.5 pr-0.5 h-[25px]  xs:max-w-[120px]"
                     href="#contact"
