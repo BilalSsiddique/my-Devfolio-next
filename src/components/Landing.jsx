@@ -1,8 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
-import AnchorLink from "react-anchor-link-smooth-scroll";
 import SocialMediaIcons from '../components/SocialMediaIcons'
 import useMediaQuery from "@/hooks/useMediaQuery";
+import Link from "next/link";
 
 const Landing = ({ setSelectedPage }) => {
   const isAboveLargeScreen = useMediaQuery("(min-width:1060px)");
@@ -76,15 +76,15 @@ const Landing = ({ setSelectedPage }) => {
             visible: { opacity: 1, x: 0 },
           }}
         >
-          <AnchorLink
+          <Link
             className="text-sm xs:text-lg bg-gradient-rainblue text-deep-blue rounded-sm  xs:max-w-[160px] py-3 px-5 xs:px-7 font-semibold
               hover:bg-blue hover:text-white transition duration-500"
             onClick={() => setSelectedPage("contact")}
             href="#contact"
           >
             Contact Me
-          </AnchorLink>
-          <AnchorLink
+          </Link>
+          <Link
             className="rounded-r-sm bg-gradient-rainblue py-0.5 pr-0.5 xs:max-w-[160px]"
             onClick={() => setSelectedPage("contact")}
             href="#contact"
@@ -92,7 +92,7 @@ const Landing = ({ setSelectedPage }) => {
             <div className="text-sm xs:text-lg bg-deep-blue hover:text-red transition duration-500 w-full h-full flex items-center justify-center px-7 xs:px-10 font-playfair">
               Let&#39;s talk.
             </div>
-          </AnchorLink>
+          </Link>
         </motion.div>
 
         <motion.div
