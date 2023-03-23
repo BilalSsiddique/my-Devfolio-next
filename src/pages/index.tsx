@@ -6,6 +6,7 @@ import Landing from "../components/Landing";
 import LineGradient from "../components/LineGradient";
 import Skills from "../components/Skills";
 import ImageSlider from "../components/Certification";
+import Contact from '../components/Contact'
 import useMediaQuery from "../hooks/useMediaQuery";
 import CustomToggleIcon from "@/components/CustomToggleIcon";
 import Projects from "@/components/Projects";
@@ -63,7 +64,7 @@ export default function Home() {
         <LineGradient ID="projects" section="Projects" />
         <div className=" ss:w-5/6 pb-20 mx-5 ss:mx-auto h-full mt-44 xs:mt-52">
           {/* <div className="b-gradient-rainbow-bg"></div> */}
-          <Projects/>
+          <Projects />
         </div>
 
         {/* Linear Gradient Certifications Section w-full */}
@@ -86,6 +87,11 @@ export default function Home() {
           >
             <ImageSlider gridSwitch={gridSwitch} />
           </div>
+        </div>
+        {/* CONTACT SECTION */}
+        <LineGradient ID="contact" section="Contact" />
+        <div className=" ss:w-5/6 pb-20 mx-5 ss:mx-auto h-full mt-44 xs:mt-52">
+          <Contact/>
         </div>
       </main>
     </>
