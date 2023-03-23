@@ -15,7 +15,7 @@ const Skills = () => {
             className="sm:hover:scale-x-105 sm:transition sm:z-40   relative flex flex-col glass flex-wrap text-center gap-3 items-center h-[130px] w-[170px] max-[535px]:w-[200px] max-[667px]:w-[230px] md:w-[200px]   justify-center  p-5"
             key={index}
           >
-            <p className="text-[20px] font-playfair font-bold mb-1">
+            <p className="text-[20px] font-outfit font-bold mb-1">
               {iconImage.alt}
             </p>
             <motion.div

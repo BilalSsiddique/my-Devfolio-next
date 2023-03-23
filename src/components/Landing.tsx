@@ -56,7 +56,7 @@ const Landing = ({ setSelectedPage }:any) => {
             </span>
           </p>
 
-          <p className="max-[420px]:px-4 max-[420px]:text-[13px] mt-11 mb-2 text-sm text-center w-full ss:w-3/5 ss:text-start">
+          <p className="font-outfit max-[420px]:px-4 max-[420px]:text-[13px] mt-11 mb-2 text-sm text-center w-full ss:w-3/5 ss:text-start">
             An Undergraduate Software Engineer , Certified Meta Front-end
             Engineer & Aspiring Full-Stack & Block Chain Engineer.
           </p>
@@ -75,7 +75,7 @@ const Landing = ({ setSelectedPage }:any) => {
           }}
         >
           <Link
-            className="text-sm xs:text-lg bg-gradient-rainblue text-deep-blue rounded-sm  xs:max-w-[160px] py-3 px-5 xs:px-7 font-semibold
+            className="font-outfit text-sm xs:text-lg bg-gradient-rainblue text-deep-blue rounded-sm  xs:max-w-[160px] py-3 px-5 xs:px-7 font-semibold
               hover:bg-blue hover:text-white transition duration-500"
             onClick={() => setSelectedPage("contact")}
             href="#contact"
@@ -87,7 +87,7 @@ const Landing = ({ setSelectedPage }:any) => {
             onClick={() => setSelectedPage("contact")}
             href="#contact"
           >
-            <div className="text-sm xs:text-lg bg-deep-blue hover:text-red transition duration-500 w-full h-full flex items-center justify-center px-7 xs:px-10 font-playfair">
+            <div className="text-sm xs:text-lg bg-deep-blue hover:text-red transition duration-500 w-full h-full flex items-center justify-center px-7 xs:px-10 font-outfit">
               Let&#39;s talk.
             </div>
           </Link>

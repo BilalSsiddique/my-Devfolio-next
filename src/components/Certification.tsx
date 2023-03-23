@@ -1,7 +1,3 @@
-import React, { ReactNode } from 'react'
-import {useState} from 'react'
-import Image, { StaticImageData } from 'next/image';
-import {motion} from 'framer-motion'
 import useMediaQuery from '@/hooks/useMediaQuery';
 import GridCertification from '../components/GridCertification'
 import { slides } from '@/data/website-data';

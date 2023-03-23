@@ -31,6 +31,7 @@ module.exports = {
       fontFamily: {
         playfair: ["Playfair Display", "serif"],
         opensans: ["Open Sans", "sans-serif"],
+        outfit:['Outfit','sans-serif']
       },
       content: {
         brush: "url('/brush.png')",

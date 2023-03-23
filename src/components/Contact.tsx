@@ -31,7 +31,7 @@ const Contact = () => {
         }}
       >
         <div>
-          <p className="font-playfair font-semibold text-xl xs:text-3xl">
+          <p className="font-outfit font-semibold text-xl xs:text-3xl">
             <span className="text-yellow">CONTACT ME</span> TO GET STARTED
           </p>
           <div className="flex my-5">
@@ -54,7 +54,7 @@ const Contact = () => {
             visible: { opacity: 1, y: 0 },
           }}
         >
-          <Image className="w-full rounded-sm"  src={contact} alt="contact" />
+          <Image className="w-full rounded-sm" src={contact} alt="contact" />
         </motion.div>
         <motion.div
           className="basis-1/2 mt-10 md:mt-0"
@@ -72,9 +72,10 @@ const Contact = () => {
             action="https://formsubmit.co/dd4d0b8ba0db45f077d53e1ff5d2c38f"
             target="_blank"
             onSubmit={onSubmit}
+            className="font-outfit"
           >
             <input
-              className="rounded-sm w-full text-black outline-0 font-semibold placeholder-opaque-black p-3"
+              className=" rounded-sm w-full text-black outline-0 font-semibold placeholder-opaque-black p-3"
               type="text"
               placeholder="NAME"
               {...register("name", {
@@ -98,7 +99,7 @@ const Contact = () => {
               })}
             />
             {errors.email && (
-              <p className="text-red mt-1">
+              <p className="text-red mt-1 ">
                 {errors.email.type === "required" && "This field is required."}
                 {errors.email.type === "pattern" && "Invalid email address."}
               </p>
@@ -115,7 +116,7 @@ const Contact = () => {
               })}
             />
             {errors.message && (
-              <p className="text-red mt-1">
+              <p className="text-red mt-1 font-outfit">
                 {errors.message.type === "required" &&
                   "This field is required."}
                 {errors.message.type === "maxLength" &&
@@ -123,7 +124,7 @@ const Contact = () => {
               </p>
             )}
             <button
-              className="mt-5 text-sm xs:text-lg bg-gradient-rainblue text-deep-blue rounded-sm  xs:w-[50%] py-3 px-5 font-semibold
+              className="font-outfit mt-5 text-sm xs:text-lg bg-gradient-rainblue text-deep-blue rounded-sm  xs:w-[50%] py-3 px-5 font-semibold
               hover:bg-blue hover:text-white transition duration-500"
             >
               SEND ME MESSAGE

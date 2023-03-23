@@ -71,7 +71,7 @@ export default function Home() {
         <div className="ss:w-5/6 pb-20 mx-5 ss:mx-auto h-full mt-32 xs:mt-36 ">
           {/* GRID VIEW SWITCH */}
           <div className=" flex items-center gap-3 justify-center xs:justify-start w-full mb-20">
-            <p className="text-[22px] font-playfair">Grid View</p>
+            <p className="text-[22px] font-outfit">Grid View</p>
             <CustomToggleIcon
               gridSwitch={gridSwitch}
               setGridSwitch={setGridSwitch}

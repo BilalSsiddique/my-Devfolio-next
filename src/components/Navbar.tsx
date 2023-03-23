@@ -31,7 +31,7 @@ const Navbar = ({ selectedPage, setSelectedPage }:any) => {
       } z-50  w-full glass-navbar  fixed top-0 py-6 `}
     >
       <div className="flex items-center justify-between mx-auto w-5/6 ">
-        <h4 className="font-playfair text-3xl font-extrabold ">BS</h4>
+        <h4 className="font-outfit text-3xl font-extrabold ">BS</h4>
 
         {/* DESKTOP NAVBAR */}
         {isAboveSmallScreens ? (
@@ -96,7 +96,7 @@ const Navbar = ({ selectedPage, setSelectedPage }:any) => {
             </div>
 
             {/* MENU ITEMS */}
-            <div className="flex flex-col gap-9 ml-[33%] text-[20px] text-white">
+            <div className="font-outfit flex flex-col gap-9 ml-[33%] text-[20px] text-white">
               <LinkC
                 page="Home"
                 selectedPage={selectedPage}
@@ -117,7 +117,7 @@ const Navbar = ({ selectedPage, setSelectedPage }:any) => {
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
               />
-              
+
               <LinkC
                 page="Experience"
                 selectedPage={selectedPage}

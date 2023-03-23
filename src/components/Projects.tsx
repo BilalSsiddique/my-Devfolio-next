@@ -27,14 +27,14 @@ const Projects = () => {
           />
           <div className="  sm:border-b-2 sm:border-t-2 sm:border-r-2 xs:border-b-2    xs:border-black font-playfair h-auto  sm:rounded-l-lg w-full sm:w-[38%]   flex justify-center ">
             <div className="flex flex-col w-full   items-start  ">
-              <p className="glass-navbar max-[480px]:font-playfair  xs:bg-black font-opensans w-full xs:rounded-tr-lg sm:rounded-tr-none xs:rounded-tl-lg text-center md:text-left  md:pl-10 max-[480px]:pb-4 pt-3 ss:pt-6  text-[18px] sm:text-[20px] md:text-[27px] font-bold ">
+              <p className="glass-navbar   xs:bg-black font-outfit w-full xs:rounded-tr-lg sm:rounded-tr-none xs:rounded-tl-lg text-center md:text-left  md:pl-10 max-[480px]:pb-4 pt-3 ss:pt-6  text-[18px] sm:text-[20px] md:text-[27px] font-bold ">
                 {project.name}
               </p>
               <div className="flex flex-col max-[480px]:rounded-b-lg rounded-bl-none sm:rounded-bl-lg h-full glass-navbar xs:bg-black w-full md:text-left text-center  justify-between ss:py-2 md:py-5 pl-2 md:pl-10 pb-5 gap-2 xs:gap-2 items-center md:items-start ">
-                <p className=" max-[480px]:pb-2 max-[480px]:font-playfair font-opensans text max-[850px]:text-[12px] sm:text-[13px] md:text-[15px]">
+                <p className=" max-[480px]:pb-2  font-outfit text max-[850px]:text-[12px] sm:text-[13px] md:text-[15px]">
                   {project.description}
                 </p>
-                <div className="max-[480px]:font-playfair font-opensans max-[850px]:text-[12px] sm:text-[13px]  md:text-[15px] /*h-[35%] md:h-[55%]*/  flex items-center gap-4 sm:gap-4 md:gap-4 ">
+                <div className="font-outfit max-[850px]:text-[12px] sm:text-[13px]  md:text-[15px] /*h-[35%] md:h-[55%]*/  flex items-center gap-4 sm:gap-4 md:gap-4 ">
                   <div className="flex items-center  ss:ml-0  max-[480px]:pb-2 gap-1">
                     <Image width={30} src={linkrepo} alt="next" />
                     <Link target="_blank" href={project.repo}>
@@ -46,11 +46,10 @@ const Projects = () => {
                     href={project.live}
                     target="_blank"
                   >
-                    <div className="text-[13px] sm:justify-end  sm:text-[15px] bg-deep-blue hover:text-red transition duration-500 w-[60px] sm:w-[60px] sm:h-[25px] h-full flex items-center justify-center  xs:px-2.5 font-playfair">
+                    <div className="text-[13px] sm:justify-end  sm:text-[15px] bg-deep-blue hover:text-red transition duration-500 w-[60px] sm:w-[60px] sm:h-[25px] h-full flex items-center justify-center  xs:px-2.5 font-outfit">
                       Demo
                     </div>
                   </Link>
-                  
                 </div>
                 <div className="flex items-center  gap-2 ">
                   {/* <p className="text-xl font-extrabold">Tech Stack </p> */}
