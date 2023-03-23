@@ -44,7 +44,7 @@ const Landing = ({ setSelectedPage }:any) => {
             visible: { opacity: 1, x: 0 },
           }}
         >
-          <p className="max-[420px]:m-2 max-[420px]:text-[40px]   text-6xl  font-playfair z-10 text-center ss:text-start">
+          <p className=" max-[420px]:m-2 max-[420px]:text-[40px]   text-6xl  font-playfair z-10 text-center ss:text-start">
             Bilal {""}
             <span className="relative">
               <span

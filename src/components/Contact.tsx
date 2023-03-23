@@ -9,7 +9,7 @@ const Contact = () => {
     register,
     trigger,
     formState: { errors },
-  } = useForm();
+  } = useForm({mode:'all'});
 
   const onSubmit = async (e:any) => {
     const isValid = await trigger();
