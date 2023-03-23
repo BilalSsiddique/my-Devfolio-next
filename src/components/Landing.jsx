@@ -1,39 +1,37 @@
 import React from "react";
 import { motion } from "framer-motion";
-import SocialMediaIcons from '../components/SocialMediaIcons'
+import SocialMediaIcons from "../components/SocialMediaIcons";
 import useMediaQuery from "@/hooks/useMediaQuery";
 import Link from "next/link";
+import Image from "next/image";
+import profile from "../assets/profile-2.svg";
 
 const Landing = ({ setSelectedPage }) => {
   const isAboveLargeScreen = useMediaQuery("(min-width:1060px)");
   return (
-    <section id="home" className=" flex md:justify-start items-center   py-10 ">
+    <section
+      id="home"
+      className=" flex w-full justify-start md:justify-between md:h-full md:items-center md:gap-16  py-10 "
+    >
       {/* IMAGE SECTION  */}
-      {/* <div className="basis-3/5 z-10 mt-16 md:mt-32 flex justify-center md:order-2">
+      <div className=" md:order-2 md:flex md:justify-center md:basis-1/2 z-10 mt-16 md:mt-32">
+        <div className="b-gradient-rainbow-bg-right"></div>
         {isAboveLargeScreen ? (
-          <div className="relative z-0 ml-20 before:z-[-1]">
-            <div className="b-gradient-rainbow-bg-right"></div>
+          <div className="relative z-0  ml-20 before:absolute before:top-2 before:-left-1 before:rounded-full before:w-[72%] before:h-[72%] before:border-2  before:border-blue before:max-w-[400px] before:z-[-1]">
             <Image
               alt="profile"
-              className="hidden lg:block max-w-md max-h-md hover:filter hover:saturate-200 transition duration-500 z-10 w-full  "
-              src={dev}
-              width={0}
-              height={0}
+              className=" max-w-[300px] md:max-w-[400px] hover:filter hover:saturate-200 transition duration-500 z-10 w-full  "
+              src={profile}
+              width={500}
             />
           </div>
         ) : (
-          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-            <path
-              fill="#010026"
-              d="M57.6,-8.7C57.6,10.5,28.8,21.1,9.5,21.1C-9.8,21.1,-19.6,10.5,-19.6,-8.7C-19.6,-27.9,-9.8,-55.8,9.5,-55.8C28.8,-55.8,57.6,-27.9,57.6,-8.7Z"
-              transform="translate(100 100)"
-            />
-          </svg>
+          ""
         )}
-      </div> */}
+      </div>
 
       {/* MAIN TEXT */}
-      <div className="z-30   flex flex-col   mt-52 md:mt-52">
+      <div className="z-30 h-full w-full md:basis-1/2 mt-32 md:mt-32 ">
         {/* HEADINGS */}
         <motion.div
           className="motion relative"
