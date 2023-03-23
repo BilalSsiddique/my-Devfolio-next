@@ -7,6 +7,7 @@ import LineGradient from "../components/LineGradient";
 import Skills from "../components/Skills";
 import ImageSlider from "../components/Certification";
 import Contact from '../components/Contact'
+import Footer from '../components/Footer'
 import useMediaQuery from "../hooks/useMediaQuery";
 import CustomToggleIcon from "@/components/CustomToggleIcon";
 import Projects from "@/components/Projects";
@@ -93,6 +94,7 @@ export default function Home() {
         <div className=" ss:w-5/6 pb-20 mx-5 ss:mx-auto h-full mt-44 xs:mt-52">
           <Contact/>
         </div>
+        <Footer/>
       </main>
     </>
   );

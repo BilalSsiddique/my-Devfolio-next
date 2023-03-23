@@ -1,5 +1,5 @@
 import React from "react";
-import { FaFacebook, FaInstagram, FaTwitter, FaLinkedin } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaTwitter, FaLinkedin,FaGithub } from "react-icons/fa";
 import Link from "next/link";
 
 const SocialMediaIcons = () => {
@@ -22,7 +22,7 @@ const SocialMediaIcons = () => {
         rel="noreferrer"
       >
         <button>
-          <FaTwitter size={32}/>
+          <FaTwitter size={32} />
         </button>
       </Link>
       <Link
@@ -43,6 +43,16 @@ const SocialMediaIcons = () => {
       >
         <button>
           <FaInstagram size={32} />
+        </button>
+      </Link>
+      <Link
+        href="https://github.com/BilalSsiddique"
+        className="hover:opacity-50 transition duration-500"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <button>
+          <FaGithub size={32} />
         </button>
       </Link>
     </div>
