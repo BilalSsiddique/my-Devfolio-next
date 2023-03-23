@@ -59,7 +59,7 @@ const Navbar = ({ selectedPage, setSelectedPage }) => {
               setSelectedPage={setSelectedPage}
             />
             <LinkC
-              page="Testimonials"
+              page="Experience"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
@@ -91,7 +91,6 @@ const Navbar = ({ selectedPage, setSelectedPage }) => {
                   className="close-icon rounded-full bg-red p-2"
                   src={closeIcon}
                   width={35}
-                  
                   alt="close-icon"
                 />
               </button>
@@ -115,7 +114,13 @@ const Navbar = ({ selectedPage, setSelectedPage }) => {
                 setSelectedPage={setSelectedPage}
               />
               <LinkC
-                page="Testimonials"
+                page="Certifications"
+                selectedPage={selectedPage}
+                setSelectedPage={setSelectedPage}
+              />
+              
+              <LinkC
+                page="Experience"
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
               />
