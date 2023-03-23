@@ -57,8 +57,8 @@ const Landing = ({ setSelectedPage }:any) => {
           </p>
 
           <p className="font-outfit max-[420px]:px-4 max-[420px]:text-[13px] mt-11 mb-2 text-sm text-center w-full ss:w-3/5 ss:text-start">
-            An Undergraduate Software Engineer , Certified Meta Front-end
-            Engineer & Aspiring Full-Stack & Block Chain Engineer.
+            I&#39;m a Software Engineer , Certified META Front-end Engineer &
+            Aspiring Web 3.0 & Metaverse Engineer.
           </p>
         </motion.div>
 
