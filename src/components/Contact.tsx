@@ -1,7 +1,6 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import { motion } from "framer-motion";
-import LineGradient from "./LineGradient";
 import Image from "next/image";
 import contact from "../assets/contact-image.jpeg";
 

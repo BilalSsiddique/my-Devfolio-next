@@ -10,6 +10,22 @@ import firebase from "../assets/projects/firebase-1.svg";
 import git from "../assets/projects/git-icon.svg"
 import mongo from  "../assets/projects/mongodb-icon-1.svg"
 
+// certificate imports
+import reactbasics from "/src/assets/certificates/react-basics.png";
+import version from "/src/assets/certificates/version.png";
+import ITF from "/src/assets/certificates/ITF.png";
+import web from "/src/assets/certificates/webscraping.png";
+import statis from "/src/assets/certificates/statistics.png";
+import pandas from "/src/assets/certificates/pandas.png";
+import python from "/src/assets/certificates/introduction-to-python.png";
+import interpython from "/src/assets/certificates/intermediate-python.png";
+import kagglepython from "/src/assets/certificates/kaggle-python.png";
+import kagglepandas from "/src/assets/certificates/kaggle-pandas.png";
+import datascience from "/src/assets/certificates/Introduction-to-data-science.png";
+import javascriptc from "/src/assets/certificates/programming-with-js.png";
+import manipluation from "/src/assets/certificates/data-manipulation.png";
+
+
 
 // SSSS
 
@@ -67,7 +83,7 @@ export const projects: Array<{
     url: reactdashboard,
     description:
       "An Admin Dashboard developed with react and Industry recommended packages.",
-    repo: '"https://github.com/BilalSsiddique/react-admin-dashboard"',
+    repo: 'https://github.com/BilalSsiddique/react-admin-dashboard',
     stack: [react, framer, materialui, github, git],
     live: "https://react-admin-learn.vercel.app",
   },
@@ -80,4 +96,23 @@ export const projects: Array<{
     stack: [react, firebase, github, git],
     live:"https://authentication-inky.vercel.app",
   },
+];
+
+
+// Certificates
+
+export const slides: Array<{ url: StaticImageData; classname?: string }> = [
+  { url: ITF },
+  { url: reactbasics, classname: "design-react" },
+  { url: web },
+  { url: kagglepandas },
+  { url: javascriptc, classname: "design-javascript" },
+  { url: pandas },
+  { url: python },
+  { url: interpython },
+  { url: statis },
+  { url: kagglepython },
+  { url: datascience },
+  { url: version, classname: "design-version" },
+  { url: manipluation },
 ];

@@ -1,13 +1,12 @@
 import React from "react";
 import { useState } from "react";
-import AnchorLink from "react-anchor-link-smooth-scroll";
 import useMediaQuery from "../hooks/useMediaQuery";
 import menuIcon from "../assets/menu-icon.svg";
 import closeIcon from "../assets/close-icon.svg";
 import Image from "next/image";
 import Link from "next/link";
 
-const LinkC = ({ page, selectedPage, setSelectedPage }) => {
+const LinkC = ({ page, selectedPage, setSelectedPage }:any) => {
   const lowerCasePage = page.toLowerCase();
   return (
     <Link
@@ -21,7 +20,7 @@ const LinkC = ({ page, selectedPage, setSelectedPage }) => {
   );
 };
 
-const Navbar = ({ selectedPage, setSelectedPage }) => {
+const Navbar = ({ selectedPage, setSelectedPage }:any) => {
   const [isMenuToggled, setIsMenuToggled] = useState(false);
   const isAboveSmallScreens = useMediaQuery("(min-width:950px)");
 

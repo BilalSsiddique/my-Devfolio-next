@@ -1,12 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
-import SocialMediaIcons from "../components/SocialMediaIcons";
+import SocialMediaIcons from "./SocialMediaIcons";
 import useMediaQuery from "@/hooks/useMediaQuery";
 import Link from "next/link";
 import Image from "next/image";
 import profile from "../assets/profile-2.svg";
 
-const Landing = ({ setSelectedPage }) => {
+const Landing = ({ setSelectedPage }:any) => {
   const isAboveLargeScreen = useMediaQuery("(min-width:1060px)");
   return (
     <section

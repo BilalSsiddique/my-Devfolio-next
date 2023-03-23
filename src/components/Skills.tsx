@@ -18,7 +18,7 @@ const Skills = () => {
             <p className="text-[20px] font-playfair font-bold mb-1">
               {iconImage.alt}
             </p>
-            <motion.dev
+            <motion.div
               className=" flex justify-center  items-center absolute mx-auto h-[75px] w-[75px] shadow shadow-dark-grey   top-[-50px] rounded-full"
               initial="hidden"
               whileInView="visible"
@@ -35,7 +35,7 @@ const Skills = () => {
                 alt={`${iconImage.alt}-icon`}
                 width={50}
               />
-            </motion.dev>
+            </motion.div>
             <div className=" h-0.5  w-full bg-gradient-rainbow rounded-full "></div>
           </div>
         );

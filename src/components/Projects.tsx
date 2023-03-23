@@ -9,7 +9,7 @@ import Link from "next/link";
 import { Fragment } from "react";
 import { projects } from "@/data/website-data";
 import Image from "next/image";
-import AnchorLink from "react-anchor-link-smooth-scroll";
+
 
 
 const Projects = () => {
@@ -50,14 +50,7 @@ const Projects = () => {
                       Demo
                     </div>
                   </Link>
-                  {/* <AnchorLink
-                    className="rounded-r-sm text-[0px] bg-gradient-rainblue py-0.5 pl-0.5 pr-0.5 h-[25px]  xs:max-w-[120px]"
-                    href="#contact"
-                  >
-                    <div className="text-[5px] md:text-[10px] bg-deep-blue hover:text-red transition duration-500 w-full h-full flex items-center justify-center  xs:px-10 font-playfair">
-                      View Demo.
-                    </div>
-                  </AnchorLink> */}
+                  
                 </div>
                 <div className="flex items-center  gap-2 ">
                   {/* <p className="text-xl font-extrabold">Tech Stack </p> */}
