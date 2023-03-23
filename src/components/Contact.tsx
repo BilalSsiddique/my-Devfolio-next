@@ -32,10 +32,10 @@ const Contact = () => {
         }}
       >
         <div>
-          <p className="font-playfair font-semibold text-3xl">
+          <p className="font-playfair font-semibold text-xl xs:text-3xl">
             <span className="text-yellow">CONTACT ME</span> TO GET STARTED
           </p>
-          <div className="flex md:justify-end my-5">
+          <div className="flex my-5">
             {/* Line */}
             <div className="h-0.5 bg-gradient-rainblue w-2/4 mr-auto"></div>
           </div>
@@ -55,7 +55,7 @@ const Contact = () => {
             visible: { opacity: 1, y: 0 },
           }}
         >
-          <Image className="w-full" src={contact} alt="contact" />
+          <Image className="w-full rounded-sm"  src={contact} alt="contact" />
         </motion.div>
         <motion.div
           className="basis-1/2 mt-10 md:mt-0"
@@ -124,7 +124,7 @@ const Contact = () => {
               </p>
             )}
             <button
-              className="mt-5 text-sm xs:text-lg bg-gradient-rainblue text-deep-blue rounded-sm  w-[50%] py-3 px-5 font-semibold
+              className="mt-5 text-sm xs:text-lg bg-gradient-rainblue text-deep-blue rounded-sm  xs:w-[50%] py-3 px-5 font-semibold
               hover:bg-blue hover:text-white transition duration-500"
             >
               SEND ME MESSAGE
