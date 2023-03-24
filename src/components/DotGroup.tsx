@@ -25,6 +25,14 @@ const DotGroup = ({ selectedPage, setSelectedPage }:{selectedPage:string,setSele
         href={"#skills"}
         onClick={() => setSelectedPage("skills")}
       />
+      <Link
+        className={`${
+          selectedPage === "experience" ? selectedStyles : "bg-dark-grey"
+        }
+        w-3 h-3 rounded-full`}
+        href={"#experience"}
+        onClick={() => setSelectedPage("experience")}
+      />
 
       <Link
         className={`${
@@ -42,14 +50,7 @@ const DotGroup = ({ selectedPage, setSelectedPage }:{selectedPage:string,setSele
         href={"#certifications"}
         onClick={() => setSelectedPage("certifications")}
       />
-      <Link
-        className={`${
-          selectedPage === "experience" ? selectedStyles : "bg-dark-grey"
-        }
-        w-3 h-3 rounded-full`}
-        href={"#experience"}
-        onClick={() => setSelectedPage("testimonials")}
-      />
+
       <Link
         className={`${
           selectedPage === "contact" ? selectedStyles : "bg-dark-grey"
