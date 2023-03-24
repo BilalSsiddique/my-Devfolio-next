@@ -46,19 +46,20 @@ const Navbar = ({ selectedPage, setSelectedPage }:any) => {
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
+            <LinkC
+              page="Experience"
+              selectedPage={selectedPage}
+              setSelectedPage={setSelectedPage}
+            />
 
             <LinkC
               page="Projects"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
+
             <LinkC
               page="Certifications"
-              selectedPage={selectedPage}
-              setSelectedPage={setSelectedPage}
-            />
-            <LinkC
-              page="Experience"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
@@ -108,6 +109,11 @@ const Navbar = ({ selectedPage, setSelectedPage }:any) => {
                 setSelectedPage={setSelectedPage}
               />
               <LinkC
+                page="Experience"
+                selectedPage={selectedPage}
+                setSelectedPage={setSelectedPage}
+              />
+              <LinkC
                 page="Projects"
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
@@ -118,11 +124,6 @@ const Navbar = ({ selectedPage, setSelectedPage }:any) => {
                 setSelectedPage={setSelectedPage}
               />
 
-              <LinkC
-                page="Experience"
-                selectedPage={selectedPage}
-                setSelectedPage={setSelectedPage}
-              />
               <LinkC
                 page="Contact"
                 selectedPage={selectedPage}
