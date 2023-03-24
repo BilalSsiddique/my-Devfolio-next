@@ -1,16 +1,17 @@
-import javascript from '../assets/javascript.svg'
+// Skills Import
+import javascript from "../assets/javascript.svg";
 import typescript from "../assets/typescript.svg";
 import next from "../assets/projects/next-js.svg";
-import figma from "../assets/figma.svg"
-import node from "../assets/nodejs.svg"
+import figma from "../assets/figma.svg";
+import node from "../assets/nodejs.svg";
 import material from "../assets/projects/material-ui-1.svg";
 import tailwind from "../assets/projects/tailwindcss.svg";
-import redux from "../assets/redux.svg" 
+import redux from "../assets/redux.svg";
 import firebase from "../assets/projects/firebase-1.svg";
-import git from "../assets/projects/git-icon.svg"
-import mongo from  "../assets/projects/mongodb-icon-1.svg"
+import git from "../assets/projects/git-icon.svg";
+import mongo from "../assets/projects/mongodb-icon-1.svg";
 
-// certificate imports
+// Certificate Imports
 import reactbasics from "/src/assets/certificates/react-basics.png";
 import version from "/src/assets/certificates/version.png";
 import ITF from "/src/assets/certificates/ITF.png";
@@ -25,9 +26,7 @@ import datascience from "/src/assets/certificates/Introduction-to-data-science.p
 import javascriptc from "/src/assets/certificates/programming-with-js.png";
 import manipluation from "/src/assets/certificates/data-manipulation.png";
 
-
-
-// SSSS
+// Project Imports
 
 import reactdashboard from "../assets/projects/react-dashboard.png";
 import reactdashboard2 from "../assets/projects/react-dashboard-2.png";
@@ -37,34 +36,29 @@ import reactselfie from "../assets/projects/react-selfie-crop-full.png";
 // import movieticketdemo from "../assets/projects/movie-ticket.png";
 // import theme from "../assets/projects/theme-full.png";
 // import domarray from "../assets/projects/dom-array-method-full.png";
+
 import { StaticImageData } from "next/image";
 import react from "../assets/projects/react-2.svg";
 import framer from "../assets/projects/framer-motion.svg";
 import materialui from "../assets/projects/material-ui-1.svg";
 import github from "../assets/githubLogo.svg";
 
-
-
-
-
-
-
-  export const tectStackIcons = [
-    { Image: javascript, alt: "Javascript" },
-    { Image: typescript, alt: "Typescript" },
-    { Image: react, alt: "React.js" },
-    { Image: next, alt: "Next.js" },
-    { Image: node, alt: "Node.js" },
-    { Image: figma, alt: "Figma" },
-    { Image: material, alt: "Material-UI" },
-    { Image: tailwind, alt: "Tailwind" },
-    { Image: redux, alt: "Redux-Toolkit" },
-    // { Image: "../assets/context", alt: "Context-API" },
-    { Image: firebase, alt: "Firebase" },
-    { Image: git, alt: "Git & Github" },
-    { Image: mongo, alt: "Mongo-DB" },
-  ];
-
+// Skills
+export const tectStackIcons = [
+  { Image: javascript, alt: "Javascript" },
+  { Image: typescript, alt: "Typescript" },
+  { Image: react, alt: "React.js" },
+  { Image: next, alt: "Next.js" },
+  { Image: node, alt: "Node.js" },
+  { Image: figma, alt: "Figma" },
+  { Image: material, alt: "Material-UI" },
+  { Image: tailwind, alt: "Tailwind" },
+  { Image: redux, alt: "Redux-Toolkit" },
+  // { Image: "../assets/context", alt: "Context-API" },
+  { Image: firebase, alt: "Firebase" },
+  { Image: git, alt: "Git & Github" },
+  { Image: mongo, alt: "Mongo-DB" },
+];
 
 // PROJECTS
 
@@ -83,7 +77,7 @@ export const projects: Array<{
     url: reactdashboard,
     description:
       "An Admin Dashboard developed with react and Industry recommended packages.",
-    repo: 'https://github.com/BilalSsiddique/react-admin-dashboard',
+    repo: "https://github.com/BilalSsiddique/react-admin-dashboard",
     stack: [react, framer, materialui, github, git],
     live: "https://react-admin-learn.vercel.app",
   },
@@ -94,10 +88,9 @@ export const projects: Array<{
       "A Product-Development Internship Project offered at Radical-X, developed with react, firebase & toastify.",
     repo: "https://github.com/BilalSsiddique/test-login",
     stack: [react, firebase, github, git],
-    live:"https://authentication-inky.vercel.app",
+    live: "https://authentication-inky.vercel.app",
   },
 ];
-
 
 // Certificates
 
@@ -115,4 +108,40 @@ export const slides: Array<{ url: StaticImageData; classname?: string }> = [
   { url: datascience },
   { url: version, classname: "design-version" },
   { url: manipluation },
+];
+
+// Experience
+type experience = {
+  name: string;
+  title: string;
+  from: string;
+  to: string;
+  year: string;
+  workDone: string[];
+};
+export const experience: Array<experience> = [
+  {
+    name: "Radical X",
+    title: "Product Development Intern",
+    from: "Sep",
+    to: "November",
+    year: "2022",
+    workDone: [
+      "Collaborated in an interdisciplinary and agile team consisting of frontend and backend developers, designers and product managers",
+      "Contributed towards creating user stories, further dividing them into engineering tickets and setting them up on ClickUp board",
+      "Worked in an agile environment to develop the front-end of an Apprenticeship Project where a company is able to login to their dashboard and set up (create, read, update, delete) an apprenticeship program and successfully hire a team on contractual basis",
+      "Followed best development practices & patterns Completed assigned task & also provide suggestions",
+    ],
+  },
+  {
+    name: "ZHAB Developers",
+    title: "Front-end Engineer",
+    from: "Jan",
+    to: "August",
+    year: "2022",
+    workDone: [
+      "Developed using CSS, HTML, and JavaScript to enhance functionality and user experience on web pages.",
+      "Edited existing code to improve browser compatibility and mobile responsiveness.",
+    ],
+  },
 ];
