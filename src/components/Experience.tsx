@@ -15,7 +15,7 @@ const Experience = () => {
           }
           ${currentIndex.name === "Radical X" && "text-yellow"}
           ${currentIndex.name === "Radical X" && "font-semibold"}
-
+          
           `}
         >
           Radical X &nbsp;&nbsp;&nbsp;&nbsp;
