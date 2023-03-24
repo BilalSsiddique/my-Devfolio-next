@@ -39,7 +39,7 @@ export default function Home() {
 
       <main className={`app bg-deep-blue `}>
         {/* NAVBAR */}
-        <Navbar selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+        <Navbar isTopOfPage={isTopOfPage} selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
         <div className="xs:w-5/6 xs:mx-auto md:h-full ">
           {/* SIDE DOTS BAR */}
           {isAboveMediumScreens && (

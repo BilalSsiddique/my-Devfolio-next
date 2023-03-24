@@ -20,15 +20,15 @@ const LinkC = ({ page, selectedPage, setSelectedPage }:any) => {
   );
 };
 
-const Navbar = ({ selectedPage, setSelectedPage }:any) => {
+const Navbar = ({ isTopOfPage,selectedPage, setSelectedPage }:any) => {
   const [isMenuToggled, setIsMenuToggled] = useState(false);
   const isAboveSmallScreens = useMediaQuery("(min-width:950px)");
-
+  const navbarBackground = isTopOfPage ? '' : 'glass-navbar'
   return (
     <nav
       className={`${
         !isMenuToggled && "backdrop-blur-xl"
-      } z-50  w-full glass-navbar  fixed top-0 py-6 `}
+      } z-50  w-full ${navbarBackground}  fixed top-0 py-6 `}
     >
       <div className="flex items-center justify-between mx-auto w-5/6 ">
         <h4 className="font-outfit text-3xl font-extrabold ">BS</h4>

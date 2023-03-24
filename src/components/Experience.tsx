@@ -39,7 +39,7 @@ const Experience = () => {
             <span className="text-[18px] ">@</span> {currentIndex.name}
           </p>
         </div>
-        <div className="flex gap-2 font-semibold text-[14px] xs:text-xl">
+        <div className="flex gap-2 font-semibold text-[14px] xs:text-[14px] sm:text-[15px]">
           <p>{currentIndex.from}</p>
 
           <p>-</p>
