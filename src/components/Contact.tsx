@@ -8,6 +8,7 @@ const Contact = () => {
   const {
     register,
     trigger,
+    reset,
     formState: { errors },
   } = useForm({mode:'all'});
 
@@ -15,6 +16,17 @@ const Contact = () => {
     const isValid = await trigger();
     if (!isValid) {
       e.preventDefault();
+    }
+    else{
+      setTimeout(
+        () =>
+          reset({
+            name: "",
+            email: "",
+            message: "",
+          }),
+        3000
+      );
     }
   };
 

@@ -9,7 +9,7 @@ body,
 .app {
   height: 100%;
   background-color: #010026;
-  @apply text-white;
+  color: white;
 }
 
 .custom-shadow {
