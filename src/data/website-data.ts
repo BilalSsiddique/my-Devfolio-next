@@ -25,6 +25,7 @@ import kagglepandas from "/src/assets/certificates/kaggle-pandas.png";
 import datascience from "/src/assets/certificates/Introduction-to-data-science.png";
 import javascriptc from "/src/assets/certificates/programming-with-js.png";
 import manipluation from "/src/assets/certificates/data-manipulation.png";
+import advanceReact from "/src/assets/certificates/advanceReact.png";
 
 // Project Imports
 
@@ -95,19 +96,20 @@ export const projects: Array<{
 // Certificates
 
 export const slides: Array<{ url: StaticImageData; classname?: string }> = [
+  { url: advanceReact, classname: "design-react" },
+  { url: javascriptc },
   { url: ITF },
-  { url: reactbasics, classname: "design-react" },
-  { url: web },
-  { url: kagglepandas },
-  { url: javascriptc, classname: "design-javascript" },
+  { url: reactbasics, classname: "design-javascript" },
   { url: pandas },
   { url: python },
   { url: interpython },
   { url: statis },
   { url: kagglepython },
+  { url: web },
   { url: datascience },
   { url: version, classname: "design-version" },
   { url: manipluation },
+  { url: kagglepandas },
 ];
 
 // Experience
