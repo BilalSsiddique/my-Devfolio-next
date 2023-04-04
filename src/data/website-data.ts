@@ -25,7 +25,7 @@ import kagglepandas from "/src/assets/certificates/kaggle-pandas.png";
 import datascience from "/src/assets/certificates/Introduction-to-data-science.png";
 import javascriptc from "/src/assets/certificates/programming-with-js.png";
 import manipluation from "/src/assets/certificates/data-manipulation.png";
-import advanceReact from "/src/assets/certificates/advanceReact.png";
+import advanceReact from "/src/assets/certificates/AdvanceReact.png";
 
 // Project Imports
 
