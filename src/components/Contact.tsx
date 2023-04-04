@@ -3,30 +3,32 @@ import { useForm } from "react-hook-form";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import contact from "../assets/contact-image.jpeg";
-
+import { toast } from "react-toastify";
 const Contact = () => {
   const {
     register,
+    getValues,
     trigger,
     reset,
     formState: { errors },
-  } = useForm({mode:'all'});
+  } = useForm({ mode: "all" });
 
-  const onSubmit = async (e:any) => {
+  const onSubmit = async (e: any) => {
     const isValid = await trigger();
+
     if (!isValid) {
       e.preventDefault();
-    }
-    else{
-      setTimeout(
-        () =>
-          reset({
-            name: "",
-            email: "",
-            message: "",
-          }),
-        3000
-      );
+      toast.error(`Form Error: All fields are required!`);
+    } else {
+      setTimeout(() => {
+        const nameValue = getValues("name");
+        toast.success(`Thank you! , ${nameValue} I will get back to you.`);
+        reset({
+          name: "",
+          email: "",
+          message: "",
+        });
+      }, 10000);
     }
   };
 
