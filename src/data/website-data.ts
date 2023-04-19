@@ -10,6 +10,7 @@ import redux from "../assets/redux.svg";
 import firebase from "../assets/projects/firebase-1.svg";
 import git from "../assets/projects/git-icon.svg";
 import mongo from "../assets/projects/mongodb-icon-1.svg";
+import postman from '../assets/projects/postman.svg'
 
 // Certificate Imports
 import reactbasics from "/src/assets/certificates/react-basics.png";
@@ -30,13 +31,16 @@ import advanceReact from "/src/assets/certificates/AdvanceReact.png";
 // Project Imports
 
 import reactdashboard from "../assets/projects/react-dashboard.png";
-import reactdashboard2 from "../assets/projects/react-dashboard-2.png";
 import authentication from "../assets/projects/react-authentication.png";
-import reactselfie from "../assets/projects/react-selfie-crop-full.png";
+import reduxCart from '../assets/projects/redux-cart.png'
+import simpleBookStore from '../assets/projects/simple-book-store.png'
+// import reactselfie from "../assets/projects/react-selfie-crop-full.png";
 // import exchangerate from "../assets/projects/exchange-rate-api.png";
 // import movieticketdemo from "../assets/projects/movie-ticket.png";
 // import theme from "../assets/projects/theme-full.png";
 // import domarray from "../assets/projects/dom-array-method-full.png";
+
+
 
 import { StaticImageData } from "next/image";
 import react from "../assets/projects/react-2.svg";
@@ -63,7 +67,7 @@ export const tectStackIcons = [
 
 // PROJECTS
 
-type icons = [string, string, string, string, string?];
+type icons = [string, string, string, string, string?,string?];
 export const projects: Array<{
   name: string;
   url: StaticImageData;
@@ -74,6 +78,16 @@ export const projects: Array<{
   live: string;
 }> = [
   {
+    name: "SIMPLE BOOK STORE",
+    url: simpleBookStore,
+    description:
+      "A Postman Simple Book Store API Project where user can explore books,authenticate using Bearer token,place ,update & delete orders, developed with latest Nextjs-13.3.0,redux-toolkit & more.",
+    repo: "https://github.com/BilalSsiddique/wmd-next-books",
+    stack: [next, redux, tailwind, github, git,postman],
+    live: "https://simple-book-store-bilal-siddique.vercel.app/",
+  },
+
+  {
     name: "DASHBOARD",
     url: reactdashboard,
     description:
@@ -83,10 +97,19 @@ export const projects: Array<{
     live: "https://react-admin-learn.vercel.app",
   },
   {
+    name: "REDUX CART",
+    url: reduxCart,
+    description:
+      "A Shopping Cart Project where user can add,update,& delete the products, developed with latest Nextjs-13.3.0,redux-toolkit,fake Store API & Tailwind CSS.",
+    repo: "https://github.com/BilalSsiddique/redux-cart",
+    stack: [next, redux, tailwind, github, git],
+    live: "https://redux-cart-rho.vercel.app/",
+  },
+  {
     name: "AUTHENTICATION",
     url: authentication,
     description:
-      "A Product-Development Internship Project offered at Radical-X, developed with react, firebase & toastify.",
+      "A Part of the Product-Development Internship Project offered at Radical-X, developed with react, firebase & toastify.",
     repo: "https://github.com/BilalSsiddique/test-login",
     stack: [react, firebase, github, git],
     live: "https://authentication-inky.vercel.app",
