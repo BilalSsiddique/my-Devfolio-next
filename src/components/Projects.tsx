@@ -80,7 +80,7 @@ const Projects = () => {
           <div className="text-center">
             <p className="text-3xl font-semibold">Other Noteworthy Projects</p>
             <Link
-              href="/moreProjects"
+              href=" "
               className="text-yellow  hover:underline text-lg mt-4"
             >
               view the archive
