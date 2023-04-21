@@ -34,11 +34,11 @@ import reactdashboard from "../assets/projects/react-dashboard.png";
 import authentication from "../assets/projects/react-authentication.png";
 import reduxCart from '../assets/projects/redux-cart.png'
 import simpleBookStore from '../assets/projects/simple-book-store.png'
-// import reactselfie from "../assets/projects/react-selfie-crop-full.png";
-// import exchangerate from "../assets/projects/exchange-rate-api.png";
-// import movieticketdemo from "../assets/projects/movie-ticket.png";
-// import theme from "../assets/projects/theme-full.png";
-// import domarray from "../assets/projects/dom-array-method-full.png";
+import reactselfie from "../assets/projects/react-selfie-crop-full.png";
+import exchangerate from "../assets/projects/exchange-rate-api.png";
+import movieticketdemo from "../assets/projects/movie-ticket.png";
+import theme from "../assets/projects/theme-full.png";
+import domarray from "../assets/projects/dom-array-method-full.png";
 
 
 
@@ -83,7 +83,7 @@ export const projects: Array<{
     description:
       "A Postman Simple Book Store API Project where user can explore books,authenticate using Bearer token,place ,update & delete orders, developed with latest Nextjs-13.3.0,redux-toolkit & more.",
     repo: "https://github.com/BilalSsiddique/wmd-next-books",
-    stack: [next, redux, tailwind, github, git,postman],
+    stack: [next, redux, tailwind, github, git, postman],
     live: "https://simple-book-store-bilal-siddique.vercel.app/",
   },
 
@@ -106,10 +106,19 @@ export const projects: Array<{
     live: "https://redux-cart-rho.vercel.app/",
   },
   {
-    name: "AUTHENTICATION",
+    name: "AUTHENTICATION USING FIREBASE",
     url: authentication,
     description:
-      "A Part of the Product-Development Internship Project offered at Radical-X, developed with react, firebase & toastify.",
+      "A simple Authentication project where user can signup,login & reset password , developed with react, firebase & toastify.",
+    repo: "https://github.com/BilalSsiddique/test-login",
+    stack: [react, firebase, github, git],
+    live: "https://authentication-inky.vercel.app",
+  },
+  {
+    name: "CURRENCY EXCHANGE RATES CALCULATOR",
+    url: authentication,
+    description:
+      "A simple Authentication project where user can signup,login & reset password , developed with react, firebase & toastify.",
     repo: "https://github.com/BilalSsiddique/test-login",
     stack: [react, firebase, github, git],
     live: "https://authentication-inky.vercel.app",

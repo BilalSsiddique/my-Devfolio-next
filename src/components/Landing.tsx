@@ -5,8 +5,11 @@ import useMediaQuery from "@/hooks/useMediaQuery";
 import Link from "next/link";
 import Image from "next/image";
 import profile from "../assets/profile-2.svg";
+import { useAppDispatch } from "@/store/hook";
+import { setSelectedPage } from "@/store/slices/navbarSlice";
+const Landing = () => {
+  const dispatch = useAppDispatch();
 
-const Landing = ({ setSelectedPage }:any) => {
   const isAboveLargeScreen = useMediaQuery("(min-width:1060px)");
   return (
     <section
@@ -77,14 +80,14 @@ const Landing = ({ setSelectedPage }:any) => {
           <Link
             className="font-outfit text-sm xs:text-lg bg-gradient-rainblue text-deep-blue rounded-sm  xs:max-w-[160px] py-3 px-5 xs:px-7 font-semibold
               hover:bg-blue hover:text-white transition duration-500"
-            onClick={() => setSelectedPage("contact")}
+            onClick={() => dispatch(setSelectedPage("contact"))}
             href="#contact"
           >
             Contact Me
           </Link>
           <Link
             className="rounded-r-sm bg-gradient-rainblue py-0.5 pr-0.5 xs:max-w-[160px]"
-            onClick={() => setSelectedPage("contact")}
+            onClick={() => dispatch(setSelectedPage("contact"))}
             href="#contact"
           >
             <div className="text-sm xs:text-lg bg-deep-blue hover:text-red transition duration-500 w-full h-full flex items-center justify-center px-7 xs:px-10 font-outfit">
