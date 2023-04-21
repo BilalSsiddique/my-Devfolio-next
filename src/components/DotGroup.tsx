@@ -1,12 +1,13 @@
 import React from "react";
 import Link from "next/link";
+import { useAppDispatch, useAppSelector } from "../store/hook";
+import { selectPage, setSelectedPage } from "../store/slices/navbarSlice";
 
+const DotGroup = () => {
+  const dispatch = useAppDispatch();
+  const selectedPage = useAppSelector(selectPage);
 
-
-
-const DotGroup = ({ selectedPage, setSelectedPage }:{selectedPage:string,setSelectedPage:React.Dispatch<React.SetStateAction<string>>}) => {
-
-    const selectedStyles = `bg-gradient-rainbow relative  before:absolute before:w-6 before:h-6 before:rounded-full
+  const selectedStyles = `bg-gradient-rainbow relative  before:absolute before:w-6 before:h-6 before:rounded-full
     before:border-2 before:border-yellow before:left-[-50%] before:top-[-50%]`;
 
   return (
@@ -15,7 +16,7 @@ const DotGroup = ({ selectedPage, setSelectedPage }:{selectedPage:string,setSele
         className={`${selectedPage === "home" ? selectedStyles : "bg-dark-grey"}
         w-3 h-3 rounded-full`}
         href={"#home"}
-        onClick={() => setSelectedPage("home")}
+        onClick={() => dispatch(setSelectedPage("home"))}
       />
       <Link
         className={`${
@@ -23,7 +24,7 @@ const DotGroup = ({ selectedPage, setSelectedPage }:{selectedPage:string,setSele
         }
         w-3 h-3 rounded-full`}
         href={"#skills"}
-        onClick={() => setSelectedPage("skills")}
+        onClick={() => dispatch(setSelectedPage("skills"))}
       />
       <Link
         className={`${
@@ -31,7 +32,7 @@ const DotGroup = ({ selectedPage, setSelectedPage }:{selectedPage:string,setSele
         }
         w-3 h-3 rounded-full`}
         href={"#experience"}
-        onClick={() => setSelectedPage("experience")}
+        onClick={() => dispatch(setSelectedPage("experience"))}
       />
 
       <Link
@@ -40,7 +41,7 @@ const DotGroup = ({ selectedPage, setSelectedPage }:{selectedPage:string,setSele
         }
         w-3 h-3 rounded-full`}
         href={"#projects"}
-        onClick={() => setSelectedPage("projects")}
+        onClick={() => dispatch(setSelectedPage("projects"))}
       />
       <Link
         className={`${
@@ -48,7 +49,7 @@ const DotGroup = ({ selectedPage, setSelectedPage }:{selectedPage:string,setSele
         }
         w-3 h-3 rounded-full`}
         href={"#certifications"}
-        onClick={() => setSelectedPage("certifications")}
+        onClick={() => dispatch(setSelectedPage("certifications"))}
       />
 
       <Link
@@ -57,7 +58,7 @@ const DotGroup = ({ selectedPage, setSelectedPage }:{selectedPage:string,setSele
         }
         w-3 h-3 rounded-full`}
         href={"#contact"}
-        onClick={() => setSelectedPage("contact")}
+        onClick={() => dispatch(setSelectedPage("contact"))}
       />
     </div>
   );

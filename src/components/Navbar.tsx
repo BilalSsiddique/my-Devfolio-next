@@ -5,25 +5,49 @@ import menuIcon from "../assets/menu-icon.svg";
 import closeIcon from "../assets/close-icon.svg";
 import Image from "next/image";
 import Link from "next/link";
+import { useAppDispatch, useAppSelector } from "@/store/hook";
+import {
+  isTopPage,
+  selectPage,
+  setSelectedPage,
+  setisTopOfPage,
+} from "@/store/slices/navbarSlice";
+import { useEffect } from "react";
 
-const LinkC = ({ page, selectedPage, setSelectedPage }:any) => {
+const LinkC = ({ page,  }: {page:string}) => {
   const lowerCasePage = page.toLowerCase();
+  const selectedPage = useAppSelector(selectPage);
+  const dispatch = useAppDispatch();
   return (
     <Link
-      className={`font-bold ${selectedPage === lowerCasePage ? "text-yellow " : ""}
+      className={`font-bold ${
+        selectedPage === lowerCasePage ? "text-yellow " : ""
+      }
         hover:text-yellow transition duration-500`}
-      href={`#${lowerCasePage}`}
-      onClick={() => setSelectedPage(lowerCasePage)}
+      href={`/#${lowerCasePage}`}
+      onClick={() => dispatch(setSelectedPage(lowerCasePage))}
     >
       {page}
     </Link>
   );
 };
 
-const Navbar = ({ isTopOfPage,selectedPage, setSelectedPage }:any) => {
+const Navbar = () => {
   const [isMenuToggled, setIsMenuToggled] = useState(false);
   const isAboveSmallScreens = useMediaQuery("(min-width:950px)");
-  const navbarBackground = isTopOfPage ? '' : 'glass-navbar'
+  const dispatch = useAppDispatch();
+  const isTopOfPage = useAppSelector(isTopPage);
+  const navbarBackground = isTopOfPage ? "" : "glass-navbar";
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY === 0) dispatch(setisTopOfPage(true));
+      if (window.scrollY !== 0) dispatch(setisTopOfPage(false));
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+  
+
   return (
     <nav
       className={`${
@@ -36,38 +60,12 @@ const Navbar = ({ isTopOfPage,selectedPage, setSelectedPage }:any) => {
         {/* DESKTOP NAVBAR */}
         {isAboveSmallScreens ? (
           <div className="flex gap-12 md:gap-16 font-opensans text-sm font-semibold ">
-            <LinkC
-              page="Home"
-              selectedPage={selectedPage}
-              setSelectedPage={setSelectedPage}
-            />
-            <LinkC
-              page="Skills"
-              selectedPage={selectedPage}
-              setSelectedPage={setSelectedPage}
-            />
-            <LinkC
-              page="Experience"
-              selectedPage={selectedPage}
-              setSelectedPage={setSelectedPage}
-            />
-
-            <LinkC
-              page="Projects"
-              selectedPage={selectedPage}
-              setSelectedPage={setSelectedPage}
-            />
-
-            <LinkC
-              page="Certifications"
-              selectedPage={selectedPage}
-              setSelectedPage={setSelectedPage}
-            />
-            <LinkC
-              page="Contact"
-              selectedPage={selectedPage}
-              setSelectedPage={setSelectedPage}
-            />
+            <LinkC page="Home" />
+            <LinkC page="Skills" />
+            <LinkC page="Experience" />
+            <LinkC page="Projects" />
+            <LinkC page="Certifications" />
+            <LinkC page="Contact" />
           </div>
         ) : (
           <button
@@ -98,37 +96,12 @@ const Navbar = ({ isTopOfPage,selectedPage, setSelectedPage }:any) => {
 
             {/* MENU ITEMS */}
             <div className="font-outfit flex flex-col gap-9 ml-[33%] text-[20px] text-white">
-              <LinkC
-                page="Home"
-                selectedPage={selectedPage}
-                setSelectedPage={setSelectedPage}
-              />
-              <LinkC
-                page="Skills"
-                selectedPage={selectedPage}
-                setSelectedPage={setSelectedPage}
-              />
-              <LinkC
-                page="Experience"
-                selectedPage={selectedPage}
-                setSelectedPage={setSelectedPage}
-              />
-              <LinkC
-                page="Projects"
-                selectedPage={selectedPage}
-                setSelectedPage={setSelectedPage}
-              />
-              <LinkC
-                page="Certifications"
-                selectedPage={selectedPage}
-                setSelectedPage={setSelectedPage}
-              />
-
-              <LinkC
-                page="Contact"
-                selectedPage={selectedPage}
-                setSelectedPage={setSelectedPage}
-              />
+              <LinkC page="Home" />
+              <LinkC page="Skills" />
+              <LinkC page="Experience" />
+              <LinkC page="Projects" />
+              <LinkC page="Certifications" />
+              <LinkC page="Contact" />
             </div>
           </div>
         )}
