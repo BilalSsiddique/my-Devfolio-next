@@ -65,7 +65,7 @@ const Projects = () => {
         )}
       </div>
 
-      <div className="flex justify-center  font-outfit mt-36 bg-black">
+      <div className="flex justify-center  font-outfit mt-36 ">
         <motion.div
           className="w-full"
           initial="hidden"
