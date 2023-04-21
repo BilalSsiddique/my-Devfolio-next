@@ -67,7 +67,7 @@ export const tectStackIcons = [
 
 // PROJECTS
 
-type icons = [string, string, string, string, string?,string?];
+type icons = [string, string, string, string?, string?,string?];
 export const projects: Array<{
   name: string;
   url: StaticImageData;
@@ -118,10 +118,10 @@ export const projects: Array<{
     name: "CURRENCY EXCHANGE RATES CALCULATOR",
     url: authentication,
     description:
-      "A simple Authentication project where user can signup,login & reset password , developed with react, firebase & toastify.",
-    repo: "https://github.com/BilalSsiddique/test-login",
-    stack: [react, firebase, github, git],
-    live: "https://authentication-inky.vercel.app",
+      "Developed an Exchange Rate Calculator using Exchange API. Exchange APIs include Standard Conversion and Pair Conversion.",
+    repo: "https://github.com/BilalSsiddique/Axiom-all-Projects/tree/main/project4",
+    stack: [javascript,github, git],
+    live: "https://exchange-rates-calculator.vercel.app/",
   },
 ];
 
