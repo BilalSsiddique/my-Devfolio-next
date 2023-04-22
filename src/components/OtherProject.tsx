@@ -8,7 +8,7 @@ import Image from "next/image";
 
 const OtherProject = () => {
   return (
-    <div className="flex flex-wrap justify-center  p-6 gap-8 sm:p-10  w-full">
+    <div className="flex flex-wrap justify-center max-[460px]:px-0 px-10 sm:px-0  gap-8 pt-6 w-full">
       {projects.map(
         (project, idx) =>
           idx >= 3 && (
