@@ -8,13 +8,13 @@ import Image from "next/image";
 
 const OtherProject = () => {
   return (
-    <div className="flex gap-8 p-10  w-full">
+    <div className="flex flex-wrap justify-center bg-black p-6 gap-8 sm:p-10  w-full">
       {projects.map(
         (project, idx) =>
           idx >= 3 && (
             <div
               key={idx}
-              className="p-8 flex glass-navbar  flex-col  w-[340px] gap-10"
+              className="p-8 flex glass-navbar    flex-col    sm:max-w-[340px] gap-10"
             >
               <div className="flex justify-between ">
                 <FiFolder size={35} className="hover:text-yellow" />
@@ -29,17 +29,17 @@ const OtherProject = () => {
               </div>
 
               <div>
-                <p className="text-lg text-yellow font-semibold">
+                <p className=" sm:text-lg text-yellow font-semibold">
                   {project.name}
                 </p>
-                <p className="mt-2 text-sm">{project.description}</p>
+                <p className="mt-2 text-[13px] sm:text-sm">{project.description}</p>
               </div>
               <div className="flex items-center  gap-2 ">
-                {/* <p className="text-xl font-extrabold">Tech Stack </p> */}
+
 
                 {project.stack.map((icon, idx) => (
                   <Fragment key={idx}>
-                    <Image width={27} src={icon!} alt="react" />
+                    <Image  width={27} src={icon!} alt="react" />
                   </Fragment>
                 ))}
               </div>
