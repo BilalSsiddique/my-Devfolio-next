@@ -8,7 +8,7 @@ import Image from "next/image";
 
 const OtherProject = () => {
   return (
-    <div className="flex flex-wrap justify-center bg-black p-6 gap-8 sm:p-10  w-full">
+    <div className="flex flex-wrap justify-center  p-6 gap-8 sm:p-10  w-full">
       {projects.map(
         (project, idx) =>
           idx >= 3 && (
@@ -32,14 +32,14 @@ const OtherProject = () => {
                 <p className=" sm:text-lg text-yellow font-semibold">
                   {project.name}
                 </p>
-                <p className="mt-2 text-[13px] sm:text-sm">{project.description}</p>
+                <p className="mt-2 text-[13px] sm:text-sm">
+                  {project.description}
+                </p>
               </div>
               <div className="flex items-center  gap-2 ">
-
-
                 {project.stack.map((icon, idx) => (
                   <Fragment key={idx}>
-                    <Image  width={27} src={icon!} alt="react" />
+                    <Image width={27} src={icon!} alt="react" />
                   </Fragment>
                 ))}
               </div>
