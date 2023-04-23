@@ -1,7 +1,7 @@
 // Skills Import
 import javascript from "../assets/javascript.svg";
 import typescript from "../assets/typescript.svg";
-import next from "../assets/projects/next-js.svg";
+import next from "../assets/projects/nextjs (1).svg";
 import figma from "../assets/figma.svg";
 import node from "../assets/nodejs.svg";
 import material from "../assets/projects/material-ui-1.svg";
@@ -10,7 +10,7 @@ import redux from "../assets/redux.svg";
 import firebase from "../assets/projects/firebase-1.svg";
 import git from "../assets/projects/git-icon.svg";
 import mongo from "../assets/projects/mongodb-icon-1.svg";
-import postman from '../assets/projects/postman.svg'
+import postman from "../assets/projects/postman.svg";
 
 // Certificate Imports
 import reactbasics from "/src/assets/certificates/react-basics.png";
@@ -32,15 +32,13 @@ import advanceReact from "/src/assets/certificates/AdvanceReact.png";
 
 import reactdashboard from "../assets/projects/react-dashboard.png";
 import authentication from "../assets/projects/react-authentication.png";
-import reduxCart from '../assets/projects/redux-cart.png'
-import simpleBookStore from '../assets/projects/simple-book-store.png'
+import reduxCart from "../assets/projects/redux-cart.png";
+import simpleBookStore from "../assets/projects/simple-book-store.png";
 import reactselfie from "../assets/projects/react-selfie-crop-full.png";
 import exchangerate from "../assets/projects/exchange-rate-api.png";
 import movieticketdemo from "../assets/projects/movie-ticket.png";
 import theme from "../assets/projects/theme-full.png";
 import domarray from "../assets/projects/dom-array-method-full.png";
-
-
 
 import { StaticImageData } from "next/image";
 import react from "../assets/projects/react-2.svg";
@@ -66,8 +64,7 @@ export const tectStackIcons = [
 ];
 
 // PROJECTS
-
-type icons = [string, string, string, string?, string?,string?];
+type icons = string[];
 export const projects: Array<{
   name: string;
   url: StaticImageData;
@@ -83,7 +80,7 @@ export const projects: Array<{
     description:
       "A Postman Simple Book Store API Project where user can explore books,authenticate using Bearer token,place ,update & delete orders, developed with latest Nextjs-13.3.0,redux-toolkit & more.",
     repo: "https://github.com/BilalSsiddique/wmd-next-books",
-    stack: [next, redux, tailwind, github, git, postman],
+    stack: [next, redux, tailwind, typescript, git, postman],
     live: "https://simple-book-store-bilal-siddique.vercel.app/",
   },
 
@@ -102,7 +99,7 @@ export const projects: Array<{
     description:
       "A Shopping Cart Project where user can add,update,& delete the products, developed with latest Nextjs-13.3.0,redux-toolkit,fake Store API & Tailwind CSS.",
     repo: "https://github.com/BilalSsiddique/redux-cart",
-    stack: [next, redux, tailwind, github, git],
+    stack: [next, redux,typescript, tailwind, github, git],
     live: "https://redux-cart-rho.vercel.app/",
   },
   {
@@ -120,8 +117,47 @@ export const projects: Array<{
     description:
       "Developed an Exchange Rate Calculator using Exchange API. Exchange APIs include Standard Conversion and Pair Conversion.",
     repo: "https://github.com/BilalSsiddique/Axiom-all-Projects/tree/main/project4",
-    stack: [javascript,github, git],
+    stack: [javascript, github, git],
     live: "https://exchange-rates-calculator.vercel.app/",
+  },
+];
+
+// MORE PROJECTS
+
+export const moreProjects: Array<{
+  year: number;
+  title: string;
+  builtWith: icons;
+  repo: string;
+  live: string;
+}> = [
+  {
+    year: 2023,
+    title: "React Capture & Crop Image",
+    repo: "https://github.com/BilalSsiddique/react-selfie-image-crop",
+    builtWith: [react, github, git],
+    live: "https://react-camera-selfie-and-card-capturing.vercel.app/",
+  },
+  {
+    year: 2023,
+    title: "Simple Todo App using Nextjs",
+    repo: "https://github.com/BilalSsiddique/WMD-Nextjs-todos",
+    builtWith: [next, github, git],
+    live: "https://bilalsiddique-todoapp-nextjs.vercel.app/",
+  },
+  {
+    year: 2022,
+    title: "Movie Ticket Demo",
+    repo: "https://github.com/BilalSsiddique/Axiom-all-Projects/tree/main/project2",
+    builtWith: [javascript, github, git],
+    live: "https://movie-ticket-demo-project.vercel.app/",
+  },
+  {
+    year: 2022,
+    title: "DOM Array Methods",
+    repo: "https://github.com/BilalSsiddique/Axiom-all-Projects/blob/main/project5/index.html",
+    builtWith: [javascript, github, git],
+    live: "https://bilal-siddiqueprojects.netlify.app/project5/index.html",
   },
 ];
 
@@ -161,10 +197,10 @@ export const experience: Array<experience> = [
     to: "November",
     year: "2022",
     workDone: [
-      "Collaborated in an interdisciplinary and agile team consisting of frontend and backend developers, designers and product managers",
-      "Contributed towards creating user stories, further dividing them into engineering tickets and setting them up on ClickUp board",
-      "Worked in an agile environment to develop the front-end of an Apprenticeship Project where a company is able to login to their dashboard and set up (create, read, update, delete) an apprenticeship program and successfully hire a team on contractual basis",
-      "Followed best development practices & patterns Completed assigned task & also provide suggestions",
+      "Collaborated in an interdisciplinary and agile team consisting of frontend and backend developers, designers and product managers.",
+      "Contributed towards creating user stories, further dividing them into engineering tickets and setting them up on ClickUp board.",
+      "Worked in an agile environment to develop the front-end of an Apprenticeship Project where a company is able to login to their dashboard and set up (create, read, update, delete) an apprenticeship program and successfully hire a team on contractual basis.",
+      "Followed best development practices & patterns, completed assigned task & also provide suggestions.",
     ],
   },
   {
