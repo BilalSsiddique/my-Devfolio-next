@@ -5,8 +5,11 @@ import { projects } from "@/data/website-data";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import OtherProject from "./OtherProject";
+import { useAppDispatch, } from "@/store/hook";
+import { setSelectedPage } from "@/store/slices/navbarSlice";
 
 const Projects = () => {
+  const dispatch = useAppDispatch()
   return (
     <>
       <div className="flex flex-wrap  gap-y-16  justify-center md:justify-between    h-full w-full">
@@ -49,11 +52,10 @@ const Projects = () => {
                         </Link>
                       </div>
                       <div className="flex items-center  gap-2 ">
-                        {/* <p className="text-xl font-extrabold">Tech Stack </p> */}
 
                         {project.stack.map((icon, idx) => (
                           <Fragment key={idx}>
-                            <Image width={30} src={icon!} alt="react" />
+                            <Image width={30} src={icon} alt="react" />
                           </Fragment>
                         ))}
                       </div>
@@ -65,7 +67,13 @@ const Projects = () => {
         )}
       </div>
 
-      <div className="flex justify-center  font-outfit mt-36 ">
+      <div className="flex flex-col justify-center  font-outfit mt-36 ">
+        <div className="text-center ">
+          <p className="text-3xl font-semibold">Other Noteworthy Projects</p>
+          <Link href="/moreProjects" onClick={()=> dispatch(setSelectedPage(''))} className="text-yellow  hover:underline text-lg mt-4">
+            view the archive
+          </Link>
+        </div>
         <motion.div
           className="w-full"
           initial="hidden"
@@ -77,16 +85,7 @@ const Projects = () => {
             visible: { opacity: 1, x: 0 },
           }}
         >
-          <div className="text-center">
-            <p className="text-3xl font-semibold">Other Noteworthy Projects</p>
-            <Link
-              href=" "
-              className="text-yellow  hover:underline text-lg mt-4"
-            >
-              view the archive
-            </Link>
-          </div>
-
+          {/* Other NoteWorthy projects component */}
           <OtherProject />
         </motion.div>
       </div>

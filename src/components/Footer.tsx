@@ -1,11 +1,11 @@
-import React from 'react'
-import SocialMediaIcons from './SocialMediaIcons'
-import { FaCopyright } from 'react-icons/fa';
+import React from "react";
+import SocialMediaIcons from "./SocialMediaIcons";
+import { FaCopyright } from "react-icons/fa";
 const Footer = () => {
   return (
-    <footer className="h-64 glass-navbar pt-10 ">
+    <footer className="h-64 glass-navbar pt-10  w-full">
       <div className="w-5/6 mx-auto">
-        <SocialMediaIcons />
+        <SocialMediaIcons size={24} />
         <div className="md:flex  justify-center md:justify-between text-center">
           <p className="font-outfit font-semibold text-xl xs:text-2xl text-yellow">
             BILAL SIDDIQUE
@@ -18,6 +18,6 @@ const Footer = () => {
       </div>
     </footer>
   );
-}
+};
 
-export default Footer
+export default Footer;

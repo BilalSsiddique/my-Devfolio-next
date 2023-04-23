@@ -2,7 +2,7 @@ import React from "react";
 import { FaFacebook, FaInstagram, FaTwitter, FaLinkedin,FaGithub } from "react-icons/fa";
 import Link from "next/link";
 
-const SocialMediaIcons = () => {
+const SocialMediaIcons = ({size=32}:{size?:number}) => {
   return (
     <div className="flex justify-center md:justify-start my-2 gap-7">
       <Link
@@ -12,7 +12,7 @@ const SocialMediaIcons = () => {
         rel="noreferrer"
       >
         <button>
-          <FaLinkedin size={32} />
+          <FaLinkedin size={size} />
         </button>
       </Link>
       <Link
@@ -22,7 +22,7 @@ const SocialMediaIcons = () => {
         rel="noreferrer"
       >
         <button>
-          <FaTwitter size={32} />
+          <FaTwitter size={size} />
         </button>
       </Link>
       <Link
@@ -32,7 +32,7 @@ const SocialMediaIcons = () => {
         rel="noreferrer"
       >
         <button>
-          <FaFacebook size={32} />
+          <FaFacebook size={size} />
         </button>
       </Link>
       <Link
@@ -42,7 +42,7 @@ const SocialMediaIcons = () => {
         rel="noreferrer"
       >
         <button>
-          <FaInstagram size={32} />
+          <FaInstagram size={size} />
         </button>
       </Link>
       <Link
@@ -52,7 +52,7 @@ const SocialMediaIcons = () => {
         rel="noreferrer"
       >
         <button>
-          <FaGithub size={32} />
+          <FaGithub size={size} />
         </button>
       </Link>
     </div>
