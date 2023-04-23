@@ -55,7 +55,9 @@ const Navbar = () => {
       } z-50  w-full ${navbarBackground}  fixed top-0 py-6 `}
     >
       <div className="flex items-center justify-between mx-auto w-5/6 ">
-        <h4 className="font-outfit text-3xl font-extrabold ">BS</h4>
+        <Link href='/#home'>
+          <h4 className="font-outfit text-3xl font-extrabold ">BS</h4>
+        </Link>
 
         {/* DESKTOP NAVBAR */}
         {isAboveSmallScreens ? (
