@@ -80,11 +80,10 @@ const Landing = () => {
           <Link
             className="font-outfit text-sm xs:text-lg bg-gradient-rainblue text-deep-blue rounded-sm  xs:max-w-[160px] py-3 px-5 xs:px-7 font-semibold
               hover:bg-blue hover:text-white transition duration-500"
-            
             href="/Bilal_Siddique.pdf"
             locale={false}
           >
-            Resume
+            Resume &nbsp;&nbsp;&nbsp;&nbsp;
           </Link>
           <Link
             className="rounded-r-sm bg-gradient-rainblue py-0.5 pr-0.5 xs:max-w-[160px]"
