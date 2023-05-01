@@ -11,6 +11,7 @@ import firebase from "../assets/projects/firebase-1.svg";
 import git from "../assets/projects/git-icon.svg";
 import mongo from "../assets/projects/mongodb-icon-1.svg";
 import postman from "../assets/projects/postman.svg";
+import contentful from '../assets/projects/contentful.svg'
 
 // Certificate Imports
 import reactbasics from "/src/assets/certificates/react-basics.png";
@@ -34,17 +35,18 @@ import reactdashboard from "../assets/projects/react-dashboard.png";
 import authentication from "../assets/projects/react-authentication.png";
 import reduxCart from "../assets/projects/redux-cart.png";
 import simpleBookStore from "../assets/projects/simple-book-store.png";
-import reactselfie from "../assets/projects/react-selfie-crop-full.png";
-import exchangerate from "../assets/projects/exchange-rate-api.png";
-import movieticketdemo from "../assets/projects/movie-ticket.png";
-import theme from "../assets/projects/theme-full.png";
-import domarray from "../assets/projects/dom-array-method-full.png";
+// import reactselfie from "../assets/projects/react-selfie-crop-full.png";
+// import exchangerate from "../assets/projects/exchange-rate-api.png";
+// import movieticketdemo from "../assets/projects/movie-ticket.png";
+// import theme from "../assets/projects/theme-full.png";
+// import domarray from "../assets/projects/dom-array-method-full.png";
 
 import { StaticImageData } from "next/image";
 import react from "../assets/projects/react-2.svg";
 import framer from "../assets/projects/framer-motion.svg";
 import materialui from "../assets/projects/material-ui-1.svg";
 import github from "../assets/githubLogo.svg";
+
 
 // Skills
 export const tectStackIcons = [
@@ -61,13 +63,14 @@ export const tectStackIcons = [
   { Image: firebase, alt: "Firebase" },
   { Image: git, alt: "Git & Github" },
   { Image: mongo, alt: "Mongo-DB" },
+  { Image: contentful, alt: "contentful" },
 ];
 
 // PROJECTS
 type icons = string[];
 export const projects: Array<{
   name: string;
-  url: StaticImageData;
+  url?: StaticImageData;
   classname?: string;
   description: string;
   repo: string;
@@ -99,8 +102,16 @@ export const projects: Array<{
     description:
       "A Shopping Cart Project where user can add,update,& delete the products, developed with latest Nextjs-13.3.0,redux-toolkit,fake Store API & Tailwind CSS.",
     repo: "https://github.com/BilalSsiddique/redux-cart",
-    stack: [next, redux,typescript, tailwind, github, git],
+    stack: [next, redux, typescript, tailwind, github, git],
     live: "https://redux-cart-rho.vercel.app/",
+  },
+  {
+    name: "NEXTJS BLOG WEBSITE",
+    description:
+      "Developed a Blog Website using Contenful CMS(content Managament System), Nexjs along with Nextjs Server functions for SSG(Static Site Generation).",
+    repo: "https://github.com/BilalSsiddique/wmd-next-contentful-blogs",
+    stack: [next, react,contentful,tailwind, github, git],
+    live: "https://random-blogs-by-bilalsiddique.vercel.app/",
   },
   {
     name: "AUTHENTICATION USING FIREBASE",
@@ -113,7 +124,6 @@ export const projects: Array<{
   },
   {
     name: "CURRENCY EXCHANGE RATES CALCULATOR",
-    url: authentication,
     description:
       "Developed an Exchange Rate Calculator using Exchange API. Exchange APIs include Standard Conversion and Pair Conversion.",
     repo: "https://github.com/BilalSsiddique/Axiom-all-Projects/tree/main/project4",
