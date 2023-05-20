@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Dispatch } from "react";
 import { useState } from "react";
 import useMediaQuery from "../hooks/useMediaQuery";
 import menuIcon from "../assets/menu-icon.svg";
@@ -14,10 +14,17 @@ import {
 } from "@/store/slices/navbarSlice";
 import { useEffect } from "react";
 
-const LinkC = ({ page,  }: {page:string}) => {
+const LinkC = ({ page,isMenuToggled,setIsMenuToggled }: { page: string,setIsMenuToggled?: Dispatch<boolean>,isMenuToggled?:boolean }) => {
   const lowerCasePage = page.toLowerCase();
   const selectedPage = useAppSelector(selectPage);
   const dispatch = useAppDispatch();
+
+  function setDispatchandtoggle(){
+    dispatch(setSelectedPage(lowerCasePage));
+    if (isMenuToggled !== undefined && setIsMenuToggled !== undefined) {
+      setIsMenuToggled(!isMenuToggled);
+    }
+  }
   return (
     <Link
       className={`font-bold ${
@@ -25,7 +32,7 @@ const LinkC = ({ page,  }: {page:string}) => {
       }
         hover:text-yellow transition duration-500`}
       href={`/#${lowerCasePage}`}
-      onClick={() => dispatch(setSelectedPage(lowerCasePage))}
+      onClick={setDispatchandtoggle}
     >
       {page}
     </Link>
@@ -46,7 +53,6 @@ const Navbar = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-  
 
   return (
     <nav
@@ -55,19 +61,37 @@ const Navbar = () => {
       } z-50  w-full ${navbarBackground}  fixed top-0 py-6 `}
     >
       <div className="flex items-center justify-between mx-auto w-5/6 ">
-        <Link href='/#home'>
+        <Link href="/#home">
           <h4 className="font-outfit text-3xl font-extrabold ">BS</h4>
         </Link>
 
         {/* DESKTOP NAVBAR */}
         {isAboveSmallScreens ? (
           <div className="flex gap-12 md:gap-16 font-opensans text-sm font-semibold ">
-            <LinkC page="Home" />
-            <LinkC page="Skills" />
-            <LinkC page="Experience" />
-            <LinkC page="Projects" />
-            <LinkC page="Certifications" />
-            <LinkC page="Contact" />
+            <LinkC
+              page="Home"
+              
+            />
+            <LinkC
+              page="Skills"
+              
+            />
+            <LinkC
+              page="Experience"
+             
+            />
+            <LinkC
+              page="Projects"
+       
+            />
+            <LinkC
+              page="Certifications"
+           
+            />
+            <LinkC
+              page="Contact"
+              
+            />
           </div>
         ) : (
           <button
@@ -98,12 +122,36 @@ const Navbar = () => {
 
             {/* MENU ITEMS */}
             <div className="font-outfit flex flex-col gap-9 ml-[33%] text-[20px] text-white">
-              <LinkC page="Home" />
-              <LinkC page="Skills" />
-              <LinkC page="Experience" />
-              <LinkC page="Projects" />
-              <LinkC page="Certifications" />
-              <LinkC page="Contact" />
+              <LinkC
+                page="Home"
+                isMenuToggled={isMenuToggled}
+                setIsMenuToggled={setIsMenuToggled}
+              />
+              <LinkC
+                page="Skills"
+                isMenuToggled={isMenuToggled}
+                setIsMenuToggled={setIsMenuToggled}
+              />
+              <LinkC
+                page="Experience"
+                isMenuToggled={isMenuToggled}
+                setIsMenuToggled={setIsMenuToggled}
+              />
+              <LinkC
+                page="Projects"
+                isMenuToggled={isMenuToggled}
+                setIsMenuToggled={setIsMenuToggled}
+              />
+              <LinkC
+                page="Certifications"
+                isMenuToggled={isMenuToggled}
+                setIsMenuToggled={setIsMenuToggled}
+              />
+              <LinkC
+                page="Contact"
+                isMenuToggled={isMenuToggled}
+                setIsMenuToggled={setIsMenuToggled}
+              />
             </div>
           </div>
         )}
