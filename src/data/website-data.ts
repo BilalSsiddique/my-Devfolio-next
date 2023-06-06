@@ -12,6 +12,7 @@ import git from "../assets/projects/git-icon.svg";
 import mongo from "../assets/projects/mongodb-icon-1.svg";
 import postman from "../assets/projects/postman.svg";
 import contentful from '../assets/projects/contentful.svg'
+import Sanity from '../assets/sanity.svg'
 
 // Certificate Imports
 import reactbasics from "/src/assets/certificates/react-basics.png";
@@ -59,11 +60,11 @@ export const tectStackIcons = [
   { Image: material, alt: "Material-UI" },
   { Image: tailwind, alt: "Tailwind" },
   { Image: redux, alt: "Redux-Toolkit" },
-  // { Image: "../assets/context", alt: "Context-API" },
   { Image: firebase, alt: "Firebase" },
   { Image: git, alt: "Git & Github" },
   { Image: mongo, alt: "Mongo-DB" },
   { Image: contentful, alt: "contentful" },
+  { Image: Sanity, alt: "Sanity" },
 ];
 
 // PROJECTS
