@@ -35,6 +35,7 @@ const Skills = () => {
                 src={iconImage.Image}
                 alt={`${iconImage.alt}-icon`}
                 width={50}
+                priority
               />
             </motion.div>
             <div className=" h-0.5  w-full bg-gradient-rainbow rounded-full "></div>
