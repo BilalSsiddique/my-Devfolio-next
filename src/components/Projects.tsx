@@ -52,7 +52,6 @@ const Projects = () => {
                         </Link>
                       </div>
                       <div className="flex items-center  gap-2 ">
-
                         {project.stack.map((icon, idx) => (
                           <Fragment key={idx}>
                             <Image width={30} src={icon} alt="react" />
@@ -70,11 +69,16 @@ const Projects = () => {
       <div className="flex flex-col justify-center  font-outfit mt-36 ">
         <div className="text-center ">
           <p className="text-3xl font-semibold">Other Noteworthy Projects</p>
-          <Link href="/moreProjects" onClick={()=> dispatch(setSelectedPage(''))} className="text-yellow  hover:underline text-lg mt-4">
+          <Link
+            href="/moreProjects"
+            onClick={() => dispatch(setSelectedPage(""))}
+            className="text-yellow  hover:underline text-lg mt-4"
+          >
             view the archive
           </Link>
         </div>
         <motion.div
+          style={{ willChange: "opacity, transform" }}
           className="w-full"
           initial="hidden"
           whileInView="visible"

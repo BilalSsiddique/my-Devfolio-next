@@ -1,16 +1,14 @@
 import React from "react";
 import { motion } from "framer-motion";
 import SocialMediaIcons from "./SocialMediaIcons";
-import useMediaQuery from "@/hooks/useMediaQuery";
 import Link from "next/link";
 import Image from "next/image";
 import profile from "../assets/profile-2.svg";
 import { useAppDispatch } from "@/store/hook";
 import { setSelectedPage } from "@/store/slices/navbarSlice";
+
 const Landing = () => {
   const dispatch = useAppDispatch();
-
-  const isAboveLargeScreen = useMediaQuery("(min-width:1060px)");
   return (
     <section
       id="home"
@@ -19,18 +17,15 @@ const Landing = () => {
       {/* IMAGE SECTION  */}
       <div className=" md:order-2 md:flex md:justify-center md:basis-1/2 z-10 mt-16 md:mt-32">
         <div className="b-gradient-rainbow-bg-right"></div>
-        {isAboveLargeScreen ? (
-          <div className="relative z-0  ml-20 before:absolute before:top-2 before:-left-1 before:rounded-full before:w-[72%] before:h-[72%] before:border-2  before:border-blue before:max-w-[400px] before:z-[-1]">
-            <Image
-              alt="profile"
-              className=" max-w-[300px] md:max-w-[400px] hover:filter hover:saturate-200 transition duration-500 z-10 w-full  "
-              src={profile}
-              width={500}
-            />
-          </div>
-        ) : (
-          ""
-        )}
+
+        <div className="hidden min-[1060px]:block relative z-0  ml-20 before:absolute before:top-2 before:-left-1 before:rounded-full before:w-[72%] before:h-[72%] before:border-2  before:border-blue before:max-w-[400px] before:z-[-1]">
+          <Image
+            alt="profile"
+            className=" max-w-[300px] md:max-w-[400px] hover:filter hover:saturate-200 transition duration-500 z-10 w-full  "
+            src={profile}
+            width={500}
+          />
+        </div>
       </div>
 
       {/* MAIN TEXT */}
@@ -80,7 +75,7 @@ const Landing = () => {
           <Link
             className="font-outfit text-sm xs:text-lg bg-gradient-rainblue text-deep-blue rounded-sm  xs:max-w-[160px] py-3 px-5 xs:px-7 font-semibold
               hover:bg-blue hover:text-white transition duration-500"
-            href="/Bilal_Siddique.pdf"
+            href="/Bilal'sResume(28-06-2023).pdf"
             locale={false}
           >
             Resume &nbsp;&nbsp;&nbsp;&nbsp;
