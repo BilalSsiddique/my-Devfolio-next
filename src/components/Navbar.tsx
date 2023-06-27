@@ -1,43 +1,15 @@
-import React, { Dispatch } from "react";
+
 import { useState } from "react";
 import useMediaQuery from "../hooks/useMediaQuery";
 import menuIcon from "../assets/menu-icon.svg";
 import closeIcon from "../assets/close-icon.svg";
 import Image from "next/image";
 import Link from "next/link";
-import { useAppDispatch, useAppSelector } from "@/store/hook";
-import {
-  isTopPage,
-  selectPage,
-  setSelectedPage,
-  setisTopOfPage,
-} from "@/store/slices/navbarSlice";
 import { useEffect } from "react";
+import { useAppDispatch, useAppSelector } from "@/store/hook";
+import LinkC from '../components/LinkC'
+import { isTopPage,setisTopOfPage } from "@/store/slices/navbarSlice";
 
-const LinkC = ({ page,isMenuToggled,setIsMenuToggled }: { page: string,setIsMenuToggled?: Dispatch<boolean>,isMenuToggled?:boolean }) => {
-  const lowerCasePage = page.toLowerCase();
-  const selectedPage = useAppSelector(selectPage);
-  const dispatch = useAppDispatch();
-
-  function setDispatchandtoggle(){
-    dispatch(setSelectedPage(lowerCasePage));
-    if (isMenuToggled !== undefined && setIsMenuToggled !== undefined) {
-      setIsMenuToggled(!isMenuToggled);
-    }
-  }
-  return (
-    <Link
-      className={`font-bold ${
-        selectedPage === lowerCasePage ? "text-yellow " : ""
-      }
-        hover:text-yellow transition duration-500`}
-      href={`/#${lowerCasePage}`}
-      onClick={setDispatchandtoggle}
-    >
-      {page}
-    </Link>
-  );
-};
 
 const Navbar = () => {
   const [isMenuToggled, setIsMenuToggled] = useState(false);
@@ -45,6 +17,7 @@ const Navbar = () => {
   const dispatch = useAppDispatch();
   const isTopOfPage = useAppSelector(isTopPage);
   const navbarBackground = isTopOfPage ? "" : "glass-navbar";
+  
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY === 0) dispatch(setisTopOfPage(true));
@@ -52,7 +25,7 @@ const Navbar = () => {
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [dispatch]);
 
   return (
     <nav
