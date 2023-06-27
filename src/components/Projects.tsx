@@ -78,7 +78,7 @@ const Projects = () => {
           </Link>
         </div>
         <motion.div
-          style={{ willChange: "opacity, transform" }}
+
           className="w-full"
           initial="hidden"
           whileInView="visible"
