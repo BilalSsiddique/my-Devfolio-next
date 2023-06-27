@@ -204,9 +204,9 @@ export const experience: Array<experience> = [
   {
     name: "Radical X",
     title: "Product Development Intern",
-    from: "Sep",
-    to: "November",
-    year: "2022",
+    from: "Jan",
+    to: "Jun",
+    year: "2021",
     workDone: [
       "Collaborated in an interdisciplinary and agile team consisting of frontend and backend developers, designers and product managers.",
       "Contributed towards creating user stories, further dividing them into engineering tickets and setting them up on ClickUp board.",
@@ -217,12 +217,23 @@ export const experience: Array<experience> = [
   {
     name: "ZHAB Developers",
     title: "Front-end Engineer",
-    from: "Jan",
-    to: "August",
-    year: "2022",
+    from: "Aug ",
+    to: "Dec",
+    year: "2021-2022",
     workDone: [
-      "Developed using CSS, HTML, and JavaScript to enhance functionality and user experience on web pages.",
+      "Developed using CSS, HTML,JavaScript & React.js to enhance functionality and user experience on web pages.",
       "Edited existing code to improve browser compatibility and mobile responsiveness.",
+      "Also Responsible for designing the front-end.",
+    ],
+  },
+  {
+    name: "Fiverr | Upwork",
+    title: "Full-Stack Engineer",
+    from: "Jan",
+    to: "Present",
+    year: "2023",
+    workDone: [
+      "fortunate to collaborate with clients from around the world, allowing me to showcase my expertise and deliver exceptional results through my services.",
     ],
   },
 ];
