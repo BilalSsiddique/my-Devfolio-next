@@ -19,6 +19,7 @@ const Skills = () => {
               {iconImage.alt}
             </p>
             <motion.div
+              style={{ willChange: "opacity, transform" }}
               className=" flex justify-center  items-center absolute mx-auto h-[75px] w-[75px] shadow shadow-dark-grey   top-[-50px] rounded-full"
               initial="hidden"
               whileInView="visible"
