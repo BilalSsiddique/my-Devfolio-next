@@ -32,7 +32,7 @@ const Landing = () => {
       <div className="z-30 h-full w-full md:basis-1/2 mt-32 md:mt-32 ">
         {/* HEADINGS */}
         <motion.div
-          className="motion relative"
+          className="motion relative "
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
