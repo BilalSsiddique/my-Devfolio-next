@@ -29,10 +29,14 @@ export default function Home() {
       <main className={`app bg-deep-blue `}>
         <div className="xs:w-5/6 xs:mx-auto md:h-full ">
           {/* SIDE DOTS BAR */}
-          {isAboveMediumScreens && <DotGroup />}
+          {isAboveMediumScreens && (
+            <DotGroup
+            
+            />
+          )}
 
           {/* INTRO SECTION */}
-          <Landing />
+          <Landing  />
         </div>
 
         {/* Linear Gradient Skills Section (by Default skills) w-full */}
@@ -52,7 +56,7 @@ export default function Home() {
         <LineGradient ID="projects" section="Projects" />
         <div className=" ss:w-5/6 pb-20 mx-5 ss:mx-auto h-full mt-44 xs:mt-52">
           <div className="b-gradient-rainbow-bg"></div>
-          <Projects />
+          <Projects  />
         </div>
 
         {/* Linear Gradient Certifications Section w-full */}

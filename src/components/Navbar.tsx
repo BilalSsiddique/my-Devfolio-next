@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import useMediaQuery from "../hooks/useMediaQuery";
 import menuIcon from "../assets/menu-icon.svg";
@@ -6,26 +5,23 @@ import closeIcon from "../assets/close-icon.svg";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect } from "react";
-import { useAppDispatch, useAppSelector } from "@/store/hook";
 import LinkC from '../components/LinkC'
-import { isTopPage,setisTopOfPage } from "@/store/slices/navbarSlice";
 
 
 const Navbar = () => {
   const [isMenuToggled, setIsMenuToggled] = useState(false);
+  const [isTopOfPage,setisTopOfPage]= useState(true)
   const isAboveSmallScreens = useMediaQuery("(min-width:950px)");
-  const dispatch = useAppDispatch();
-  const isTopOfPage = useAppSelector(isTopPage);
   const navbarBackground = isTopOfPage ? "" : "glass-navbar";
   
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY === 0) dispatch(setisTopOfPage(true));
-      if (window.scrollY !== 0) dispatch(setisTopOfPage(false));
+      if (window.scrollY === 0) setisTopOfPage(true);
+      if (window.scrollY !== 0) setisTopOfPage(false);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [dispatch]);
+  }, []);
 
   return (
     <nav
