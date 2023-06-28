@@ -18,17 +18,17 @@ const Skills = () => {
             <p className="text-[20px] font-outfit font-bold mb-1">
               {iconImage.alt}
             </p>
-            <motion.div
+            <div
               
               className=" flex justify-center  items-center absolute mx-auto h-[75px] w-[75px] shadow shadow-dark-grey   top-[-50px] rounded-full"
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.5 }}
-              transition={{ delay: 0.1, duration: 0.5 }}
-              variants={{
-                hidden: { opacity: 0, y: -50 },
-                visible: { opacity: 1, y: 0 },
-              }}
+              // initial="hidden"
+              // whileInView="visible"
+              // viewport={{ once: true, amount: 0.5 }}
+              // transition={{ delay: 0.1, duration: 0.5 }}
+              // variants={{
+              //   hidden: { opacity: 0, y: -50 },
+              //   visible: { opacity: 1, y: 0 },
+              // }}
             >
               <Image
                 className="bg-cover "
@@ -37,7 +37,7 @@ const Skills = () => {
                 width={50}
                 priority
               />
-            </motion.div>
+            </div>
             <div className=" h-0.5  w-full bg-gradient-rainbow rounded-full "></div>
           </div>
         );
