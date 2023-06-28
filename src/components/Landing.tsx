@@ -56,7 +56,7 @@ const Landing = () => {
 
           <p className="font-outfit max-[420px]:px-4 max-[420px]:text-[13px] mt-11 mb-2 text-sm text-center w-full ss:w-3/5 ss:text-start">
             I&#39;m a Software Engineer , Certified META Front-end Engineer &
-            Aspiring Cloud Engineer.
+            Aspiring Full-Stack & Cloud Engineer.
           </p>
         </motion.div>
 
