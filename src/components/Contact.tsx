@@ -22,7 +22,7 @@ const Contact = () => {
     } else {
       setTimeout(() => {
         const nameValue = getValues("name");
-        toast.success(`Thank you! , ${nameValue} I will get back to you.`);
+        toast.success(`Thank you ${nameValue}, I will get back to you!`);
         reset({
           name: "",
           email: "",
