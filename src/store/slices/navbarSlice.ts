@@ -4,12 +4,11 @@ import { RootState } from "../store";
 
 type InitialState = {
   selectedPage: string,
-  isTopOfPage:boolean,
 };
 
 const initialState:InitialState={
     selectedPage:'home',
-    isTopOfPage: true,
+
 }
 
 
@@ -20,17 +19,14 @@ const navBarSlice= createSlice({
         setSelectedPage(state,action:PayloadAction<string>){
             state.selectedPage= action.payload
         },
-        setisTopOfPage(state,action:PayloadAction<boolean>){
-            state.isTopOfPage = action.payload
-        }
     }
 })
 
 
-export const {setSelectedPage,setisTopOfPage} = navBarSlice.actions;
+export const {setSelectedPage} = navBarSlice.actions;
 
 // selectors 
 export const selectPage = (state:RootState)=> state.navbar.selectedPage
-export const isTopPage = (state:RootState)=> state.navbar.isTopOfPage
+
 
 export default navBarSlice.reducer
