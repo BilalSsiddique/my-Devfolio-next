@@ -13,6 +13,9 @@ import mongo from "../assets/projects/mongodb-icon-1.svg";
 import postman from "../assets/projects/postman.svg";
 import contentful from '../assets/projects/contentful.svg'
 import Sanity from '../assets/sanity.svg'
+import pythonskill from '@/assets/python-5.svg'
+import django from '@/assets/Django.svg'
+import Flask from '@/assets/flask.svg'
 
 // Certificate Imports
 import reactbasics from "/src/assets/certificates/react-basics.png";
@@ -51,6 +54,9 @@ import github from "../assets/githubLogo.svg";
 
 // Skills
 export const tectStackIcons = [
+  { Image: pythonskill, alt: "Python" },
+  { Image: django, alt: "django" },
+  { Image: Flask, alt: "Flask" },
   { Image: javascript, alt: "Javascript" },
   { Image: typescript, alt: "Typescript" },
   { Image: react, alt: "React.js" },
