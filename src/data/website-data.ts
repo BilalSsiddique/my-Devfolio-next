@@ -202,6 +202,29 @@ type experience = {
 };
 export const experience: Array<experience> = [
   {
+    name: "Fiverr | Upwork",
+    title: "Full-Stack Engineer",
+    from: "Jan",
+    to: "Present",
+    year: "2023",
+    workDone: [
+      "fortunate to collaborate with clients from around the world, allowing me to showcase my expertise and deliver exceptional results through my services.",
+    ],
+  },
+  {
+    name: "NED University(UIT)",
+    title: "Assistant Python Lecturer",
+    from: "Oct ",
+    to: "Mar",
+    year: "2022-2023",
+    workDone: [
+      "Assisted lead Python lecturer in preparing and delivering engaging lectures.",
+      "Conducted tutorial sessions to provide additional support on Python programming concepts..",
+      "Assisted in organizing and coordinating coding competitions or workshops to foster a coding culture among students.",
+      "Maintained a positive and inclusive learning environment, encouraging students to explore and excel in Python programming."],
+  },
+
+  {
     name: "Radical X",
     title: "Product Development Intern",
     from: "Jan",
@@ -212,28 +235,6 @@ export const experience: Array<experience> = [
       "Contributed towards creating user stories, further dividing them into engineering tickets and setting them up on ClickUp board.",
       "Worked in an agile environment to develop the front-end of an Apprenticeship Project where a company is able to login to their dashboard and set up (create, read, update, delete) an apprenticeship program and successfully hire a team on contractual basis.",
       "Followed best development practices & patterns, completed assigned task & also provide suggestions.",
-    ],
-  },
-  {
-    name: "ZHAB Developers",
-    title: "Front-end Engineer",
-    from: "Aug ",
-    to: "Dec",
-    year: "2021-2022",
-    workDone: [
-      "Developed using CSS, HTML,JavaScript & React.js to enhance functionality and user experience on web pages.",
-      "Edited existing code to improve browser compatibility and mobile responsiveness.",
-      "Also Responsible for designing the front-end.",
-    ],
-  },
-  {
-    name: "Fiverr | Upwork",
-    title: "Full-Stack Engineer",
-    from: "Jan",
-    to: "Present",
-    year: "2023",
-    workDone: [
-      "fortunate to collaborate with clients from around the world, allowing me to showcase my expertise and deliver exceptional results through my services.",
     ],
   },
 ];
