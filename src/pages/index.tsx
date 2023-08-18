@@ -85,6 +85,7 @@ export default function Home() {
         <div className=" ss:w-5/6 pb-20 mx-5 ss:mx-auto h-full mt-44 xs:mt-52">
           <Contact />
         </div>
+
       </main>
     </>
   );

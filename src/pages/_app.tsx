@@ -15,9 +15,9 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
       <ToastContainer position="top-center" />
       <Provider store={store}>
-        <Navbar />
+        {/* <Navbar /> */}
         <Component {...pageProps} />
-        <Footer />
+        {/* <Footer /> */}
       </Provider>
       <Analytics />
     </>
