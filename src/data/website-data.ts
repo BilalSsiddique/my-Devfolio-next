@@ -11,11 +11,16 @@ import firebase from "../assets/projects/firebase-1.svg";
 import git from "../assets/projects/git-icon.svg";
 import mongo from "../assets/projects/mongodb-icon-1.svg";
 import postman from "../assets/projects/postman.svg";
-import contentful from '../assets/projects/contentful.svg'
-import Sanity from '../assets/sanity.svg'
-import pythonskill from '@/assets/python-5.svg'
-import django from '@/assets/Django.svg'
-import Flask from '@/assets/flask.svg'
+import contentful from "../assets/projects/contentful.svg";
+import Sanity from "../assets/sanity.svg";
+import pythonskill from "@/assets/python-5.svg";
+import django from "@/assets/Django.svg";
+import Flask from "@/assets/flask.svg";
+import Bootstrap from "@/assets/Bootstrap5.svg";
+import postgreSQL from "@/assets/postgresql.svg";
+import airflow from "@/assets/airflow.svg";
+import mysql from "@/assets/mysql-6.svg";
+import streamlit from "@/assets/streamlit.svg";
 
 // Certificate Imports
 import reactbasics from "/src/assets/certificates/react-basics.png";
@@ -32,6 +37,7 @@ import datascience from "/src/assets/certificates/Introduction-to-data-science.p
 import javascriptc from "/src/assets/certificates/programming-with-js.png";
 import manipluation from "/src/assets/certificates/data-manipulation.png";
 import advanceReact from "/src/assets/certificates/AdvanceReact.png";
+import sql from "@/assets/certificates/sql.svg";
 
 // Project Imports
 
@@ -39,6 +45,7 @@ import reactdashboard from "../assets/projects/react-dashboard.png";
 import authentication from "../assets/projects/react-authentication.png";
 import reduxCart from "../assets/projects/redux-cart.png";
 import simpleBookStore from "../assets/projects/simple-book-store.png";
+import studentProject from "@/assets/projects/Student-Project-Management.png";
 // import reactselfie from "../assets/projects/react-selfie-crop-full.png";
 // import exchangerate from "../assets/projects/exchange-rate-api.png";
 // import movieticketdemo from "../assets/projects/movie-ticket.png";
@@ -51,7 +58,6 @@ import framer from "../assets/projects/framer-motion.svg";
 import materialui from "../assets/projects/material-ui-1.svg";
 import github from "../assets/githubLogo.svg";
 
-
 // Skills
 export const tectStackIcons = [
   { Image: pythonskill, alt: "Python" },
@@ -61,7 +67,7 @@ export const tectStackIcons = [
   { Image: typescript, alt: "Typescript" },
   { Image: react, alt: "React.js" },
   { Image: next, alt: "Next.js" },
-  { Image: node, alt: "Node.js" },
+  { Image: postgreSQL, alt: "PostgreSQL" },
   { Image: figma, alt: "Figma" },
   { Image: material, alt: "Material-UI" },
   { Image: tailwind, alt: "Tailwind" },
@@ -82,13 +88,22 @@ export const projects: Array<{
   description: string;
   repo: string;
   stack: icons;
-  live: string;
+  live?: string;
 }> = [
   {
-    name: "SIMPLE BOOK STORE",
+    name: "STUDENT PROJECT ALLOCATION SYSTEM",
+    url: studentProject,
+    description:
+      "Designed and implemented a Python Django based project enabling student and project management.Empowered users to effortlessly add, edit, and assign projects to students, while providing visibility into assigned projects. ",
+    repo: "https://github.com/BilalSsiddique/basic_student_project_allocation_system",
+    stack: [pythonskill, django, postgreSQL, Bootstrap, git],
+    live: "https://basic-student-project-allocation-system.vercel.app/",
+  },
+  {
+    name: "BOOK STORE",
     url: simpleBookStore,
     description:
-      "A Postman Simple Book Store API Project where user can explore books,authenticate using Bearer token,place ,update & delete orders, developed with latest Nextjs-13.3.0,redux-toolkit & more.",
+      "A Simple Book Store Project developed using POSTMAN provided API where user can explore books,authenticate using Bearer token,place ,update & delete orders, developed with latest Nextjs-13.3.0,redux-toolkit & more.",
     repo: "https://github.com/BilalSsiddique/wmd-next-books",
     stack: [next, redux, tailwind, typescript, git, postman],
     live: "https://simple-book-store-bilal-siddique.vercel.app/",
@@ -113,14 +128,6 @@ export const projects: Array<{
     live: "https://redux-cart-rho.vercel.app/",
   },
   {
-    name: "NEXTJS BLOG WEBSITE",
-    description:
-      "Developed a Blog Website using Contenful CMS(content Managament System), Nexjs along with Nextjs Server functions for SSG(Static Site Generation).",
-    repo: "https://github.com/BilalSsiddique/wmd-next-contentful-blogs",
-    stack: [next, react,contentful,tailwind, github, git],
-    live: "https://random-blogs-by-bilalsiddique.vercel.app/",
-  },
-  {
     name: "AUTHENTICATION USING FIREBASE",
     url: authentication,
     description:
@@ -129,6 +136,23 @@ export const projects: Array<{
     stack: [react, firebase, github, git],
     live: "https://authentication-inky.vercel.app",
   },
+  {
+    name: "CONSUMER COMPLAINTS DATA PIPELINE AND VISUALIZATION",
+    description:
+      "Crafted an end-to-end ETL solution in Airflow for Consumer Financial Protection Bureau complaint data, meeting internal stakeholders’ need for up-to-date monitoring.",
+    repo: "https://github.com/BilalSsiddique/CFPB-Complaints-ETL-Dashboard",
+    stack: [pythonskill, airflow, mysql, streamlit, github, git],
+    live: "https://github.com/BilalSsiddique/CFPB-Complaints-ETL-Dashboard",
+  },
+  {
+    name: "NEXTJS BLOG WEBSITE",
+    description:
+      "Developed a Blog Website using Contenful CMS(content Managament System), Nexjs along with Nextjs Server functions for SSG(Static Site Generation).",
+    repo: "https://github.com/BilalSsiddique/wmd-next-contentful-blogs",
+    stack: [next, react, contentful, tailwind, github, git],
+    live: "https://random-blogs-by-bilalsiddique.vercel.app/",
+  },
+
   {
     name: "CURRENCY EXCHANGE RATES CALCULATOR",
     description:
@@ -182,6 +206,7 @@ export const moreProjects: Array<{
 
 export const slides: Array<{ url: StaticImageData; classname?: string }> = [
   { url: advanceReact, classname: "design-react" },
+  { url: sql },
   { url: javascriptc },
   { url: ITF },
   { url: reactbasics, classname: "design-javascript" },
@@ -220,19 +245,20 @@ export const experience: Array<experience> = [
   {
     name: "NED University(UIT)",
     title: "Assistant Python Lecturer",
-    from: "Oct ",
-    to: "Mar",
-    year: "2022-2023",
+    from: "Jan",
+    to: "July",
+    year: "2023",
     workDone: [
       "Assisted lead Python lecturer in preparing and delivering engaging lectures.",
       "Conducted tutorial sessions to provide additional support on Python programming concepts..",
       "Assisted in organizing and coordinating coding competitions or workshops to foster a coding culture among students.",
-      "Maintained a positive and inclusive learning environment, encouraging students to explore and excel in Python programming."],
+      "Maintained a positive and inclusive learning environment, encouraging students to explore and excel in Python programming.",
+    ],
   },
 
   {
     name: "Radical X",
-    title: "Product Development Intern",
+    title: "Software Engineer Intern ",
     from: "Jan",
     to: "Jun",
     year: "2021",

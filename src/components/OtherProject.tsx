@@ -11,10 +11,10 @@ const OtherProject = () => {
     <div className="flex flex-wrap justify-center max-[460px]:px-0 px-10 sm:px-0  gap-8 pt-6 w-full">
       {projects.map(
         (project, idx) =>
-          idx >= 3 && (
+          idx >= 5 && (
             <div
               key={idx}
-              className="p-8 flex glass-navbar    flex-col    sm:max-w-[340px] gap-10"
+              className="p-6 flex shadow-inner glass-navbar    flex-col    sm:max-w-[340px] gap-10"
             >
               <div className="flex justify-between ">
                 <FiFolder size={35} className="hover:text-yellow" />
@@ -22,7 +22,7 @@ const OtherProject = () => {
                   <Link target="_blank" href={project.repo}>
                     <FaGithub size={22} className="hover:text-yellow" />
                   </Link>
-                  <Link target="_blank" href={project.live}>
+                  <Link target="_blank" href={project.live ? project.live : ''}>
                     <FiExternalLink size={22} className="hover:text-yellow" />
                   </Link>
                 </div>

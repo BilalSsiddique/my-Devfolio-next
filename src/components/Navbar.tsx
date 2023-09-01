@@ -5,15 +5,14 @@ import closeIcon from "../assets/close-icon.svg";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect } from "react";
-import LinkC from '../components/LinkC'
-
+import LinkC from "../components/LinkC";
 
 const Navbar = () => {
   const [isMenuToggled, setIsMenuToggled] = useState(false);
-  const [isTopOfPage,setisTopOfPage]= useState(true)
+  const [isTopOfPage, setisTopOfPage] = useState(true);
   const isAboveSmallScreens = useMediaQuery("(min-width:950px)");
   const navbarBackground = isTopOfPage ? "" : "glass-navbar";
-  
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY === 0) setisTopOfPage(true);
@@ -37,30 +36,12 @@ const Navbar = () => {
         {/* DESKTOP NAVBAR */}
         {isAboveSmallScreens ? (
           <div className="flex gap-12 md:gap-16 font-opensans text-sm font-semibold ">
-            <LinkC
-              page="Home"
-              
-            />
-            <LinkC
-              page="Skills"
-              
-            />
-            <LinkC
-              page="Experience"
-             
-            />
-            <LinkC
-              page="Projects"
-       
-            />
-            <LinkC
-              page="Certifications"
-           
-            />
-            <LinkC
-              page="Contact"
-              
-            />
+            <LinkC page="Home" />
+            <LinkC page="Skills" />
+            <LinkC page="Experience" />
+            <LinkC page="Projects" />
+            <LinkC page="Certifications" />
+            <LinkC page="Contact" />
           </div>
         ) : (
           <button
