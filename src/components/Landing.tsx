@@ -80,6 +80,7 @@ const Landing = () => {
           >
             Resume &nbsp;&nbsp;&nbsp;&nbsp;
           </Link>
+
           <Link
             className="rounded-r-sm bg-gradient-rainblue py-0.5 pr-0.5 xs:max-w-[160px]"
             onClick={() => dispatch(setSelectedPage("contact"))}

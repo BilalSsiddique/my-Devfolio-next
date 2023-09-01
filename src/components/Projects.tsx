@@ -15,7 +15,7 @@ const Projects = () => {
       <div className="flex flex-wrap  gap-y-16  justify-center md:justify-between    h-full w-full">
         {projects.map(
           (project, idx) =>
-            idx < 3 && (
+            idx < 5 && (
               <div
                 className="flex   flex-col hover:relative sm:flex-row w-[100%]    rounded-lg"
                 key={idx}
@@ -43,7 +43,7 @@ const Projects = () => {
                         </div>
                         <Link
                           className="text-white rounded-r-sm bg-gradient-rainblue font-playfair   py-0.5 px-0.5 text-center  flex items-center justify-center   border-1   border-deep-blue w-auto"
-                          href={project.live}
+                          href={project.live ? project.live : ''}
                           target="_blank"
                         >
                           <div className="text-[13px] sm:justify-end  sm:text-[15px] bg-deep-blue hover:text-red transition duration-500 w-[60px] sm:w-[60px] sm:h-[25px] h-full flex items-center justify-center  xs:px-2.5 font-outfit">
