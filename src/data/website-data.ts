@@ -21,6 +21,7 @@ import postgreSQL from "@/assets/postgresql.svg";
 import airflow from "@/assets/airflow.svg";
 import mysql from "@/assets/mysql-6.svg";
 import streamlit from "@/assets/streamlit.svg";
+import clerk from '@/assets/clerk.png'
 
 // Certificate Imports
 import reactbasics from "/src/assets/certificates/react-basics.png";
@@ -46,6 +47,8 @@ import authentication from "../assets/projects/react-authentication.png";
 import reduxCart from "../assets/projects/redux-cart.png";
 import simpleBookStore from "../assets/projects/simple-book-store.png";
 import studentProject from "@/assets/projects/Student-Project-Management.png";
+import dineMarketEcommerce from '@/assets/projects/dine-market-ecommerce.png'
+
 // import reactselfie from "../assets/projects/react-selfie-crop-full.png";
 // import exchangerate from "../assets/projects/exchange-rate-api.png";
 // import movieticketdemo from "../assets/projects/movie-ticket.png";
@@ -60,13 +63,13 @@ import github from "../assets/githubLogo.svg";
 
 // Skills
 export const tectStackIcons = [
-  { Image: pythonskill, alt: "Python" },
-  { Image: django, alt: "django" },
-  { Image: Flask, alt: "Flask" },
   { Image: javascript, alt: "Javascript" },
   { Image: typescript, alt: "Typescript" },
   { Image: react, alt: "React.js" },
   { Image: next, alt: "Next.js" },
+  { Image: pythonskill, alt: "Python" },
+  { Image: django, alt: "django" },
+  { Image: Flask, alt: "Flask" },
   { Image: postgreSQL, alt: "PostgreSQL" },
   { Image: figma, alt: "Figma" },
   { Image: material, alt: "Material-UI" },
@@ -77,6 +80,7 @@ export const tectStackIcons = [
   { Image: mongo, alt: "Mongo-DB" },
   { Image: contentful, alt: "contentful" },
   { Image: Sanity, alt: "Sanity" },
+  { Image: clerk, alt: "clerk" },
 ];
 
 // PROJECTS
@@ -91,41 +95,51 @@ export const projects: Array<{
   live?: string;
 }> = [
   {
-    name: "STUDENT PROJECT ALLOCATION SYSTEM",
-    url: studentProject,
+    name: "🌟EcomPulse 🛒💓: NextVista Bazaar (Sanity CMS,Stripe & Clerk AUTH)",
+    url: dineMarketEcommerce,
     description:
-      "Designed and implemented a Python Django based project enabling student and project management.Empowered users to effortlessly add, edit, and assign projects to students, while providing visibility into assigned projects. ",
-    repo: "https://github.com/BilalSsiddique/basic_student_project_allocation_system",
-    stack: [pythonskill, django, postgreSQL, Bootstrap, git],
-    live: "https://basic-student-project-allocation-system.vercel.app/",
+      "✨Engineered a lightning-fast Ecommerce Store with Next.js, React.js,Clerk Authentication,Stripe and Sanity CMS for efficient product management, utilizing SSG and ISG for a seamless user experience.",
+    repo: "https://github.com/BilalSsiddique/wmd-next-ecommerce-sanity",
+    stack: [next, postgreSQL, tailwind, git, typescript, Sanity, clerk],
+    live: "",
   },
+
   {
-    name: "BOOK STORE",
+    name: "📚 Bookworm Haven",
     url: simpleBookStore,
     description:
-      "A Simple Book Store Project developed using POSTMAN provided API where user can explore books,authenticate using Bearer token,place ,update & delete orders, developed with latest Nextjs-13.3.0,redux-toolkit & more.",
+      "✨ A sleek Book Store Project built on the robust Next.js v13.3.0, featuring seamless user authentication using Bearer tokens and an engaging exploration of books through the POSTMAN provided API.",
     repo: "https://github.com/BilalSsiddique/wmd-next-books",
     stack: [next, redux, tailwind, typescript, git, postman],
     live: "https://simple-book-store-bilal-siddique.vercel.app/",
   },
 
   {
-    name: "DASHBOARD",
+    name: "📊 React Insights Dashboard",
     url: reactdashboard,
     description:
-      "An Admin Dashboard developed with react and Industry recommended packages.",
+      "✨ A powerful Admin Dashboard meticulously crafted with React.js and industry-recommended packages including Novo Charts, Material UI, and Framer Motion, presenting data visualization in a dynamic and intuitive interface.",
     repo: "https://github.com/BilalSsiddique/react-admin-dashboard",
     stack: [react, framer, materialui, github, git],
     live: "https://react-admin-learn.vercel.app",
   },
   {
-    name: "REDUX CART",
+    name: "🛒NextCart-Redux",
     url: reduxCart,
     description:
-      "A Shopping Cart Project where user can add,update,& delete the products, developed with latest Nextjs-13.3.0,redux-toolkit,fake Store API & Tailwind CSS.",
+      "✨ A Shopping Cart Project utilizing Next.js v13.3.0, Redux Toolkit, and Tailwind CSS, offering a seamless shopping experience where users can effortlessly add, update, and delete products. Powered by a Fake Store API for realistic product data 🛍️.",
     repo: "https://github.com/BilalSsiddique/redux-cart",
     stack: [next, redux, typescript, tailwind, github, git],
     live: "https://redux-cart-rho.vercel.app/",
+  },
+  {
+    name: "🎓Project Nexus: Streamlined Student Project Allocation",
+    url: studentProject,
+    description:
+      "✨ Incorporating Python Django, I created a seamless project management module. This project allows effortless project addition, editing, and assignment to students, providing a clear overview of assigned projects for efficient management. 🚀",
+    repo: "https://github.com/BilalSsiddique/basic_student_project_allocation_system",
+    stack: [pythonskill, django, postgreSQL, Bootstrap, git],
+    live: "https://basic-student-project-allocation-system.vercel.app/",
   },
   {
     name: "AUTHENTICATION USING FIREBASE",
@@ -172,6 +186,13 @@ export const moreProjects: Array<{
   repo: string;
   live: string;
 }> = [
+  {
+    title: "🌟EcomPulse 🛒💓: NextVista Bazaar",
+    year:2023,
+    repo: "https://github.com/BilalSsiddique/wmd-next-ecommerce-sanity",
+    builtWith: [next, postgreSQL, tailwind, git, typescript, Sanity, clerk],
+    live: "",
+  },
   {
     year: 2023,
     title: "React Capture & Crop Image",
