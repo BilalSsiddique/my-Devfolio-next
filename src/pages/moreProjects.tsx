@@ -17,7 +17,7 @@ const MoreProjects = () => {
             <tr className="text-left text-yellow ">
               <th>Year</th>
               <th>Title</th>
-              <th className="max-[535px]:hidden">Stack</th>
+              <th className="sm:block hidden">Stack</th>
               <th>Link</th>
             </tr>
           </thead>
@@ -30,9 +30,12 @@ const MoreProjects = () => {
                 <td className="font-semibold sm:font-bold max-[352px]:text-[13px]  text-sm sm:text-[16px]">
                   {project.title}
                 </td>
-                <td key={idx} className="flex gap-2 max-[535px]:hidden">
+                <td key={idx} className="sm:flex hidden items-center gap-2 ">
                   {project.builtWith.map((icon, idx) => (
-                    <Image key={idx} width={20} src={icon} alt="icons" />
+                    <td className="self-center" key={idx}>
+                      {" "}
+                      <Image  width={20} src={icon} alt="icons" />
+                    </td>
                   ))}
                 </td>
                 <td>
