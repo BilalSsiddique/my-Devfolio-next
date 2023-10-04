@@ -5,11 +5,11 @@ import { projects } from "@/data/website-data";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import OtherProject from "./OtherProject";
-import { useAppDispatch, } from "@/store/hook";
+import { useAppDispatch } from "@/store/hook";
 import { setSelectedPage } from "@/store/slices/navbarSlice";
 
 const Projects = () => {
-  const dispatch = useAppDispatch()
+  const dispatch = useAppDispatch();
   return (
     <>
       <div className="flex flex-wrap  gap-y-16  justify-center md:justify-between    h-full w-full">
@@ -43,11 +43,11 @@ const Projects = () => {
                         </div>
                         <Link
                           className="text-white rounded-r-sm bg-gradient-rainblue  py-0.5 px-0.5 text-center  flex items-center justify-center   border-1   border-deep-blue w-auto"
-                          href={project.live ? project.live : ''}
+                          href={project.live!}
                           target="_blank"
                         >
                           <div className="font-semibold tracking-widest text-[13px] sm:justify-end  sm:text-[15px] bg-deep-blue hover:text-red transition duration-500 w-[60px] sm:w-[60px] sm:h-[25px] h-full flex items-center justify-center  xs:px-1 font-outfit">
-                            { project.live ? 'Demo' : 'Soon'}
+                            {project.live ? 'Demo' : 'Soon'}
                           </div>
                         </Link>
                       </div>
@@ -78,7 +78,6 @@ const Projects = () => {
           </Link>
         </div>
         <motion.div
-
           className="w-full"
           initial="hidden"
           whileInView="visible"
