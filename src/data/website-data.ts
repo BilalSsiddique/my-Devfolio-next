@@ -21,7 +21,7 @@ import postgreSQL from "@/assets/postgresql.svg";
 import airflow from "@/assets/airflow.svg";
 import mysql from "@/assets/mysql-6.svg";
 import streamlit from "@/assets/streamlit.svg";
-import clerk from '@/assets/clerk.png'
+import clerk from "@/assets/clerk.png";
 
 // Certificate Imports
 import reactbasics from "/src/assets/certificates/react-basics.png";
@@ -47,7 +47,7 @@ import authentication from "../assets/projects/react-authentication.png";
 import reduxCart from "../assets/projects/redux-cart.png";
 import simpleBookStore from "../assets/projects/simple-book-store.png";
 import studentProject from "@/assets/projects/Student-Project-Management.png";
-import dineMarketEcommerce from '@/assets/projects/dine-market-ecommerce.png'
+import dineMarketEcommerce from "@/assets/projects/dine-market-ecommerce.png";
 
 // import reactselfie from "../assets/projects/react-selfie-crop-full.png";
 // import exchangerate from "../assets/projects/exchange-rate-api.png";
@@ -101,7 +101,7 @@ export const projects: Array<{
       "✨Engineered a lightning-fast Ecommerce Store with Next.js, React.js,Clerk Authentication,Stripe and Sanity CMS for efficient product management, utilizing SSG and ISG for a seamless user experience.",
     repo: "https://github.com/BilalSsiddique/wmd-next-ecommerce-sanity",
     stack: [next, postgreSQL, tailwind, git, typescript, Sanity, clerk],
-    live: "",
+    live: "https://wmd-next-ecommerce-sanity.vercel.app/",
   },
 
   {
@@ -188,10 +188,10 @@ export const moreProjects: Array<{
 }> = [
   {
     title: "🌟EcomPulse 🛒💓: NextVista Bazaar",
-    year:2023,
+    year: 2023,
     repo: "https://github.com/BilalSsiddique/wmd-next-ecommerce-sanity",
     builtWith: [next, postgreSQL, tailwind, git, typescript, Sanity, clerk],
-    live: "",
+    live: "https://wmd-next-ecommerce-sanity.vercel.app/",
   },
   {
     year: 2023,
