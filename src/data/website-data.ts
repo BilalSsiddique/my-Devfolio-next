@@ -48,6 +48,7 @@ import reduxCart from "../assets/projects/redux-cart.png";
 import simpleBookStore from "../assets/projects/simple-book-store.png";
 import studentProject from "@/assets/projects/Student-Project-Management.png";
 import dineMarketEcommerce from "@/assets/projects/dine-market-ecommerce.png";
+import todoist from '@/assets/projects/todoist.png'
 
 // import reactselfie from "../assets/projects/react-selfie-crop-full.png";
 // import exchangerate from "../assets/projects/exchange-rate-api.png";
@@ -124,7 +125,7 @@ export const projects: Array<{
     live: "https://react-admin-learn.vercel.app",
   },
   {
-    name: "🛒NextCart-Redux",
+    name: "🛒 NextCart-Redux",
     url: reduxCart,
     description:
       "✨ A Shopping Cart Project utilizing Next.js v13.3.0, Redux Toolkit, and Tailwind CSS, offering a seamless shopping experience where users can effortlessly add, update, and delete products. Powered by a Fake Store API for realistic product data 🛍️.",
@@ -133,13 +134,13 @@ export const projects: Array<{
     live: "https://redux-cart-rho.vercel.app/",
   },
   {
-    name: "🎓Project Nexus: Streamlined Student Project Allocation",
-    url: studentProject,
+    name: "🚀 Todoist",
+    url: todoist,
     description:
-      "✨ Incorporating Python Django, I created a seamless project management module. This project allows effortless project addition, editing, and assignment to students, providing a clear overview of assigned projects for efficient management. 🚀",
-    repo: "https://github.com/BilalSsiddique/basic_student_project_allocation_system",
-    stack: [pythonskill, django, postgreSQL, Bootstrap, git],
-    live: "https://basic-student-project-allocation-system.vercel.app/",
+      "✨ Streamline your tasks with TodoistXpress, a robust Todoist web app crafted using Django Rest Framework and React.js! 📝.",
+    repo: "https://github.com/BilalSsiddique/todoist-django-react-frontend",
+    stack: [react, django, redux, tailwind, github, git],
+    live: "https://todoist-django-react-frontend.vercel.app",
   },
   {
     name: "AUTHENTICATION USING FIREBASE",
@@ -149,6 +150,15 @@ export const projects: Array<{
     repo: "https://github.com/BilalSsiddique/test-login",
     stack: [react, firebase, github, git],
     live: "https://authentication-inky.vercel.app",
+  },
+  {
+    name: "🎓Project Nexus: Streamlined Student Project Allocation",
+    url: studentProject,
+    description:
+      "✨ Incorporating Python Django, I created a seamless project management module. This project allows effortless project addition, editing, and assignment to students, providing a clear overview of assigned projects for efficient management. 🚀",
+    repo: "https://github.com/BilalSsiddique/basic_student_project_allocation_system",
+    stack: [pythonskill, django, postgreSQL, Bootstrap, git],
+    live: "https://basic-student-project-allocation-system.vercel.app/",
   },
   {
     name: "CONSUMER COMPLAINTS DATA PIPELINE AND VISUALIZATION",
@@ -186,13 +196,6 @@ export const moreProjects: Array<{
   repo: string;
   live: string;
 }> = [
-  {
-    title: "🌟EcomPulse 🛒💓: NextVista Bazaar",
-    year: 2023,
-    repo: "https://github.com/BilalSsiddique/wmd-next-ecommerce-sanity",
-    builtWith: [next, postgreSQL, tailwind, git, typescript, Sanity, clerk],
-    live: "https://wmd-next-ecommerce-sanity.vercel.app/",
-  },
   {
     year: 2023,
     title: "React Capture & Crop Image",
