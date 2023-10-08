@@ -40,6 +40,7 @@ const Navbar = () => {
             <LinkC page="Skills" />
             <LinkC page="Experience" />
             <LinkC page="Projects" />
+            <LinkC page="Services" />
             <LinkC page="Certifications" />
             <LinkC page="Contact" />
           </div>
@@ -89,6 +90,11 @@ const Navbar = () => {
               />
               <LinkC
                 page="Projects"
+                isMenuToggled={isMenuToggled}
+                setIsMenuToggled={setIsMenuToggled}
+              />
+              <LinkC
+                page="Services"
                 isMenuToggled={isMenuToggled}
                 setIsMenuToggled={setIsMenuToggled}
               />

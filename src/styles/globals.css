@@ -158,3 +158,22 @@ body,
     
   }
 } */
+
+div.swiper-pagination{
+  position: relative;
+  top: 4px !important;
+}
+
+span.swiper-pagination-bullet{
+  color: white !important;
+  background-color: white !important;
+}
+
+span.swiper-pagination-bullet-active{
+  background: linear-gradient(
+    90deg,
+    #24cbff 14.53%,
+    #fc59ff 69.36%,
+    #ffbd0c 117.73%
+  );
+}

@@ -2,6 +2,7 @@ import React, { Dispatch } from "react";
 import Link from "next/link";
 import { selectPage, setSelectedPage } from "@/store/slices/navbarSlice";
 import { useAppDispatch, useAppSelector } from "@/store/hook";
+import { service } from "@/data/website-data";
 
 const LinkC = ({
   page,
@@ -22,13 +23,17 @@ const LinkC = ({
       setIsMenuToggled(!isMenuToggled);
     }
   }
+  const builLink = ` ${
+    lowerCasePage === "services" ? "/" + lowerCasePage : "/#" + lowerCasePage
+  } `;
+  console.log("bu", builLink);
   return (
     <Link
       className={`font-bold ${
         selectedPage === lowerCasePage ? "text-yellow " : ""
       }
         hover:text-yellow transition duration-500`}
-      href={`/#${lowerCasePage}`}
+      href={builLink}
       onClick={setDispatchandtoggle}
     >
       {page}
@@ -36,5 +41,4 @@ const LinkC = ({
   );
 };
 
-
-export default LinkC
+export default LinkC;

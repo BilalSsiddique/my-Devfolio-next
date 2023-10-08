@@ -1,5 +1,5 @@
 // Skills Import
-import javascript from "../assets/javascript.svg";
+import javascript from "@/assets/javascript.svg";
 import typescript from "../assets/typescript.svg";
 import next from "../assets/projects/nextjs (1).svg";
 import figma from "../assets/figma.svg";
@@ -22,6 +22,7 @@ import airflow from "@/assets/airflow.svg";
 import mysql from "@/assets/mysql-6.svg";
 import streamlit from "@/assets/streamlit.svg";
 import clerk from "@/assets/clerk.png";
+import shopify from "@/assets/shopify.svg";
 
 // Certificate Imports
 import reactbasics from "/src/assets/certificates/react-basics.png";
@@ -48,7 +49,7 @@ import reduxCart from "../assets/projects/redux-cart.png";
 import simpleBookStore from "../assets/projects/simple-book-store.png";
 import studentProject from "@/assets/projects/Student-Project-Management.png";
 import dineMarketEcommerce from "@/assets/projects/dine-market-ecommerce.png";
-import todoist from '@/assets/projects/todoist.png'
+import todoist from "@/assets/projects/todoist.png";
 
 // import reactselfie from "../assets/projects/react-selfie-crop-full.png";
 // import exchangerate from "../assets/projects/exchange-rate-api.png";
@@ -61,6 +62,11 @@ import react from "../assets/projects/react-2.svg";
 import framer from "../assets/projects/framer-motion.svg";
 import materialui from "../assets/projects/material-ui-1.svg";
 import github from "../assets/githubLogo.svg";
+
+// SERVICES
+import service1 from "@/assets/services/MODERN FULL-STACK DEVELOPMENT.gif";
+import service2 from "@/assets/services/Next.js with Shopify.png";
+import { FaShopify } from "react-icons/fa";
 
 // Skills
 export const tectStackIcons = [
@@ -142,17 +148,9 @@ export const projects: Array<{
     stack: [react, django, redux, tailwind, github, git],
     live: "https://todoist-django-react-frontend.vercel.app",
   },
+
   {
-    name: "AUTHENTICATION USING FIREBASE",
-    url: authentication,
-    description:
-      "A simple Authentication project where user can signup,login & reset password , developed with react, firebase & toastify.",
-    repo: "https://github.com/BilalSsiddique/test-login",
-    stack: [react, firebase, github, git],
-    live: "https://authentication-inky.vercel.app",
-  },
-  {
-    name: "🎓Project Nexus: Streamlined Student Project Allocation",
+    name: "🎓PROJECT NEXUS : STREAMLINED STUDENT PROJECT ALLOCATION",
     url: studentProject,
     description:
       "✨ Incorporating Python Django, I created a seamless project management module. This project allows effortless project addition, editing, and assignment to students, providing a clear overview of assigned projects for efficient management. 🚀",
@@ -175,6 +173,15 @@ export const projects: Array<{
     repo: "https://github.com/BilalSsiddique/wmd-next-contentful-blogs",
     stack: [next, react, contentful, tailwind, github, git],
     live: "https://random-blogs-by-bilalsiddique.vercel.app/",
+  },
+  {
+    name: "AUTHENTICATION USING FIREBASE",
+    url: authentication,
+    description:
+      "A simple Authentication project where user can signup,login & reset password , developed with react, firebase & toastify.",
+    repo: "https://github.com/BilalSsiddique/test-login",
+    stack: [react, firebase, github, git],
+    live: "https://authentication-inky.vercel.app",
   },
 
   {
@@ -227,7 +234,6 @@ export const moreProjects: Array<{
 ];
 
 // Certificates
-
 export const slides: Array<{ url: StaticImageData; classname?: string }> = [
   { url: advanceReact, classname: "design-react" },
   { url: sql },
@@ -245,6 +251,70 @@ export const slides: Array<{ url: StaticImageData; classname?: string }> = [
   { url: manipluation },
   { url: kagglepandas },
 ];
+
+
+// SERVICES
+export type services = {
+  id: number;
+  name: string;
+  image: StaticImageData;
+  tech?: string[];
+  techStack: [string[], string[], string[]];
+  techIcons?: StaticImageData[];
+};
+
+export const service: Array<services> = [
+  {
+    id: 2,
+    name: "MODERN CUSTOM ECOMMERCE",
+    image: service2,
+    tech: ["FRONT-END", "BACK-END", "DATABASE"],
+    techIcons: [shopify, next, react, tailwind],
+    techStack: [
+      [
+        "JavaScript",
+        "TypeScript",
+        "Next.js",
+        "React.js",
+        "Tailwind CSS",
+        "Material UI",
+        "Chakra UI",
+        "Redux-toolkit",
+        "Redux",
+        "RTK Query",
+        "Figma",
+      ],
+      ["Next.js", "Shopify", "Sanity", "Contentful", "Express"],
+      ["MySQL", "PostgreSQL", "Mongo-DB", "Drizzle-ORM"],
+    ],
+  },
+  {
+    id: 1,
+    name: "FULL-STACK DEVELOPMENT USING MODERN TECH-STACK",
+    image: service1,
+    tech: ["FRONT-END", "BACK-END", "DATABASE"],
+    techStack: [
+      [
+        "JavaScript",
+        "TypeScript",
+        "Next.js",
+        "React.js",
+        "Tailwind CSS",
+        "Material UI",
+        "Chakra UI",
+        "Redux-toolkit",
+        "Redux",
+        "RTK Query",
+        "python/Django",
+        "Figma",
+      ],
+      ["Next.js", "Django-Rest-Framework", "Express", "Flask"],
+      ["MySQL", "PostgreSQL", "Mongo-DB", "ORMS"],
+    ],
+  },
+];
+
+// service[0].techStack[1].
 
 // Experience
 type experience = {
