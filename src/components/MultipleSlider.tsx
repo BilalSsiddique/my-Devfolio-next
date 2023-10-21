@@ -23,7 +23,7 @@ const MultipleSlider = () => {
 
   return (
     <>
-      <div className="md:h-full   md:w-[80%] mx-auto relative">
+      <div className="md:h-full    md:w-[80%] mx-auto relative">
         <div>
           <div
             className="absolute top-[50%] left-[-20px] xs:left-[-40px] text-2xl text-white shadow-xl z-10 cursor-pointer"

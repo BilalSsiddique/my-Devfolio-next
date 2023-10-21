@@ -12,7 +12,7 @@ const Projects = () => {
   const dispatch = useAppDispatch();
   return (
     <>
-      <div className="flex flex-wrap  gap-y-16  justify-center md:justify-between    h-full w-full">
+      <div className="flex flex-wrap   gap-y-16  justify-center md:justify-between    h-full w-full">
         {projects.map(
           (project, idx) =>
             idx < 5 && (

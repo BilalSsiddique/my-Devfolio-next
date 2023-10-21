@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const SocialMediaIcons = ({size=32}:{size?:number}) => {
   return (
-    <div className="flex justify-center md:justify-start my-2 gap-7">
+    <div className="flex  justify-center md:justify-start my-2 gap-7">
       <Link
         href="https://www.linkedin.com/in/bilal-siddiquee/"
         className="hover:opacity-50 transition duration-500"

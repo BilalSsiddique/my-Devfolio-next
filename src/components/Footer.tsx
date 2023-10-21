@@ -3,7 +3,7 @@ import SocialMediaIcons from "./SocialMediaIcons";
 import { FaCopyright } from "react-icons/fa";
 const Footer = () => {
   return (
-    <footer className="h-64 glass-navbar pt-10  w-full">
+    <footer className="h-64 glass-navbar pt-10  w-full ">
       <div className="w-5/6 mx-auto">
         <SocialMediaIcons size={24} />
         <div className="md:flex  justify-center md:justify-between text-center">

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useAppDispatch, useAppSelector } from "../store/hook";
 import { selectPage, setSelectedPage } from "../store/slices/navbarSlice";
 
+
 const DotGroup = () => {
   const dispatch = useAppDispatch();
   const selectedPage = useAppSelector(selectPage);
@@ -11,7 +12,7 @@ const DotGroup = () => {
     before:border-2 before:border-yellow before:left-[-50%] before:top-[-50%]`;
 
   return (
-    <div className=" flex flex-col gap-6 fixed top-[60%] right-7">
+    <div className=" flex flex-col gap-6 fixed top-[60%] right-7 ">
       <Link
         className={`${selectedPage === "home" ? selectedStyles : "bg-dark-grey"}
         w-3 h-3 rounded-full`}

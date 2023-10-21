@@ -10,7 +10,7 @@ const CustomToggleIcon = ({ gridSwitch, setGridSwitch }: any) => {
 
   return (
     <button onClick={handleGridViewToggle} type="button">
-      <div className="relative w-[50px] bg-white h-[20px] rounded-full ">
+      <div className="relative w-[50px]  bg-white h-[20px] rounded-full ">
         <div
           className={`absolute w-[15px] h-[16px] top-[2px]  ${
             gridSwitch || !isAboveMediumScreens ? "right-[2px] " : "left-[2px]"

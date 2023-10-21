@@ -8,7 +8,7 @@ import Image from "next/image";
 
 const OtherProject = () => {
   return (
-    <div className="grid grid-cols-[repeat(auto-fill,minmax(340px,1fr))] justify-center max-[460px]:px-0 px-10 sm:px-0  gap-8 pt-6 w-full">
+    <div className="grid  grid-cols-[repeat(auto-fill,minmax(340px,1fr))] justify-center max-[460px]:px-0 px-10 sm:px-0  gap-8 pt-6 w-full">
       {projects.map(
         (project, idx) =>
           idx >= 5 && (

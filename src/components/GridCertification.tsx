@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const GridCertification = ({ slides }: any) => {
   return (
-    <div className="grid gap-2 grid-col-1 xs:grid-cols-2  p-2 ">
+    <div className="grid  gap-2 grid-col-1 xs:grid-cols-2   p-2 ">
       {slides.map((image: any, idx: number) => (
         <div
           className={`flex 

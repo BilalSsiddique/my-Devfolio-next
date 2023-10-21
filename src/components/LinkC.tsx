@@ -29,7 +29,7 @@ const LinkC = ({
   console.log("bu", builLink);
   return (
     <Link
-      className={`font-bold ${
+      className={`font-bold  ${
         selectedPage === lowerCasePage ? "text-yellow " : ""
       }
         hover:text-yellow transition duration-500`}

@@ -33,7 +33,7 @@ const Contact = () => {
   };
 
   return (
-    <section className="">
+    <section>
       <motion.div
         initial="hidden"
         whileInView="visible"
