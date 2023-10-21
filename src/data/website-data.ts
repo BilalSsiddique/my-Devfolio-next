@@ -1,3 +1,9 @@
+// About
+import programmer from '@/assets/programmer.gif'
+
+
+
+
 // Skills Import
 import javascript from "@/assets/javascript.svg";
 import typescript from "../assets/typescript.svg";
@@ -66,7 +72,17 @@ import github from "../assets/githubLogo.svg";
 // SERVICES
 import service1 from "@/assets/services/MODERN FULL-STACK DEVELOPMENT.gif";
 import service2 from "@/assets/services/Next.js with Shopify.png";
-import { FaShopify } from "react-icons/fa";
+
+
+// About
+
+export const about = [
+  {
+    Image: programmer,
+    alt: "programmer Image",
+    about: '',
+  },
+];
 
 // Skills
 export const tectStackIcons = [
@@ -364,3 +380,5 @@ export const experience: Array<experience> = [
     ],
   },
 ];
+
+

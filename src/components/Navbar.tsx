@@ -26,7 +26,7 @@ const Navbar = () => {
     <nav
       className={`${
         !isMenuToggled && "backdrop-blur-xl"
-      } z-50  w-full ${navbarBackground}  fixed top-0 py-6 `}
+      } z-50  w-full ${navbarBackground} overflow-hidden fixed top-0 py-6 `}
     >
       <div className="flex items-center justify-between mx-auto w-5/6 ">
         <Link href="/#home">

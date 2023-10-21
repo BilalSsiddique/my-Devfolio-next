@@ -5,7 +5,7 @@ const Experience = () => {
   const [index, setIndex] = useState(0);
   const currentIndex = experience[index];
   return (
-    <section className="font-outfit font-extralight rounded-md glass-navbar py-6 px-4 xs:p-8 md:p-16 h-full flex sm:flex-row flex-col">
+    <section className=" font-outfit font-extralight rounded-md glass-navbar py-6 px-4 xs:p-8 md:p-16 h-full flex sm:flex-row flex-col">
       <div className="text-sm  xs:text-base sm:text-xl w-fit sm:w-[70%]  md:w-[40%] lg:w-[35%] text-left flex-row mb-8 sm:mb-0 flex sm:flex-col menu ">
         {experience.map((exp, index) => (
           <button

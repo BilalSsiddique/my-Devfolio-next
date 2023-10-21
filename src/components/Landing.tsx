@@ -12,7 +12,7 @@ const Landing = () => {
   return (
     <section
       id="home"
-      className="flex w-full justify-start md:justify-between md:h-full md:items-center md:gap-16  py-10 "
+      className="  flex w-full justify-start md:justify-between md:h-full md:items-center md:gap-16  py-10 "
     >
       {/* IMAGE SECTION  */}
       <div className=" md:order-2 md:flex md:justify-center md:basis-1/2 z-10 mt-16 md:mt-32">
@@ -55,8 +55,7 @@ const Landing = () => {
           </p>
 
           <p className="font-outfit max-[420px]:px-4 max-[420px]:text-[13px] mt-11 mb-2 text-sm text-center w-full ss:w-3/5 ss:text-start">
-            I&#39;m a Software Engineer , Certified META Front-end Engineer &
-            Aspiring Full-Stack & Cloud Data Engineer.
+            I&#39;m a Software Engineer , Certified META Front-end Engineer, Full-Stack & Aspiring Cloud Engineer.
           </p>
         </motion.div>
 
