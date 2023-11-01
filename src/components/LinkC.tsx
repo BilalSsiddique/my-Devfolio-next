@@ -2,7 +2,7 @@ import React, { Dispatch } from "react";
 import Link from "next/link";
 import { selectPage, setSelectedPage } from "@/store/slices/navbarSlice";
 import { useAppDispatch, useAppSelector } from "@/store/hook";
-import { service } from "@/data/website-data";
+
 
 const LinkC = ({
   page,

@@ -12,7 +12,6 @@ const Services = () => {
   return (
     <Swiper
       className="   mx-auto overflow-hidden font-outfit mt-44 mb-20 xs:mt-52 w-5/6 rounded-2xl "
-      spaceBetween={50}
       slidesPerView={1}
       pagination={{ clickable: true }}
       autoplay

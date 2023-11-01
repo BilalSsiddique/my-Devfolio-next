@@ -3,8 +3,15 @@ import Image from "next/image";
 import { about } from "@/data/website-data";
 import { Fragment } from "react";
 import Link from "next/link";
+import { setSelectedPage } from "@/store/slices/navbarSlice";
+import { useAppDispatch } from "@/store/hook";
+
+
 
 const About = () => {
+  const dispatch  = useAppDispatch()
+
+  
   return (
     <div className="glass    rounded-md font-light text-[12px] xs:text-sm leading-relaxed font-outfit grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] sm:gap-10">
       {about.map((obj, idx) => (
@@ -57,6 +64,7 @@ const About = () => {
               <Link
                 className="text-white mt-5 w-fit rounded-r-sm bg-gradient-rainblue  py-0.5 px-0.5 text-center  flex items-center justify-center   border-1   border-deep-blue "
                 href="/#contact"
+                onClick={() => dispatch(setSelectedPage("contact"))}
               >
                 <div className="font-semibold  tracking-widest text-[13px] sm:justify-end  sm:text-[15px] bg-deep-blue hover:text-red transition duration-500  sm:h-[25px] h-full flex items-center justify-center  xs:px-1 font-outfit">
                   Hire Me
@@ -65,6 +73,7 @@ const About = () => {
               <Link
                 className="text-white mt-5 w-fit rounded-r-sm bg-gradient-rainblue  py-0.5 px-0.5 text-center  flex items-center justify-center   border-1   border-deep-blue "
                 href="/services"
+                onClick={() => dispatch(setSelectedPage("services"))}
               >
                 <div className="font-semibold  tracking-widest text-[13px] sm:justify-end  sm:text-[15px] bg-deep-blue hover:text-red transition duration-500  sm:h-[25px] h-full flex items-center justify-center  xs:px-1 font-outfit">
                   My Services

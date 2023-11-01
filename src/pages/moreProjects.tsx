@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const MoreProjects = () => {
+
   return (
     <div className="font-outfit ss:w-5/6 pb-24 mx-5 ss:mx-auto h-full mt-44 xs:mt-52 ">
       <div className="flex flex-col justify-start w-full ">
@@ -34,7 +35,7 @@ const MoreProjects = () => {
                   {project.builtWith.map((icon, idx) => (
                     <td className="self-center" key={idx}>
                       {" "}
-                      <Image  width={20} src={icon} alt="icons" />
+                      <Image width={20} src={icon} alt="icons" />
                     </td>
                   ))}
                 </td>

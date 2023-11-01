@@ -22,7 +22,7 @@ export default function Home() {
         <title>Bilal Siddique</title>
         <meta
           name="description"
-          content="Bilal Siddique Frontend,Full-Stack Engineer & Aspiring Cloud Engineer. My TechStack is React, Next, Custom Shopify Stores using Nextjs, Remix Hydrogen, Python, Django  "
+          content="Bilal Siddique Frontend Developer,custom Shopify Developer using Nextjs,Shopify Developer,Full-Stack Engineer & Aspiring Cloud Engineer. My TechStack is React, Next, Custom Shopify Stores using Nextjs, Remix Hydrogen, Python, Django  "
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
@@ -42,8 +42,9 @@ export default function Home() {
         </div>
         {/* Linear Gradient Skills/Techstack Section (by Default skills) w-full */}
         <LineGradient />
-        <div className=" ss:w-5/6 pb-20 mx-5 ss:mx-auto h-full mt-44 xs:mt-52">
-          <div className="b-gradient-rainbow-bg"></div>
+        <div className=" ss:w-5/6 pb-20  mx-5 ss:mx-auto h-full mt-44 xs:mt-52">
+          <div className="hidden sm:block b-gradient-rainbow-bg"></div>
+
           <Skills />
         </div>
 

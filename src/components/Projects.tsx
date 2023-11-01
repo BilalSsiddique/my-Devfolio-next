@@ -71,7 +71,7 @@ const Projects = () => {
           <p className="text-3xl font-semibold">Other Noteworthy Projects</p>
           <Link
             href="/moreProjects"
-            onClick={() => dispatch(setSelectedPage(""))}
+            onClick={() => dispatch(setSelectedPage("projects"))}
             className="text-yellow  hover:underline text-lg mt-4"
           >
             view the archive

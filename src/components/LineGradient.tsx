@@ -1,6 +1,6 @@
 import React from 'react'
 
-const LineGradient = ({ID='skills', width="w-full",section='My Tech Stack'}) => {
+const LineGradient = ({ID='skills', width="w-full",section='Tech Stack'}) => {
   return (
     <div id={ID} className={`h-0.5 ${width}  relative bg-gradient-rainblue `}>
       <div className="absolute top-0.5 z-10 w-0.5 h-8 glass left-[50%]  ">

@@ -3,10 +3,13 @@ import Image from "next/image";
 import type { services } from "@/data/website-data";
 import { useState } from "react";
 import Link from "next/link";
+import { useAppDispatch } from "@/store/hook";
+import { setSelectedPage } from "@/store/slices/navbarSlice";
 
 const Service = ({ item }: { item: services }) => {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const currentTech = item.techStack[selectedIndex];
+  const dispatch = useAppDispatch()
 
   return (
     <div className="flex flex-col  sm:flex-row  w-full ">
@@ -45,6 +48,7 @@ const Service = ({ item }: { item: services }) => {
           <Link
             className="text-white w-fit rounded-r-sm bg-gradient-rainblue  py-0.5 px-0.5 text-center  flex items-center justify-center   border-1   border-deep-blue "
             href="/#contact"
+            onClick={()=>dispatch(setSelectedPage('contact'))}
           >
             <div className="font-semibold  tracking-widest text-[13px] sm:justify-end  sm:text-[15px] bg-deep-blue hover:text-red transition duration-500  sm:h-[25px] h-full flex items-center justify-center  xs:px-1 font-outfit">
               Hire Me

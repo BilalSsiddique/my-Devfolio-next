@@ -90,6 +90,7 @@ export const tectStackIcons = [
   { Image: typescript, alt: "Typescript" },
   { Image: react, alt: "React.js" },
   { Image: next, alt: "Next.js" },
+  { Image: shopify, alt: "Shopify / Custom-shopify" },
   { Image: pythonskill, alt: "Python" },
   { Image: django, alt: "django" },
   { Image: Flask, alt: "Flask" },
