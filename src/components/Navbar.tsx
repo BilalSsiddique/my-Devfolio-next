@@ -6,12 +6,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect } from "react";
 import LinkC from "../components/LinkC";
+import { useAppDispatch } from "@/store/hook";
+import { setSelectedPage } from "@/store/slices/navbarSlice";
 
 const Navbar = () => {
   const [isMenuToggled, setIsMenuToggled] = useState(false);
   const [isTopOfPage, setisTopOfPage] = useState(true);
   const isAboveSmallScreens = useMediaQuery("(min-width:950px)");
   const navbarBackground = isTopOfPage ? "" : "glass-navbar";
+  const dispatch = useAppDispatch();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,7 +32,7 @@ const Navbar = () => {
       } z-50  w-full ${navbarBackground} overflow-hidden fixed top-0 py-6 `}
     >
       <div className="flex items-center justify-between mx-auto w-5/6 ">
-        <Link href="/#home">
+        <Link href="/#home" onClick={() => dispatch(setSelectedPage("home"))}>
           <h4 className="font-outfit text-3xl font-extrabold ">BS</h4>
         </Link>
 

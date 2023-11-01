@@ -47,7 +47,7 @@ const Projects = () => {
                           target="_blank"
                         >
                           <div className="font-semibold tracking-widest text-[13px] sm:justify-end  sm:text-[15px] bg-deep-blue hover:text-red transition duration-500 w-[60px] sm:w-[60px] sm:h-[25px] h-full flex items-center justify-center  xs:px-1 font-outfit">
-                            {project.live ? 'Demo' : 'Soon'}
+                            {project.live ? "Demo" : "Soon"}
                           </div>
                         </Link>
                       </div>
@@ -71,7 +71,7 @@ const Projects = () => {
           <p className="text-3xl font-semibold">Other Noteworthy Projects</p>
           <Link
             href="/moreProjects"
-            onClick={() => dispatch(setSelectedPage(""))}
+            onClick={() => dispatch(setSelectedPage("projects"))}
             className="text-yellow  hover:underline text-lg mt-4"
           >
             view the archive
@@ -81,7 +81,7 @@ const Projects = () => {
           className="w-full"
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
+          viewport={{ once: true }}
           transition={{ duration: 1 }}
           variants={{
             hidden: { opacity: 0, x: 0 },
