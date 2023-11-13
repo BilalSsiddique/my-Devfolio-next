@@ -9,9 +9,9 @@ import SkillsComponent from "./SkillsComponent";
 
 const Skills = () => {
   return (
-    <div className="flex  items-center justify-center ">
+    <div className="flex relative items-center justify-center ">
       <Swiper
-        className="  "
+        className="skills-slider "
         spaceBetween={20}
         slidesPerView="auto"
         pagination={{ clickable: true }}
