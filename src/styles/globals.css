@@ -159,14 +159,29 @@ body,
   }
 } */
 
-div.swiper-pagination {
+/* SKILLS SLIDER */
+
+div.skills-slider {
+  padding-bottom: 25px;
+  /* background-color: wheat !important; */
+
+}
+div.skills-slider .swiper-pagination {
   position: relative;
-  top: 4px !important;
+  top: 26px !important;
 }
 
 span.swiper-pagination-bullet {
   color: white !important;
+
   background-color: white !important;
+}
+
+@media only screen and (min-width: 631px) {
+  span.swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+  }
 }
 
 span.swiper-pagination-bullet-active {
@@ -176,8 +191,27 @@ span.swiper-pagination-bullet-active {
     #fc59ff 69.36%,
     #ffbd0c 117.73%
   );
+  size: 20px !important ;
 }
 
 div.swiper-slide {
   width: fit-content !important;
 }
+
+/* CERTIFICATION SLIDER */
+
+div.certification-slide {
+  width: 100% !important;
+}
+
+div.certification-slider .swiper-pagination {
+  position: fixed !important;
+  bottom: -50px !important;
+}
+
+
+/* SERVICES SLIDER */
+div.services-slider{
+  padding-bottom: 45px;
+}
+

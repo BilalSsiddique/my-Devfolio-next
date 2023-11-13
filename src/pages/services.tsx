@@ -11,7 +11,7 @@ import { Autoplay, A11y, Pagination } from "swiper/modules";
 const Services = () => {
   return (
     <Swiper
-      className="   mx-auto overflow-hidden font-outfit mt-44 mb-20 xs:mt-52 w-5/6 rounded-2xl "
+      className=" services-slider  mx-auto overflow-hidden font-outfit mt-44 mb-20 xs:mt-52 w-5/6 rounded-2xl "
       slidesPerView={1}
       pagination={{ clickable: true }}
       autoplay
