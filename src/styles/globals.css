@@ -159,9 +159,12 @@ body,
   }
 } */
 
+/* SKILLS SLIDER */
+
 div.skills-slider {
   padding-bottom: 25px;
   /* background-color: wheat !important; */
+
 }
 div.skills-slider .swiper-pagination {
   position: relative;
@@ -205,3 +208,10 @@ div.certification-slider .swiper-pagination {
   position: fixed !important;
   bottom: -50px !important;
 }
+
+
+/* SERVICES SLIDER */
+div.services-slider{
+  padding-bottom: 45px;
+}
+

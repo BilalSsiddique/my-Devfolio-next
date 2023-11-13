@@ -6,25 +6,36 @@ import "swiper/css/navigation";
 import { Autoplay, A11y, Pagination } from "swiper/modules";
 import { tectStackIcons } from "@/data/website-data";
 import SkillsComponent from "./SkillsComponent";
+import { Fragment } from "react";
+import GridSkills from "./GridSkills";
 
 const Skills = () => {
   return (
-    <div className="flex relative items-center justify-center ">
-      <Swiper
-        className="skills-slider "
-        spaceBetween={20}
-        slidesPerView="auto"
-        pagination={{ clickable: true }}
-        autoplay
-        modules={[Pagination, A11y, Autoplay]}
-      >
+    <>
+      <div className="flex w-full h-full relative items-center justify-center ">
+        <div className="w-full h-full md:hidden">
+          <Swiper
+            className="skills-slider "
+            spaceBetween={20}
+            slidesPerView="auto"
+            pagination={{ clickable: true }}
+            autoplay
+            modules={[Pagination, A11y, Autoplay]}
+          >
+            {tectStackIcons.map((iconImage, index) => (
+              <SwiperSlide key={index} >
+                <SkillsComponent skill={iconImage} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+      </div>
+      <div className="hidden h-full md:grid md:grid-cols-[repeat(auto-fit,minmax(270px,1fr))] place-items-center gap-4 gap-y-8" >
         {tectStackIcons.map((iconImage, index) => (
-          <SwiperSlide key={index}>
-            <SkillsComponent skill={iconImage} />
-          </SwiperSlide>
+          <SkillsComponent skill={iconImage} key={index} />
         ))}
-      </Swiper>
-    </div>
+      </div>
+    </>
   );
 };
 

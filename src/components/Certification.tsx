@@ -1,7 +1,6 @@
 import useMediaQuery from '@/hooks/useMediaQuery';
 import GridCertification from '../components/GridCertification'
 import { slides } from '@/data/website-data';
-import MultipleSlider from './MultipleSlider';
 import MultipleSlider2 from './MultipleSlider2';
 
 
