@@ -17,6 +17,7 @@ const Service = ({ item }: { item: services }) => {
         src={item.image}
         alt="gig-image "
         className="object-cover  sm:rounded-l-xl w-full sm:w-1/2 "
+        priority
       />
 
       <div className="glass-navbar  rounded-b-xl sm:rounded-b-none sm:rounded-br-xl  sm:rounded-r-xl p-5 overflow-hidden w-full sm:w-1/2   flex items-start space-y-5 flex-col">
