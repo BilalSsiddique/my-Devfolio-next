@@ -63,7 +63,7 @@ const About = () => {
             <div className="flex gap-3 flex-wrap w-full">
               <Link
                 className="text-white mt-5 w-fit rounded-r-sm bg-gradient-rainblue  py-0.5 px-0.5 text-center  flex items-center justify-center   border-1   border-deep-blue "
-                href="/#contact"
+                href="https://contra.com/s/eRsWFmON-frontend-development/checkout"
                 onClick={() => dispatch(setSelectedPage("contact"))}
               >
                 <div className="font-semibold  tracking-widest text-[13px] sm:justify-end  sm:text-[15px] bg-deep-blue hover:text-red transition duration-500  sm:h-[25px] h-full flex items-center justify-center  xs:px-1 font-outfit">
