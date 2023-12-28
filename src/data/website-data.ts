@@ -46,6 +46,7 @@ import javascriptc from "/src/assets/certificates/programming-with-js.png";
 import manipluation from "/src/assets/certificates/data-manipulation.png";
 import advanceReact from "/src/assets/certificates/AdvanceReact.png";
 import sql from "@/assets/certificates/sql.svg";
+import reactNative from '@/assets/react-native.svg'
 
 // Project Imports
 
@@ -89,6 +90,7 @@ export const tectStackIcons = [
   { Image: javascript, alt: "Javascript" },
   { Image: typescript, alt: "Typescript" },
   { Image: react, alt: "React.js" },
+  { Image: reactNative, alt: "React Nativnpnne" },
   { Image: next, alt: "Next.js" },
   { Image: shopify, alt: "Shopify / Custom-shopify" },
   { Image: pythonskill, alt: "Python" },
