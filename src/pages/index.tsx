@@ -11,6 +11,7 @@ import Projects from "@/components/Projects";
 import Experience from "@/components/Experience";
 import { useState } from "react";
 import About from "@/components/About";
+import Whatsapp from "@/components/whatsapp/button";
 
 export default function Home() {
   const [gridSwitch, setGridSwitch] = useState(false);
@@ -87,6 +88,7 @@ export default function Home() {
         <div className=" ss:w-5/6 pb-20 mx-5 ss:mx-auto h-full mt-44 xs:mt-52">
           <Contact />
         </div>
+        <Whatsapp />
       </main>
     </>
   );
