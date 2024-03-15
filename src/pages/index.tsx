@@ -11,7 +11,7 @@ import Projects from "@/components/Projects";
 import Experience from "@/components/Experience";
 import { useState } from "react";
 import About from "@/components/About";
-import Whatsapp from "@/components/whatsapp/button";
+import Whatsapp from "@/components/whatsapp/WhastsAppButton";
 
 export default function Home() {
   const [gridSwitch, setGridSwitch] = useState(false);

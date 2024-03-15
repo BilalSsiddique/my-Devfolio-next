@@ -1,6 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
-const MessageBox = () => {
+import { IoIosClose } from "react-icons/io";
+
+interface handler {
+  handleCloseMessage: () => void;
+}
+const MessageBox: React.FC<handler> = ({ handleCloseMessage }) => {
   return (
     <motion.div
       initial="hidden"
@@ -16,6 +21,11 @@ const MessageBox = () => {
         <div className="outer"></div>
         <div className="inner border-r-[20px] border-solid border-b-amber-200"></div>
       </div>
+      <IoIosClose
+        className="absolute right-2 cursor-pointer text-white"
+        size={20}
+        onClick={handleCloseMessage}
+      />
       <div className=" message-body  bg-deep-blue ">
         <p>
           Hello! 👋 Aspiring for innovation or need technical assistance? Feel
