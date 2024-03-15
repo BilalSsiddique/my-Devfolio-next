@@ -1,8 +1,5 @@
 // About
-import programmer from '@/assets/programmer.gif'
-
-
-
+import programmer from "@/assets/programmer.gif";
 
 // Skills Import
 import javascript from "@/assets/javascript.svg";
@@ -46,7 +43,7 @@ import javascriptc from "/src/assets/certificates/programming-with-js.png";
 import manipluation from "/src/assets/certificates/data-manipulation.png";
 import advanceReact from "/src/assets/certificates/AdvanceReact.png";
 import sql from "@/assets/certificates/sql.svg";
-import reactNative from '@/assets/react-native.svg'
+import reactNative from "@/assets/react-native.svg";
 
 // Project Imports
 
@@ -57,6 +54,9 @@ import simpleBookStore from "../assets/projects/simple-book-store.png";
 import studentProject from "@/assets/projects/Student-Project-Management.png";
 import dineMarketEcommerce from "@/assets/projects/dine-market-ecommerce.png";
 import todoist from "@/assets/projects/todoist.png";
+import companyPortfolio from "@/assets/projects/company-portfolio.png";
+import neobank from "@/assets/projects/Neo-bank.png";
+import contactList from "@/assets/projects/Contact-List-app.png";
 
 // import reactselfie from "../assets/projects/react-selfie-crop-full.png";
 // import exchangerate from "../assets/projects/exchange-rate-api.png";
@@ -73,7 +73,7 @@ import github from "../assets/githubLogo.svg";
 // SERVICES
 import service1 from "@/assets/services/MODERN FULL-STACK DEVELOPMENT.gif";
 import service2 from "@/assets/services/Next.js with Shopify.png";
-
+import Swiper from "swiper";
 
 // About
 
@@ -81,7 +81,7 @@ export const about = [
   {
     Image: programmer,
     alt: "programmer Image",
-    about: '',
+    about: "",
   },
 ];
 
@@ -129,17 +129,6 @@ export const projects: Array<{
     stack: [next, postgreSQL, tailwind, git, typescript, Sanity, clerk],
     live: "https://wmd-next-ecommerce-sanity.vercel.app/",
   },
-
-  {
-    name: "📚 Bookworm Haven",
-    url: simpleBookStore,
-    description:
-      "✨ A sleek Book Store Project built on the robust Next.js v13.3.0, featuring seamless user authentication using Bearer tokens and an engaging exploration of books through the POSTMAN provided API.",
-    repo: "https://github.com/BilalSsiddique/wmd-next-books",
-    stack: [next, redux, tailwind, typescript, git, postman],
-    live: "https://simple-book-store-bilal-siddique.vercel.app/",
-  },
-
   {
     name: "📊 React Insights Dashboard",
     url: reactdashboard,
@@ -149,6 +138,43 @@ export const projects: Array<{
     stack: [react, framer, materialui, github, git],
     live: "https://react-admin-learn.vercel.app",
   },
+  {
+    name: "🛒 Tech Company Portfolio",
+    url: companyPortfolio,
+    description:
+      "✨ Transformed from a Figma design, this company portfolio is now fully functional and responsive, featuring dynamic elements such as Swiper.js for smooth slideshows, Grid layout for structured content presentation, and more, ensuring an engaging user experience.",
+    repo: "",
+    stack: [next, react, typescript, tailwind, github, git],
+    live: "https://company-portfolio-pi.vercel.app/",
+  },
+  {
+    name: "📚 Bookworm Haven",
+    url: simpleBookStore,
+    description:
+      "✨ A sleek Book Store Project built on the robust Next.js v13.3.0, featuring seamless user authentication using Bearer tokens and an engaging exploration of books through the POSTMAN provided API.",
+    repo: "https://github.com/BilalSsiddique/wmd-next-books",
+    stack: [next, redux, tailwind, typescript, git, postman],
+    live: "https://simple-book-store-bilal-siddique.vercel.app/",
+  },
+  {
+    name: "🛒 NeoBank - Crypto",
+    url: neobank,
+    description:
+      "✨Crafted with Next.js, React.js, Tailwind CSS, and TypeScript, this login page is designed for a crypto-based company, offering a seamless and secure authentication experience.",
+    repo: "",
+    stack: [next, react, typescript, tailwind, github, git],
+    live: "https://neobank-seven.vercel.app/",
+  },
+  {
+    name: "🛒 Dynamic Contact List App",
+    url: contactList,
+    description:
+      "✨ Seamlessly developed using the latest Remix Framework, custom CSS, React Router, and Dynamic Routes, this Contact List Web App empowers users with comprehensive contact management functionalities. Effortlessly add, update, and delete contacts, ensuring a seamless and intuitive experience throughout.",
+    repo: "https://github.com/BilalSsiddique/remix-contacs",
+    stack: [react, typescript, tailwind, github, git],
+    live: "https://remix-contacs.vercel.app/contacts/giovanni-benussi",
+  },
+
   {
     name: "🛒 NextCart-Redux",
     url: reduxCart,
@@ -271,7 +297,6 @@ export const slides: Array<{ url: StaticImageData; classname?: string }> = [
   { url: kagglepandas },
 ];
 
-
 // SERVICES
 export type services = {
   id: number;
@@ -383,5 +408,3 @@ export const experience: Array<experience> = [
     ],
   },
 ];
-
-

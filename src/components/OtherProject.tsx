@@ -11,7 +11,7 @@ const OtherProject = () => {
     <div className="grid  grid-cols-[repeat(auto-fill,minmax(340px,1fr))] justify-center max-[460px]:px-0 px-10 sm:px-0  gap-8 pt-6 w-full">
       {projects.map(
         (project, idx) =>
-          idx >= 5 && (
+          idx >= 7 && (
             <div
               key={idx}
               className="p-6 flex shadow-inner glass-navbar    flex-col    w-full gap-10"
