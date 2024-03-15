@@ -15,7 +15,7 @@ const Projects = () => {
       <div className="flex flex-wrap   gap-y-16  justify-center md:justify-between    h-full w-full">
         {projects.map(
           (project, idx) =>
-            idx < 5 && (
+            idx < 7 && (
               <div
                 className="flex   flex-col hover:relative sm:flex-row w-[100%]    rounded-lg"
                 key={idx}
