@@ -381,7 +381,7 @@ export const experience: Array<experience> = [
     ],
   },
   {
-    name: "NED University(UIT)",
+    name: "NED University",
     title: "Assistant Python Lecturer",
     from: "Jan",
     to: "July",
@@ -397,9 +397,9 @@ export const experience: Array<experience> = [
   {
     name: "Radical X",
     title: "Software Engineer Intern ",
-    from: "Jan",
-    to: "Jun",
-    year: "2021",
+    from: "Sep",
+    to: "Nov",
+    year: "2022",
     workDone: [
       "Collaborated in an interdisciplinary and agile team consisting of frontend and backend developers, designers and product managers.",
       "Contributed towards creating user stories, further dividing them into engineering tickets and setting them up on ClickUp board.",
