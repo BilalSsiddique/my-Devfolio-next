@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import contact from "../assets/contact-image.jpeg";
 import { toast } from "react-toastify";
+
 const Contact = () => {
   const {
     register,
@@ -33,25 +34,28 @@ const Contact = () => {
   };
 
   return (
-    <section>
+    <section className="relative">
+      {/* Background Gradient */}
+      <div className="absolute -inset-4 bg-gradient-rainbow opacity-10 blur-3xl -z-10" />
+
       <motion.div
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.5 }}
-        transition={{ durationa: 0.5 }}
+        transition={{ duration: 0.5 }}
         variants={{
-          hidden: { opacity: 0, x: -50 },
-          visible: { opacity: 1, x: 0 },
+          hidden: { opacity: 0, y: -20 },
+          visible: { opacity: 1, y: 0 },
         }}
+        className="text-center mb-12"
       >
-        <div>
-          <p className="font-outfit font-semibold text-xl xs:text-3xl">
-            <span className="text-yellow">CONTACT ME</span> TO GET STARTED
-          </p>
-          <div className="flex my-5">
-            {/* Line */}
-            <div className="h-0.5 bg-gradient-rainblue w-2/4 mr-auto"></div>
-          </div>
+        <h2 className="font-outfit font-bold text-3xl xs:text-4xl mb-6">
+          Let&apos;s <span className="text-gradient">Connect</span>
+        </h2>
+        <div className="flex justify-center items-center gap-3">
+          <div className="h-0.5 w-12 bg-gradient-rainblue opacity-50" />
+          <p className="font-outfit text-lg text-white/70">Get in touch for opportunities or just to say hi!</p>
+          <div className="h-0.5 w-12 bg-gradient-rainblue opacity-50" />
         </div>
       </motion.div>
 
@@ -62,23 +66,33 @@ const Contact = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
-          transition={{ durationa: 0.5 }}
+          transition={{ duration: 0.5 }}
           variants={{
-            hidden: { opacity: 0, y: 50 },
-            visible: { opacity: 1, y: 0 },
+            hidden: { opacity: 0, x: -50 },
+            visible: { opacity: 1, x: 0 },
           }}
         >
-          <Image className="w-full rounded-sm" src={contact} alt="contact" />
+          <div className="relative w-full overflow-hidden rounded-xl glass-card backdrop-blur-md bg-white/5 border border-white/10 p-2">
+            <Image 
+              className="w-full rounded-lg transition-transform duration-500 hover:scale-105" 
+              src={contact} 
+              alt="contact"
+              placeholder="blur"
+            />
+            {/* Rainbow Gradient Line */}
+            <div className="absolute bottom-0 left-0 right-0 w-full h-1 bg-gradient-rainblue opacity-75" />
+          </div>
         </motion.div>
+
         <motion.div
           className="basis-1/2 mt-10 md:mt-0"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
-          transition={{ delay: 0.2, durationa: 0.5 }}
+          transition={{ delay: 0.2, duration: 0.5 }}
           variants={{
-            hidden: { opacity: 0, y: 50 },
-            visible: { opacity: 1, y: 0 },
+            hidden: { opacity: 0, x: 50 },
+            visible: { opacity: 1, x: 0 },
           }}
         >
           <form
@@ -86,63 +100,91 @@ const Contact = () => {
             action="https://formsubmit.co/dd4d0b8ba0db45f077d53e1ff5d2c38f"
             target="_blank"
             onSubmit={onSubmit}
-            className="font-outfit"
+            className="font-outfit space-y-6"
           >
-            <input
-              className=" rounded-sm w-full text-black outline-0 font-semibold placeholder-opaque-black p-3"
-              type="text"
-              placeholder="NAME"
-              {...register("name", {
-                required: true,
-                maxLength: 100,
-              })}
-            />
-            {errors.name && (
-              <p className="text-red mt-1">
-                {errors.name.type === "required" && "This field is required."}
-                {errors.name.type === "maxLength" && "Max length is 100 char."}
-              </p>
-            )}
-            <input
-              className="text-black rounded-sm w-full outline-0  bg-white font-semibold placeholder-opaque-black p-3 mt-5"
-              type="text"
-              placeholder="EMAIL"
-              {...register("email", {
-                required: true,
-                pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-              })}
-            />
-            {errors.email && (
-              <p className="text-red mt-1 ">
-                {errors.email.type === "required" && "This field is required."}
-                {errors.email.type === "pattern" && "Invalid email address."}
-              </p>
-            )}
+            <div className="space-y-2">
+              <motion.div
+                whileHover={{ scale: 1.01 }}
+                transition={{ duration: 0.2 }}
+              >
+                <input
+                  className="w-full px-4 py-3 rounded-lg glass-card backdrop-blur-md bg-white/5 border border-white/10 
+                    text-white outline-none focus:border-white/20 transition-all duration-300 placeholder:text-white/50"
+                  type="text"
+                  placeholder="Your Name"
+                  {...register("name", {
+                    required: true,
+                    maxLength: 100,
+                  })}
+                />
+              </motion.div>
+              {errors.name && (
+                <p className="text-red text-sm pl-1">
+                  {errors.name.type === "required" && "Name is required"}
+                  {errors.name.type === "maxLength" && "Name is too long"}
+                </p>
+              )}
+            </div>
 
-            <textarea
-              className="text-black rounded-sm w-full outline-0 bg-white font-semibold placeholder-opaque-black p-3 mt-5"
-              placeholder="MESSAGE"
-              rows={4}
-              cols={50}
-              {...register("message", {
-                required: true,
-                maxLength: 2000,
-              })}
-            />
-            {errors.message && (
-              <p className="text-red mt-1 font-outfit">
-                {errors.message.type === "required" &&
-                  "This field is required."}
-                {errors.message.type === "maxLength" &&
-                  "Max length is 2000 char."}
-              </p>
-            )}
-            <button
-              className="font-outfit mt-5 text-sm xs:text-lg bg-gradient-rainblue text-deep-blue rounded-sm  xs:w-[50%] py-3 px-5 font-semibold
-              hover:bg-blue hover:text-white transition duration-500"
+            <div className="space-y-2">
+              <motion.div
+                whileHover={{ scale: 1.01 }}
+                transition={{ duration: 0.2 }}
+              >
+                <input
+                  className="w-full px-4 py-3 rounded-lg glass-card backdrop-blur-md bg-white/5 border border-white/10 
+                    text-white outline-none focus:border-white/20 transition-all duration-300 placeholder:text-white/50"
+                  type="text"
+                  placeholder="Your Email"
+                  {...register("email", {
+                    required: true,
+                    pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                  })}
+                />
+              </motion.div>
+              {errors.email && (
+                <p className="text-red text-sm pl-1">
+                  {errors.email.type === "required" && "Email is required"}
+                  {errors.email.type === "pattern" && "Invalid email address"}
+                </p>
+              )}
+            </div>
+
+            <div className="space-y-2">
+              <motion.div
+                whileHover={{ scale: 1.01 }}
+                transition={{ duration: 0.2 }}
+              >
+                <textarea
+                  className="w-full px-4 py-3 rounded-lg glass-card backdrop-blur-md bg-white/5 border border-white/10 
+                    text-white outline-none focus:border-white/20 transition-all duration-300 placeholder:text-white/50 min-h-[150px] resize-y"
+                  placeholder="Your Message"
+                  {...register("message", {
+                    required: true,
+                    maxLength: 2000,
+                  })}
+                />
+              </motion.div>
+              {errors.message && (
+                <p className="text-red text-sm pl-1">
+                  {errors.message.type === "required" && "Message is required"}
+                  {errors.message.type === "maxLength" && "Message is too long"}
+                </p>
+              )}
+            </div>
+
+            <motion.button
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className="relative group overflow-hidden px-8 py-3 rounded-lg font-semibold 
+                glass-card backdrop-blur-md bg-white/5 border border-white/10 
+                transition-all duration-300 hover:border-white/20"
             >
-              SEND ME MESSAGE
-            </button>
+              <span className="relative z-10 text-white group-hover:text-white transition-colors duration-300">
+                Send Message
+              </span>
+              <div className="absolute inset-0 bg-gradient-rainblue opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            </motion.button>
           </form>
         </motion.div>
       </div>

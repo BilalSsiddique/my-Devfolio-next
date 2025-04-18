@@ -90,7 +90,7 @@ export const tectStackIcons = [
   { Image: javascript, alt: "Javascript" },
   { Image: typescript, alt: "Typescript" },
   { Image: react, alt: "React.js" },
-  { Image: reactNative, alt: "React Nativnpnne" },
+  { Image: reactNative, alt: "React Native" },
   { Image: next, alt: "Next.js" },
   { Image: shopify, alt: "Shopify / Custom-shopify" },
   { Image: pythonskill, alt: "Python" },
@@ -206,7 +206,7 @@ export const projects: Array<{
   {
     name: "CONSUMER COMPLAINTS DATA PIPELINE AND VISUALIZATION",
     description:
-      "Crafted an end-to-end ETL solution in Airflow for Consumer Financial Protection Bureau complaint data, meeting internal stakeholders’ need for up-to-date monitoring.",
+      "Crafted an end-to-end ETL solution in Airflow for Consumer Financial Protection Bureau complaint data, meeting internal stakeholders' need for up-to-date monitoring.",
     repo: "https://github.com/BilalSsiddique/CFPB-Complaints-ETL-Dashboard",
     stack: [pythonskill, airflow, mysql, streamlit, github, git],
     live: "https://github.com/BilalSsiddique/CFPB-Complaints-ETL-Dashboard",
@@ -371,6 +371,25 @@ type experience = {
 };
 export const experience: Array<experience> = [
   {
+    name: "Code Reroute",
+    title: "Junior Software Engineer",
+    from: "April",
+    to: "April",
+    year: "2024-2025",
+    workDone: [
+      "Introduced DevOps culture in a startup environment, implementing best practices using Terraform and GitHub Actions.",
+      "Optimized Docker images, reducing size from 930 MB to 220 MB for improved deployment efficiency.",
+      "Provisioned and deployed scalable AWS ECS infrastructure with VPC, ALB, and secure networking.",
+      "Developed an internal admin dashboard to monitor AWS ECS container metrics, task counts, and real-time cluster status.",
+      "Integrated AWS cost analytics to visualize spend across all services with daily averages, service-wise breakdowns, and date filters.",
+      "Implemented Geo-blocking controls via Cloudflare for region-based traffic restrictions.",
+      "Built user and employee management modules to track beta users and manage applicant data with resume viewing and status-based filtering.",
+      "Created a log viewer for inspecting logs across all ECS services in the cluster.",
+      "Built a Mass Email system targeting beta users and applicants as segmented audiences.",
+      "Developed an Active Resources view displaying all live AWS resources for better infrastructure visibility.",
+    ],
+  },
+  {
     name: "Fiverr | Upwork",
     title: "Full-Stack Engineer",
     from: "Jan",
@@ -381,7 +400,7 @@ export const experience: Array<experience> = [
     ],
   },
   {
-    name: "NED University",
+    name: "UIT University",
     title: "Assistant Python Lecturer",
     from: "Jan",
     to: "July",
