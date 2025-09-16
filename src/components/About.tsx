@@ -14,13 +14,50 @@ const HighlightedText = ({ children }: { children: React.ReactNode }) => (
 const About = () => {
   const dispatch = useAppDispatch();
 
+  // Split the about content into two distinct sections
+  const professionalInfo = [
+    {
+      title: "Technical Expertise",
+      items: [
+        "DevOps & Cloud Infrastructure (AWS, Terraform, Docker)",
+        "Full-Stack Development (Next.js, Node.js, Nest.js, TypeScript)",
+        "Modern Web Applications & Custom Dashboards",
+        "Secure CI/CD Pipelines & Containerized Solutions",
+      ],
+    },
+    {
+      title: "Professional Experience",
+      items: [
+        "Software Engineer at Code Reroute",
+        "Full-Stack Engineer (Freelance)",
+        "Assistant Python Lecturer at UIT University",
+        "Software Engineering Intern at Radical X",
+      ],
+    },
+  ];
+
+  const personalInfo = [
+    {
+      title: "Education",
+      items: ["Bachelor's in Software Engineering from NED University"],
+    },
+    {
+      title: "Approach",
+      items: [
+        "Creating scalable, secure, and high-performance solutions",
+        "Commitment to best practices in full-stack development",
+        "Focus on technically excellent and user-focused solutions",
+      ],
+    },
+  ];
+
   return (
-    <div className="relative">
+    <div className="relative py-16">
       {/* Background Gradient */}
       <div className="absolute -inset-4 bg-gradient-rainbow opacity-10 blur-3xl -z-10" />
 
-      <motion.div 
-        className="rounded-xl overflow-hidden glass-card backdrop-blur-md bg-white/5 border border-white/10"
+      <motion.div
+        className="rounded-2xl overflow-hidden glass-card backdrop-blur-md bg-white/5 border border-white/10 shadow-xl"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -28,48 +65,61 @@ const About = () => {
       >
         {about.map((obj, idx) => (
           <Fragment key={idx}>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {/* Text Content */}
-              <motion.div 
-                className="p-8 lg:p-12 space-y-6 font-outfit"
-                initial={{ opacity: 0, x: -50 }}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 p-8 lg:p-12">
+              {/* Left Column - Image and Introduction */}
+              <motion.div
+                className="flex flex-col gap-8"
+                initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.2 }}
               >
-                <div className="prose prose-invert">
-                  <p className="text-base sm:text-lg leading-relaxed text-white/80">
-                    Hello! I&apos;m <HighlightedText>Bilal Siddique</HighlightedText>, 
-                    a versatile <HighlightedText>Software Engineer</HighlightedText> with expertise in both
-                    <HighlightedText> DevOps/Cloud infrastructure</HighlightedText> and
+                {/* Profile Image */}
+                <div className="relative">
+                  <div className="absolute -inset-0.5 bg-gradient-rainblue rounded-full opacity-75 blur-sm"></div>
+                  <div className="relative bg-deep-blue rounded-full p-2 w-64 h-64 mx-auto">
+                    <div className="relative rounded-full overflow-hidden w-full h-full">
+                      <Image
+                        src={obj.Image}
+                        alt={obj.alt}
+                        fill
+                        className="object-cover"
+                        sizes="256px"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                {/* Introduction */}
+                <div className="text-center">
+                  <h2 className="text-3xl font-bold font-playfair mb-4">
+                    Bilal <span className="text-yellow-200">Siddique</span>
+                  </h2>
+                  <p className="text-lg text-white/80 font-outfit">
+                    Versatile{" "}
+                    <HighlightedText>Software Engineer</HighlightedText> with
+                    expertise in both
+                    <HighlightedText>
+                      {" "}
+                      DevOps/Cloud infrastructure
+                    </HighlightedText>{" "}
+                    and
                     <HighlightedText> Full-Stack development</HighlightedText>.
-                  </p>
-                  
-                  <p className="text-base sm:text-lg leading-relaxed text-white/80 mt-4">
-                    I&apos;m skilled in architecting <HighlightedText>AWS cloud environments</HighlightedText> using Terraform, implementing containerized solutions with Docker, and establishing secure CI/CD pipelines. My specialty lies in <HighlightedText>Next.js</HighlightedText>, <HighlightedText>Node.js</HighlightedText>, <HighlightedText>Nest.js</HighlightedText> and <HighlightedText>TypeScript</HighlightedText>, where I excel at building modern web applications, custom dashboards, and cloud integrations.
-                  </p>
-                  
-                  <p className="text-base sm:text-lg leading-relaxed text-white/80 mt-4">
-                    With a <HighlightedText>Bachelor&apos;s in Software Engineering</HighlightedText> from NED University and professional experience at companies like <HighlightedText>Code Reroute</HighlightedText>, I&apos;ve developed strong interpersonal skills complemented by a passion for emerging technologies. I specialize in creating <HighlightedText>scalable, secure, and high-performance solutions</HighlightedText> across the entire development lifecycle.
-                  </p>
-                  
-                  <p className="text-base sm:text-lg leading-relaxed text-white/80 mt-4">
-                    My project portfolio includes <HighlightedText>E-commerce platforms</HighlightedText> with Stripe and authentication systems, <HighlightedText>custom dashboards</HighlightedText> for AWS resource monitoring, and full-stack applications with robust backend APIs. I&apos;m committed to best practices in full-stack development, delivering solutions that are both technically excellent and user-focused.
                   </p>
                 </div>
 
                 {/* CTA Buttons */}
-                <div className="flex flex-wrap gap-4 pt-6">
+                <div className="flex flex-wrap justify-center gap-4">
                   <motion.div
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
                   >
                     <Link
                       href="https://contra.com/s/eRsWFmON-frontend-development/checkout"
                       onClick={() => dispatch(setSelectedPage("contact"))}
-                      className="relative group overflow-hidden px-8 py-3 rounded-lg font-semibold 
+                      className="relative group overflow-hidden px-6 py-3 rounded-lg font-semibold 
                         glass-card backdrop-blur-md bg-white/5 border border-white/10 
-                        transition-all duration-300 hover:border-white/20 inline-block"
+                        transition-all duration-300 hover:border-white/20 inline-flex items-center"
                     >
                       <span className="relative z-10 text-white group-hover:text-white transition-colors duration-300">
                         Hire Me
@@ -79,15 +129,15 @@ const About = () => {
                   </motion.div>
 
                   <motion.div
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
                   >
                     <Link
                       href="/services"
                       onClick={() => dispatch(setSelectedPage("services"))}
-                      className="relative group overflow-hidden px-8 py-3 rounded-lg font-semibold 
+                      className="relative group overflow-hidden px-6 py-3 rounded-lg font-semibold 
                         glass-card backdrop-blur-md bg-white/5 border border-white/10 
-                        transition-all duration-300 hover:border-white/20 inline-block"
+                        transition-all duration-300 hover:border-white/20 inline-flex items-center"
                     >
                       <span className="relative z-10 text-white group-hover:text-white transition-colors duration-300">
                         My Services
@@ -98,33 +148,73 @@ const About = () => {
                 </div>
               </motion.div>
 
-              {/* Image */}
+              {/* Right Column - Detailed Information */}
               <motion.div
-                className="relative h-[400px] lg:h-full"
-                initial={{ opacity: 0, x: 50 }}
+                className="space-y-8"
+                initial={{ opacity: 0, x: 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.4 }}
               >
-                <Image
-                  src={obj.Image}
-                  alt={obj.alt}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                />
-                {/* Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                
-                {/* Rainbow Gradient Line */}
-                <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-rainblue opacity-75" />
+                {/* Professional Side */}
+                <div className="glass-card backdrop-blur-md bg-white/5 border border-white/10 rounded-xl p-6">
+                  <h3 className="text-xl font-bold font-playfair mb-4 text-yellow-200 flex items-center gap-2">
+                    <span className="w-2 h-2 bg-gradient-rainblue rounded-full"></span>
+                    Professional Profile
+                  </h3>
+                  <div className="space-y-6">
+                    {professionalInfo.map((section, idx) => (
+                      <div key={idx}>
+                        <h4 className="font-semibold text-white mb-2">
+                          {section.title}
+                        </h4>
+                        <ul className="space-y-2">
+                          {section.items.map((item, itemIdx) => (
+                            <li
+                              key={itemIdx}
+                              className="text-white/80 text-sm flex items-start"
+                            >
+                              <span className="text-yellow-200 mr-2">•</span>
+                              {item}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Personal Side */}
+                <div className="glass-card backdrop-blur-md bg-white/5 border border-white/10 rounded-xl p-6">
+                  <h3 className="text-xl font-bold font-playfair mb-4 text-yellow-200 flex items-center gap-2">
+                    <span className="w-2 h-2 bg-gradient-rainblue rounded-full"></span>
+                    Personal Approach
+                  </h3>
+                  <div className="space-y-6">
+                    {personalInfo.map((section, idx) => (
+                      <div key={idx}>
+                        <h4 className="font-semibold text-white mb-2">
+                          {section.title}
+                        </h4>
+                        <ul className="space-y-2">
+                          {section.items.map((item, itemIdx) => (
+                            <li
+                              key={itemIdx}
+                              className="text-white/80 text-sm flex items-start"
+                            >
+                              <span className="text-yellow-200 mr-2">•</span>
+                              {item}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </motion.div>
             </div>
           </Fragment>
         ))}
-
-        {/* Rainbow Gradient Line */}
-        <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-rainblue opacity-75" />
       </motion.div>
     </div>
   );

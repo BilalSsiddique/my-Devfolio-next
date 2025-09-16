@@ -374,7 +374,7 @@ export const experience: Array<experience> = [
     name: "Code Reroute",
     title: "Junior Software Engineer",
     from: "April",
-    to: "April",
+    to: "October",
     year: "2024-2025",
     workDone: [
       "Introduced DevOps culture in a startup environment, implementing best practices using Terraform and GitHub Actions.",
