@@ -7,12 +7,12 @@ import { Fragment } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-const OtherProject = () => {
+const OtherProject = ({ featuredCount = 7 }: { featuredCount?: number }) => {
   return (
     <div className="grid grid-cols-[repeat(auto-fill,minmax(340px,1fr))] gap-8 pt-6 w-full">
       {projects.map(
         (project, idx) =>
-          idx >= 7 && (
+          idx >= featuredCount && (
             <motion.div
               key={idx}
               initial={{ opacity: 0, y: 20 }}

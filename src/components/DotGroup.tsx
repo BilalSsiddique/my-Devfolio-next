@@ -21,6 +21,14 @@ const DotGroup = () => {
       />
       <Link
         className={`${
+          selectedPage === "about" ? selectedStyles : "bg-dark-grey"
+        }
+        w-3 h-3 rounded-full`}
+        href={"#about"}
+        onClick={() => dispatch(setSelectedPage("about"))}
+      />
+      <Link
+        className={`${
           selectedPage === "skills" ? selectedStyles : "bg-dark-grey"
         }
         w-3 h-3 rounded-full`}

@@ -57,6 +57,7 @@ import todoist from "@/assets/projects/todoist.png";
 import companyPortfolio from "@/assets/projects/company-portfolio.png";
 import neobank from "@/assets/projects/Neo-bank.png";
 import contactList from "@/assets/projects/Contact-List-app.png";
+import meshGradient from "../assets/projects/mesh-gradient.png";
 
 // import reactselfie from "../assets/projects/react-selfie-crop-full.png";
 // import exchangerate from "../assets/projects/exchange-rate-api.png";
@@ -119,7 +120,35 @@ export const projects: Array<{
   repo: string;
   stack: icons;
   live?: string;
+  internal?: boolean;
 }> = [
+  {
+    name: "Observability Stack (Prometheus · Grafana · Loki · Tempo)",
+    url: meshGradient,
+    description:
+      "Designed and deployed a full observability platform at a startup on EC2 — Prometheus, Grafana, Loki, and Tempo with OpenTelemetry (OTLP) across microservices. Enabled distributed tracing, centralized log aggregation, and log-to-trace correlation to cut mean time to resolution.",
+    repo: "",
+    stack: [node, postgreSQL, git, github],
+    internal: true,
+  },
+  {
+    name: "ECS Monitor Pro",
+    url: reactdashboard,
+    description:
+      "Internal admin dashboard for an AWS ECS cluster: real-time container metrics, task counts, cluster health, AWS Cost Explorer visualizations, Cloudflare geo-blocking, user/employee management, ECS log viewer, and mass email for beta users.",
+    repo: "",
+    stack: [next, node, typescript, tailwind, git],
+    internal: true,
+  },
+  {
+    name: "Play — YouTube Clone Backend",
+    url: meshGradient,
+    description:
+      "Production-grade YouTube clone backend built with Node.js, Express, and MongoDB. Supports video uploads, subscriptions, likes, comments, JWT authentication, and Cloudinary media storage.",
+    repo: "https://github.com/BilalSsiddique/play-youtube-clone-nodejs-backend",
+    stack: [node, mongo, javascript, git, github],
+    live: "https://github.com/BilalSsiddique/play-youtube-clone-nodejs-backend",
+  },
   {
     name: "🌟EcomPulse 🛒💓: NextVista Bazaar (Sanity CMS,Stripe & Clerk AUTH)",
     url: dineMarketEcommerce,
@@ -372,10 +401,10 @@ type experience = {
 export const experience: Array<experience> = [
   {
     name: "Code Reroute",
-    title: "Junior Software Engineer",
+    title: "Junior DevOps / Cloud & Full-Stack Engineer",
     from: "April",
-    to: "October",
-    year: "2024-2025",
+    to: "Present",
+    year: "2024 - Present",
     workDone: [
       "Introduced DevOps culture in a startup environment, implementing best practices using Terraform and GitHub Actions.",
       "Optimized Docker images, reducing size from 930 MB to 220 MB for improved deployment efficiency.",

@@ -1,7 +1,7 @@
 import Head from "next/head";
 import DotGroup from "../components/DotGroup";
 import Landing from "../components/Landing";
-import LineGradient from "../components/LineGradient";
+import Section from "../components/Section";
 import Skills from "../components/Skills";
 import Certification from "../components/Certification";
 import Contact from "../components/Contact";
@@ -20,74 +20,117 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Bilal Siddique</title>
+        <title>Bilal Siddique | DevOps & Cloud Engineer</title>
         <meta
           name="description"
-          content="Bilal Siddique Frontend Developer,custom Shopify Developer using Nextjs,Shopify Developer,Full-Stack Engineer & Aspiring Cloud Engineer. My TechStack is React, Next, Custom Shopify Stores using Nextjs, Remix Hydrogen, Python, Django  "
+          content="Junior DevOps / Cloud Engineer specializing in AWS (ECS, EC2, VPC), Terraform, Docker, GitHub Actions, and observability with Prometheus, Grafana, Loki, and OpenTelemetry. Based in Karachi."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+          property="og:title"
+          content="Bilal Siddique | DevOps & Cloud Engineer"
+        />
+        <meta
+          property="og:description"
+          content="Architecting AWS infrastructure, automating CI/CD pipelines, and building full-stack observability platforms."
+        />
       </Head>
 
-      <main className={`app bg-black overflow-hidden`}>
-        <div className="xs:w-5/6 xs:mx-auto md:h-full ">
-          {/* SIDE DOTS BAR */}
-          {isAboveMediumScreens && <DotGroup />}
-
-          {/* INTRO SECTION */}
-          <Landing />
-        </div>
-        {/* ABOUT SECTION */}
-        <LineGradient ID="about" section="About Me" />
-        <div className=" ss:w-5/6 pb-20 mx-5 ss:mx-auto h-full mt-44 xs:mt-52">
-          <About />
-        </div>
-        {/* Linear Gradient Skills/Techstack Section (by Default skills) w-full */}
-        <LineGradient />
-        <div className=" ss:w-5/6 pb-20  mx-5 ss:mx-auto h-full mt-44 xs:mt-52">
-          <div className="hidden sm:block b-gradient-rainbow-bg"></div>
-
-          <Skills />
+      <main className="app relative min-h-screen bg-deep-blue overflow-x-hidden">
+        {/* Page-wide ambient background */}
+        <div className="pointer-events-none fixed inset-0 z-0 overflow-hidden">
+          <div className="absolute inset-0 bg-[linear-gradient(rgba(44,188,233,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(44,188,233,0.02)_1px,transparent_1px)] bg-[size:64px_64px] opacity-40" />
+          <div className="absolute top-[20%] -left-32 h-96 w-96 rounded-full bg-blue/5 blur-[120px]" />
+          <div className="absolute top-[55%] -right-32 h-96 w-96 rounded-full bg-red/5 blur-[140px]" />
         </div>
 
-        {/* EXPERIENCE SECTION  */}
-        <LineGradient ID="experience" section="Experience" />
-        <div className=" ss:w-5/6 pb-20 mx-5 ss:mx-auto h-full mt-44 xs:mt-52">
-          <Experience />
-        </div>
+        {isAboveMediumScreens && <DotGroup />}
 
-        {/* PROJECT SECTION */}
-        <LineGradient ID="projects" section="Projects" />
-        <div className=" ss:w-5/6 pb-20 mx-5 ss:mx-auto h-full mt-44 xs:mt-52">
-          <div className="b-gradient-rainbow-bg"></div>
-          <Projects />
-        </div>
-
-        {/* Linear Gradient Certifications Section w-full */}
-        <LineGradient ID="certifications" section="Certifications" />
-        <div className="ss:w-5/6 pb-20 mx-5 ss:mx-auto h-full mt-32 xs:mt-36 ">
-          {/* GRID VIEW SWITCH */}
-          <div className=" flex items-center gap-3 justify-center xs:justify-start w-full mb-20">
-            <p className="text-[22px] font-outfit">Grid View</p>
-            <CustomToggleIcon
-              gridSwitch={gridSwitch}
-              setGridSwitch={setGridSwitch}
-            />
+        <div className="relative z-10">
+          {/* Hero */}
+          <div className="xs:w-5/6 xs:mx-auto">
+            <Landing />
           </div>
 
-          {/* CERTIFICATION SECTION CONTINUE WITH IMAGE SLIDER */}
-          <div
-            className={`md:w-full xs:w-full  glass  ${
-              isAboveMediumScreens && gridSwitch === false && "h-[600px]"
-            }  mx-auto`}
+          {/* About */}
+          <Section
+            id="about"
+            number="01"
+            title="About Me"
+            subtitle="DevOps culture, cloud infrastructure, and full-stack delivery."
           >
-            <Certification gridSwitch={gridSwitch} />
-          </div>
+            <About />
+          </Section>
+
+          {/* Skills */}
+          <Section
+            id="skills"
+            number="02"
+            title="Tech Stack"
+            subtitle="Cloud & infra, CI/CD, observability, backend, and frontend."
+            glow="left"
+          >
+            <Skills />
+          </Section>
+
+          {/* Experience */}
+          <Section
+            id="experience"
+            number="03"
+            title="Experience"
+            subtitle="From startup DevOps adoption to production AWS deployments."
+          >
+            <Experience />
+          </Section>
+
+          {/* Projects */}
+          <Section
+            id="projects"
+            number="04"
+            title="Projects"
+            subtitle="Infrastructure dashboards, observability stacks, and production backends."
+            glow="right"
+          >
+            <Projects />
+          </Section>
+
+          {/* Certifications */}
+          <Section
+            id="certifications"
+            number="05"
+            title="Certifications"
+            subtitle="Continuous learning across cloud, development, and data."
+            headerExtra={
+              <div className="flex items-center gap-3 justify-center xs:justify-start">
+                <p className="font-outfit text-base text-white/70">Grid view</p>
+                <CustomToggleIcon
+                  gridSwitch={gridSwitch}
+                  setGridSwitch={setGridSwitch}
+                />
+              </div>
+            }
+          >
+            <div
+              className={`md:w-full xs:w-full glass rounded-xl overflow-hidden ${
+                isAboveMediumScreens && gridSwitch === false ? "h-[600px]" : ""
+              } mx-auto`}
+            >
+              <Certification gridSwitch={gridSwitch} />
+            </div>
+          </Section>
+
+          {/* Contact */}
+          <Section
+            id="contact"
+            number="06"
+            title="Contact"
+            subtitle="Let's talk about cloud infrastructure, CI/CD, or your next project."
+            className="pb-24"
+          >
+            <Contact />
+          </Section>
         </div>
-        {/* CONTACT SECTION */}
-        <LineGradient ID="contact" section="Contact" />
-        <div className=" ss:w-5/6 pb-20 mx-5 ss:mx-auto h-full mt-44 xs:mt-52">
-          <Contact />
-        </div>
+
         <Whatsapp />
       </main>
     </>
