@@ -48,7 +48,7 @@ const Service = ({ item }: { item: services }) => {
           </div>
           <Link
             className="text-white w-fit rounded-r-sm bg-gradient-rainblue  py-0.5 px-0.5 text-center  flex items-center justify-center   border-1   border-deep-blue "
-            href="https://contra.com/s/eRsWFmON-frontend-development/checkout"
+            href="/#contact"
             onClick={() => dispatch(setSelectedPage("contact"))}
           >
             <div className="font-semibold  tracking-widest text-[13px] sm:justify-end  sm:text-[15px] bg-deep-blue hover:text-red transition duration-500  sm:h-[25px] h-full flex items-center justify-center  xs:px-1 font-outfit">

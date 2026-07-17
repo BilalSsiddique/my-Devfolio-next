@@ -16,7 +16,7 @@ const DotGroup = () => {
       <Link
         className={`${selectedPage === "home" ? selectedStyles : "bg-dark-grey"}
         w-3 h-3 rounded-full`}
-        href={"#home"}
+        href={"/#home"}
         onClick={() => dispatch(setSelectedPage("home"))}
       />
       <Link
@@ -24,7 +24,7 @@ const DotGroup = () => {
           selectedPage === "about" ? selectedStyles : "bg-dark-grey"
         }
         w-3 h-3 rounded-full`}
-        href={"#about"}
+        href={"/#about"}
         onClick={() => dispatch(setSelectedPage("about"))}
       />
       <Link
@@ -32,7 +32,7 @@ const DotGroup = () => {
           selectedPage === "skills" ? selectedStyles : "bg-dark-grey"
         }
         w-3 h-3 rounded-full`}
-        href={"#skills"}
+        href={"/#skills"}
         onClick={() => dispatch(setSelectedPage("skills"))}
       />
       <Link
@@ -40,7 +40,7 @@ const DotGroup = () => {
           selectedPage === "experience" ? selectedStyles : "bg-dark-grey"
         }
         w-3 h-3 rounded-full`}
-        href={"#experience"}
+        href={"/#experience"}
         onClick={() => dispatch(setSelectedPage("experience"))}
       />
 
@@ -49,7 +49,7 @@ const DotGroup = () => {
           selectedPage === "projects" ? selectedStyles : "bg-dark-grey"
         }
         w-3 h-3 rounded-full`}
-        href={"#projects"}
+        href={"/#projects"}
         onClick={() => dispatch(setSelectedPage("projects"))}
       />
       <Link
@@ -57,7 +57,7 @@ const DotGroup = () => {
           selectedPage === "services" ? selectedStyles : "bg-dark-grey"
         }
         w-3 h-3 rounded-full`}
-        href={"services"}
+        href={"/services"}
         onClick={() => dispatch(setSelectedPage("services"))}
       />
       <Link
@@ -65,7 +65,7 @@ const DotGroup = () => {
           selectedPage === "certifications" ? selectedStyles : "bg-dark-grey"
         }
         w-3 h-3 rounded-full`}
-        href={"#certifications"}
+        href={"/#certifications"}
         onClick={() => dispatch(setSelectedPage("certifications"))}
       />
 
@@ -74,7 +74,7 @@ const DotGroup = () => {
           selectedPage === "contact" ? selectedStyles : "bg-dark-grey"
         }
         w-3 h-3 rounded-full`}
-        href={"#contact"}
+        href={"/#contact"}
         onClick={() => dispatch(setSelectedPage("contact"))}
       />
     </div>

@@ -186,7 +186,7 @@ const Landing = () => {
               <Link
                 className="font-outfit text-sm sm:text-base rounded-lg border border-white/20 bg-white/5 px-6 py-3 font-semibold text-white backdrop-blur-sm transition duration-300 hover:border-blue/50 hover:bg-white/10"
                 onClick={() => dispatch(setSelectedPage("contact"))}
-                href="#contact"
+                href="/#contact"
               >
                 Let&apos;s talk
               </Link>

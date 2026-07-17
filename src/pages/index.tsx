@@ -110,11 +110,7 @@ export default function Home() {
               </div>
             }
           >
-            <div
-              className={`md:w-full xs:w-full glass rounded-xl overflow-hidden ${
-                isAboveMediumScreens && gridSwitch === false ? "h-[600px]" : ""
-              } mx-auto`}
-            >
+            <div className="md:w-full xs:w-full mx-auto">
               <Certification gridSwitch={gridSwitch} />
             </div>
           </Section>

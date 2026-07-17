@@ -11,27 +11,31 @@ const HighlightedText = ({ children }: { children: React.ReactNode }) => (
   <span className="text-yellow-200 font-semibold">{children}</span>
 );
 
+const impactStats = [
+  { value: "1+ yr", label: "Cloud / DevOps experience" },
+  { value: "80%", label: "less manual release effort" },
+  { value: "930 -> 220 MB", label: "Docker image optimization" },
+];
+
 const About = () => {
   const dispatch = useAppDispatch();
 
-  // Split the about content into two distinct sections
   const professionalInfo = [
     {
-      title: "Technical Expertise",
+      title: "Current Focus",
       items: [
-        "DevOps & Cloud Infrastructure (AWS, Terraform, Docker)",
-        "Full-Stack Development (Next.js, Node.js, Nest.js, TypeScript)",
-        "Modern Web Applications & Custom Dashboards",
-        "Secure CI/CD Pipelines & Containerized Solutions",
+        "Architecting AWS infrastructure with Terraform across ECS, EC2, VPC, ALB, IAM, ACM, and ECR.",
+        "Automating CI/CD with GitHub Actions, ECR pipelines, and repeatable deployment workflows.",
+        "Building observability with Prometheus, Grafana, Loki, Tempo, and OpenTelemetry.",
+        "Delivering internal dashboards with Next.js, NestJS, AWS SDK, Cloudflare, and Resend.",
       ],
     },
     {
-      title: "Professional Experience",
+      title: "Experience Snapshot",
       items: [
-        "Software Engineer at Code Reroute",
-        "Full-Stack Engineer (Freelance)",
-        "Assistant Python Lecturer at UIT University",
-        "Software Engineering Intern at Radical X",
+        "Junior DevOps / Cloud & Full-Stack Engineer at Code Reroute, Remote - Canada.",
+        "Assistant Python Lecturer at Usman Institute of Technology.",
+        "Software Engineer Intern at RadicalX, contributing to a CRUD apprenticeship portal.",
       ],
     },
   ];
@@ -39,14 +43,17 @@ const About = () => {
   const personalInfo = [
     {
       title: "Education",
-      items: ["Bachelor's in Software Engineering from NED University"],
+      items: [
+        "B.Sc. Software Engineering from NED University of Engineering & Technology.",
+        "Coursework strengths: Cloud Computing, Data Encryption & Security, Data Mining, DSA, and OOP.",
+      ],
     },
     {
-      title: "Approach",
+      title: "Engineering Approach",
       items: [
-        "Creating scalable, secure, and high-performance solutions",
-        "Commitment to best practices in full-stack development",
-        "Focus on technically excellent and user-focused solutions",
+        "Reduce operational overhead through automation, repeatable infrastructure, and clear deployment paths.",
+        "Make production systems observable with metrics, logs, traces, and fast debugging workflows.",
+        "Balance infrastructure ownership with full-stack delivery for practical startup environments.",
       ],
     },
   ];
@@ -95,17 +102,28 @@ const About = () => {
                   <h2 className="text-3xl font-bold font-playfair mb-4">
                     Bilal <span className="text-yellow-200">Siddique</span>
                   </h2>
-                  <p className="text-lg text-white/80 font-outfit">
-                    Versatile{" "}
-                    <HighlightedText>Software Engineer</HighlightedText> with
-                    expertise in both
-                    <HighlightedText>
-                      {" "}
-                      DevOps/Cloud infrastructure
-                    </HighlightedText>{" "}
-                    and
-                    <HighlightedText> Full-Stack development</HighlightedText>.
+                  <p className="text-lg text-white/80 font-outfit leading-relaxed">
+                    <HighlightedText>Junior DevOps / Cloud Engineer</HighlightedText>{" "}
+                    focused on AWS infrastructure, CI/CD automation,
+                    containerization, observability, and full-stack internal
+                    tooling.
                   </p>
+                </div>
+
+                <div className="grid grid-cols-1 xs:grid-cols-3 gap-3">
+                  {impactStats.map((stat) => (
+                    <div
+                      key={stat.label}
+                      className="rounded-xl border border-white/10 bg-white/[0.04] px-4 py-4 text-center"
+                    >
+                      <p className="font-outfit text-lg font-bold text-yellow-200">
+                        {stat.value}
+                      </p>
+                      <p className="font-outfit text-xs text-white/50 leading-snug mt-1">
+                        {stat.label}
+                      </p>
+                    </div>
+                  ))}
                 </div>
 
                 {/* CTA Buttons */}
@@ -115,14 +133,14 @@ const About = () => {
                     whileTap={{ scale: 0.95 }}
                   >
                     <Link
-                      href="https://contra.com/s/eRsWFmON-frontend-development/checkout"
+                      href="/#contact"
                       onClick={() => dispatch(setSelectedPage("contact"))}
                       className="relative group overflow-hidden px-6 py-3 rounded-lg font-semibold 
                         glass-card backdrop-blur-md bg-white/5 border border-white/10 
                         transition-all duration-300 hover:border-white/20 inline-flex items-center"
                     >
                       <span className="relative z-10 text-white group-hover:text-white transition-colors duration-300">
-                        Hire Me
+                        Contact Me
                       </span>
                       <div className="absolute inset-0 bg-gradient-rainblue opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     </Link>
@@ -133,14 +151,14 @@ const About = () => {
                     whileTap={{ scale: 0.95 }}
                   >
                     <Link
-                      href="/services"
-                      onClick={() => dispatch(setSelectedPage("services"))}
+                      href="/Bilal-Siddique-DevOps-Engineer.pdf"
+                      target="_blank"
                       className="relative group overflow-hidden px-6 py-3 rounded-lg font-semibold 
                         glass-card backdrop-blur-md bg-white/5 border border-white/10 
                         transition-all duration-300 hover:border-white/20 inline-flex items-center"
                     >
                       <span className="relative z-10 text-white group-hover:text-white transition-colors duration-300">
-                        My Services
+                        View Resume
                       </span>
                       <div className="absolute inset-0 bg-gradient-rainblue opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     </Link>

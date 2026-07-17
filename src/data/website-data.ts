@@ -58,6 +58,10 @@ import companyPortfolio from "@/assets/projects/company-portfolio.png";
 import neobank from "@/assets/projects/Neo-bank.png";
 import contactList from "@/assets/projects/Contact-List-app.png";
 import meshGradient from "../assets/projects/mesh-gradient.png";
+import mappetizerAdminPanel from "@/assets/projects/mappetizer-admin-panel.webp";
+import ecsMonitorPro from "@/assets/projects/ECS-monitor-pro.webp";
+import devcurate from "@/assets/projects/Devcurate.jpeg";
+import taskerly from "@/assets/projects/Taskerly.png";
 
 // import reactselfie from "../assets/projects/react-selfie-crop-full.png";
 // import exchangerate from "../assets/projects/exchange-rate-api.png";
@@ -110,12 +114,102 @@ export const tectStackIcons = [
   { Image: clerk, alt: "clerk" },
 ];
 
+export const techStackGroups = [
+  {
+    title: "Cloud & Infra",
+    summary: "AWS production infrastructure, networking, container runtime, and cost-aware hosting.",
+    skills: [
+      "AWS ECS",
+      "EC2",
+      "VPC",
+      "ALB",
+      "IAM",
+      "ACM",
+      "ECR",
+      "CloudWatch",
+      "Cost Explorer",
+      "Cloudflare",
+      "Docker",
+      "Docker Compose",
+      "Nginx",
+      "Terraform",
+    ],
+  },
+  {
+    title: "CI/CD",
+    summary: "Automated ECS and EC2 deployments with repeatable release paths.",
+    skills: [
+      "GitHub Actions",
+      "ECR pipelines",
+      "Zero-downtime deployments",
+      "ECS deployments",
+      "EC2 deployments",
+      "Infrastructure as Code",
+    ],
+  },
+  {
+    title: "Observability",
+    summary: "Metrics, logs, traces, and log-to-trace workflows for microservices.",
+    skills: [
+      "Prometheus",
+      "Grafana",
+      "Loki",
+      "Tempo",
+      "OpenTelemetry",
+      "OTLP",
+      "Distributed tracing",
+      "Log-trace correlation",
+    ],
+  },
+  {
+    title: "Backend",
+    summary: "API services, queues, caches, and data layers for product systems.",
+    skills: [
+      "Node.js",
+      "NestJS",
+      "Express.js",
+      "REST APIs",
+      "PostgreSQL",
+      "MongoDB",
+      "Redis",
+      "RabbitMQ",
+    ],
+  },
+  {
+    title: "Frontend",
+    summary: "Dashboards, admin panels, and SaaS interfaces with modern React tooling.",
+    skills: [
+      "Next.js",
+      "React.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "shadcn/ui",
+      "TanStack Query",
+      "Redux Toolkit",
+    ],
+  },
+  {
+    title: "Dev Practices",
+    summary: "Practical engineering habits for delivery, operations, and collaboration.",
+    skills: [
+      "Git",
+      "Linux/Unix",
+      "Shell scripting",
+      "Microservices",
+      "Agile/Scrum",
+      "Security-aware deployments",
+    ],
+  },
+];
+
 // PROJECTS
 type icons = string[];
 export const projects: Array<{
   name: string;
   url?: StaticImageData;
   classname?: string;
+  category?: string;
+  impact?: string;
   description: string;
   repo: string;
   stack: icons;
@@ -123,26 +217,74 @@ export const projects: Array<{
   internal?: boolean;
 }> = [
   {
-    name: "Observability Stack (Prometheus · Grafana · Loki · Tempo)",
+    name: "Observability Stack",
     url: meshGradient,
+    category: "Staging Observability",
+    impact: "Cost-aware bug detection before launch",
     description:
-      "Designed and deployed a full observability platform at a startup on EC2 — Prometheus, Grafana, Loki, and Tempo with OpenTelemetry (OTLP) across microservices. Enabled distributed tracing, centralized log aggregation, and log-to-trace correlation to cut mean time to resolution.",
+      "Designed and deployed a staging observability stack on EC2 for a startup team using Prometheus, Grafana, Loki, Tempo, and OpenTelemetry. The setup helps catch bugs earlier, control pre-launch infrastructure cost, and prepares the path for production ECS observability after launch.",
     repo: "",
     stack: [node, postgreSQL, git, github],
     internal: true,
   },
   {
     name: "ECS Monitor Pro",
-    url: reactdashboard,
+    url: ecsMonitorPro,
+    category: "Cloud Dashboard",
+    impact: "Centralized AWS operations and business workflows",
     description:
-      "Internal admin dashboard for an AWS ECS cluster: real-time container metrics, task counts, cluster health, AWS Cost Explorer visualizations, Cloudflare geo-blocking, user/employee management, ECS log viewer, and mass email for beta users.",
+      "Built ECS MonitorPro as an internal cloud management platform for a startup, independently designing and developing real-time ECS cluster visibility, container health, task status, CloudWatch logs, AWS Cost Explorer metrics, Cloudflare geo-blocking, employee and applicant management, resume viewing, and Resend-powered bulk email campaigns.",
     repo: "",
     stack: [next, node, typescript, tailwind, git],
     internal: true,
   },
   {
-    name: "Play — YouTube Clone Backend",
+    name: "Startup Admin Platform",
+    url: mappetizerAdminPanel,
+    category: "SaaS Admin Platform",
+    impact: "Central operational hub for a multi-tenant restaurant SaaS",
+    description:
+      "Designed and developed a comprehensive internal administration platform for a startup's multi-tenant restaurant SaaS application. Built as the sole engineer with Next.js, TypeScript, NestJS, TanStack Query, and shadcn/ui, covering restaurant verification, ownership claim approvals, reservations, user moderation, blocked users, staff role assignment, advanced search and filtering, and detailed restaurant operational profiles.",
+    repo: "",
+    stack: [next, node, typescript, tailwind, git],
+    internal: true,
+  },
+  {
+    name: "S3 CloudFront Frontend Delivery",
     url: meshGradient,
+    category: "Cloud Delivery",
+    impact: "Secure static hosting for internal startup platforms",
+    description:
+      "Designed the frontend delivery architecture for ECS MonitorPro and the Startup Admin Platform by building static Next.js applications, hosting them in private Amazon S3 buckets, serving them through Amazon CloudFront as the CDN, and securing origin access with Origin Access Control. The infrastructure was provisioned with Terraform while NestJS backends were deployed separately on AWS.",
+    repo: "",
+    stack: [next, typescript, git, github],
+    internal: true,
+  },
+  {
+    name: "DevCurate",
+    url: devcurate,
+    category: "AI Knowledge Base",
+    impact: "Centralized developer learning resources with AI organization",
+    description:
+      "Built an AI-powered knowledge base for developers who save learning resources across LinkedIn, Notion, GitHub, bookmarks, files, and notes. DevCurate ingests URLs, manual notes, PDFs, images, and documents, then uses AI for summarization, categorization, tag extraction, duplicate detection, semantic search, related content, learning paths, progress analytics, and freshness signals. The backend uses NestJS, TypeScript, PostgreSQL, Prisma, OpenAI, JWT auth, AWS S3, Redis, and background job processing.",
+    repo: "",
+    stack: [node, postgreSQL, typescript, git, github],
+  },
+  {
+    name: "Taskerly",
+    url: taskerly,
+    category: "Engineering Productivity",
+    impact: "Cross-repo task, plan, docs, and context tracker",
+    description:
+      "Developed a standalone task and plan tracker for personal engineering work across multiple repositories. Taskerly keeps repo tasks, durable implementation plans, append-only plan history, technical docs, doc versions, plan-to-doc links, external references, and last-context breadcrumbs together so work can resume quickly after context switches. The backend is built with NestJS, Prisma, and PostgreSQL, with a planned Next.js frontend.",
+    repo: "https://github.com/BilalSsiddique/taskerly",
+    stack: [node, postgreSQL, typescript, next, git],
+  },
+  {
+    name: "Play - YouTube Clone Backend",
+    url: meshGradient,
+    category: "Backend API",
+    impact: "Production-style video platform API",
     description:
       "Production-grade YouTube clone backend built with Node.js, Express, and MongoDB. Supports video uploads, subscriptions, likes, comments, JWT authentication, and Cloudinary media storage.",
     repo: "https://github.com/BilalSsiddique/play-youtube-clone-nodejs-backend",
@@ -150,84 +292,102 @@ export const projects: Array<{
     live: "https://github.com/BilalSsiddique/play-youtube-clone-nodejs-backend",
   },
   {
-    name: "🌟EcomPulse 🛒💓: NextVista Bazaar (Sanity CMS,Stripe & Clerk AUTH)",
+    name: "EcomPulse - NextVista Bazaar",
     url: dineMarketEcommerce,
+    category: "Ecommerce",
+    impact: "Sanity CMS, Stripe, and Clerk storefront",
     description:
-      "✨Engineered a lightning-fast Ecommerce Store with Next.js, React.js,Clerk Authentication,Stripe and Sanity CMS for efficient product management, utilizing SSG and ISG for a seamless user experience.",
+      "Engineered a Next.js ecommerce storefront with Clerk authentication, Stripe payments, and Sanity CMS for product management, using static generation patterns for fast browsing.",
     repo: "https://github.com/BilalSsiddique/wmd-next-ecommerce-sanity",
     stack: [next, postgreSQL, tailwind, git, typescript, Sanity, clerk],
     live: "https://wmd-next-ecommerce-sanity.vercel.app/",
   },
   {
-    name: "📊 React Insights Dashboard",
+    name: "React Insights Dashboard",
     url: reactdashboard,
+    category: "Admin Dashboard",
+    impact: "Interactive analytics UI with charts",
     description:
-      "✨ A powerful Admin Dashboard meticulously crafted with React.js and industry-recommended packages including Novo Charts, Material UI, and Framer Motion, presenting data visualization in a dynamic and intuitive interface.",
+      "Built a data-focused React admin dashboard with charting, Material UI, and Framer Motion to present analytics in a responsive operational interface.",
     repo: "https://github.com/BilalSsiddique/react-admin-dashboard",
     stack: [react, framer, materialui, github, git],
     live: "https://react-admin-learn.vercel.app",
   },
   {
-    name: "🛒 Tech Company Portfolio",
+    name: "Tech Company Portfolio",
     url: companyPortfolio,
+    category: "Frontend",
+    impact: "Figma-to-Next.js responsive build",
     description:
-      "✨ Transformed from a Figma design, this company portfolio is now fully functional and responsive, featuring dynamic elements such as Swiper.js for smooth slideshows, Grid layout for structured content presentation, and more, ensuring an engaging user experience.",
+      "Transformed a Figma design into a responsive company portfolio with Next.js, Swiper interactions, and structured grid-based content.",
     repo: "",
     stack: [next, react, typescript, tailwind, github, git],
     live: "https://company-portfolio-pi.vercel.app/",
   },
   {
-    name: "📚 Bookworm Haven",
+    name: "Bookworm Haven",
     url: simpleBookStore,
+    category: "Web App",
+    impact: "Authenticated book exploration workflow",
     description:
-      "✨ A sleek Book Store Project built on the robust Next.js v13.3.0, featuring seamless user authentication using Bearer tokens and an engaging exploration of books through the POSTMAN provided API.",
+      "Built a Next.js book store with bearer-token authentication and an API-driven book browsing experience.",
     repo: "https://github.com/BilalSsiddique/wmd-next-books",
     stack: [next, redux, tailwind, typescript, git, postman],
     live: "https://simple-book-store-bilal-siddique.vercel.app/",
   },
   {
-    name: "🛒 NeoBank - Crypto",
+    name: "NeoBank - Crypto",
     url: neobank,
+    category: "Frontend",
+    impact: "Responsive fintech login experience",
     description:
-      "✨Crafted with Next.js, React.js, Tailwind CSS, and TypeScript, this login page is designed for a crypto-based company, offering a seamless and secure authentication experience.",
+      "Created a responsive crypto fintech login experience with Next.js, React, TypeScript, and Tailwind CSS.",
     repo: "",
     stack: [next, react, typescript, tailwind, github, git],
     live: "https://neobank-seven.vercel.app/",
   },
   {
-    name: "🛒 Dynamic Contact List App",
+    name: "Dynamic Contact List App",
     url: contactList,
+    category: "Web App",
+    impact: "CRUD contact management",
     description:
-      "✨ Seamlessly developed using the latest Remix Framework, custom CSS, React Router, and Dynamic Routes, this Contact List Web App empowers users with comprehensive contact management functionalities. Effortlessly add, update, and delete contacts, ensuring a seamless and intuitive experience throughout.",
+      "Developed a Remix contact management app with dynamic routes and full create, read, update, and delete workflows.",
     repo: "https://github.com/BilalSsiddique/remix-contacs",
     stack: [react, typescript, tailwind, github, git],
     live: "https://remix-contacs.vercel.app/contacts/giovanni-benussi",
   },
 
   {
-    name: "🛒 NextCart-Redux",
+    name: "NextCart Redux",
     url: reduxCart,
+    category: "Ecommerce UI",
+    impact: "Redux Toolkit shopping cart flow",
     description:
-      "✨ A Shopping Cart Project utilizing Next.js v13.3.0, Redux Toolkit, and Tailwind CSS, offering a seamless shopping experience where users can effortlessly add, update, and delete products. Powered by a Fake Store API for realistic product data 🛍️.",
+      "Built a shopping cart with Next.js, Redux Toolkit, Tailwind CSS, and Fake Store API data for realistic add, update, and remove product flows.",
     repo: "https://github.com/BilalSsiddique/redux-cart",
     stack: [next, redux, typescript, tailwind, github, git],
     live: "https://redux-cart-rho.vercel.app/",
   },
   {
-    name: "🚀 Todoist",
+    name: "Todoist",
     url: todoist,
+    category: "Full-Stack App",
+    impact: "Django REST Framework plus React",
     description:
-      "✨ Streamline your tasks with TodoistXpress, a robust Todoist web app crafted using Django Rest Framework and React.js! 📝.",
+      "Built a task management application using Django REST Framework and React.js.",
     repo: "https://github.com/BilalSsiddique/todoist-django-react-frontend",
     stack: [react, django, redux, tailwind, github, git],
     live: "https://todoist-django-react-frontend.vercel.app",
   },
 
   {
-    name: "🎓PROJECT NEXUS : STREAMLINED STUDENT PROJECT ALLOCATION",
+    name: "Project Nexus - Student Project Allocation",
     url: studentProject,
+    category: "University System",
+    impact: "Student project assignment workflow",
     description:
-      "✨ Incorporating Python Django, I created a seamless project management module. This project allows effortless project addition, editing, and assignment to students, providing a clear overview of assigned projects for efficient management. 🚀",
+      "Created a Django project management module for adding, editing, and assigning projects to students with a clear management overview.",
     repo: "https://github.com/BilalSsiddique/basic_student_project_allocation_system",
     stack: [pythonskill, django, postgreSQL, Bootstrap, git],
     live: "https://basic-student-project-allocation-system.vercel.app/",
@@ -402,20 +562,17 @@ export const experience: Array<experience> = [
   {
     name: "Code Reroute",
     title: "Junior DevOps / Cloud & Full-Stack Engineer",
-    from: "April",
+    from: "Apr",
     to: "Present",
     year: "2024 - Present",
     workDone: [
-      "Introduced DevOps culture in a startup environment, implementing best practices using Terraform and GitHub Actions.",
-      "Optimized Docker images, reducing size from 930 MB to 220 MB for improved deployment efficiency.",
-      "Provisioned and deployed scalable AWS ECS infrastructure with VPC, ALB, and secure networking.",
-      "Developed an internal admin dashboard to monitor AWS ECS container metrics, task counts, and real-time cluster status.",
-      "Integrated AWS cost analytics to visualize spend across all services with daily averages, service-wise breakdowns, and date filters.",
-      "Implemented Geo-blocking controls via Cloudflare for region-based traffic restrictions.",
-      "Built user and employee management modules to track beta users and manage applicant data with resume viewing and status-based filtering.",
-      "Created a log viewer for inspecting logs across all ECS services in the cluster.",
-      "Built a Mass Email system targeting beta users and applicants as segmented audiences.",
-      "Developed an Active Resources view displaying all live AWS resources for better infrastructure visibility.",
+      "Pioneered DevOps culture in a startup by adopting Infrastructure as Code with Terraform and automating end-to-end CI/CD pipelines via GitHub Actions, cutting manual release effort by 80%.",
+      "Architected production-grade AWS ECS infrastructure with Terraform, provisioning VPC, ALB, IAM roles and policies, OIDC providers, ACM certificates, and ECR repositories.",
+      "Optimized Docker images from 930 MB to 220 MB, improving build times and reducing ECR storage costs.",
+      "Migrated deployment strategy from ECS to EC2 with Docker Compose for pre-launch cost optimization, including Nginx and SSL certificate auto-renewal.",
+      "Implemented a staging observability platform on EC2 with Prometheus, Grafana, Loki, Tempo, and OpenTelemetry for metrics, logs, traces, and log-to-trace correlation before production launch.",
+      "Developed an internal admin dashboard with Next.js and NestJS, integrating AWS SDK, CloudWatch Logs, Cost Explorer, Cloudflare geo-blocking controls, and Resend.",
+      "Built an Admin Panel for a multi-tenant restaurant SaaS application using Next.js, shadcn/ui, and TanStack Query.",
     ],
   },
   {
@@ -443,8 +600,8 @@ export const experience: Array<experience> = [
   },
 
   {
-    name: "Radical X",
-    title: "Software Engineer Intern ",
+    name: "RadicalX",
+    title: "Software Engineer Intern",
     from: "Sep",
     to: "Nov",
     year: "2022",

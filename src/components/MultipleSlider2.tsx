@@ -51,9 +51,9 @@ const MultipleSlider2 = () => {
               }}
             >
               {/* Certificate Image Container */}
-              <div className="relative h-[500px] md:h-[600px]">
+              <div className="relative h-[520px] md:h-[660px]">
                 <Image
-                  className="w-full h-full transition-transform duration-500 group-hover:scale-105"
+                  className="w-full h-full transition-transform duration-500"
                   src={item.url}
                   alt="Certificate"
                   fill
@@ -65,7 +65,6 @@ const MultipleSlider2 = () => {
                 {/* Overlay on Hover */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
-
               {/* Rainbow Gradient Line */}
               <div className="absolute bottom-0 left-0 right-0 w-full h-1 bg-gradient-rainblue opacity-75 group-hover:opacity-100 transition-opacity duration-300" />
 
