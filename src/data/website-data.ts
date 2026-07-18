@@ -59,7 +59,9 @@ import neobank from "@/assets/projects/Neo-bank.png";
 import contactList from "@/assets/projects/Contact-List-app.png";
 import meshGradient from "../assets/projects/mesh-gradient.png";
 import mappetizerAdminPanel from "@/assets/projects/mappetizer-admin-panel.webp";
-import ecsMonitorPro from "@/assets/projects/ECS-monitor-pro.webp";
+import ecsMonitorPro from "@/assets/projects/ecs-pro/ECS-monitor-pro.webp";
+import costExplorer from "@/assets/projects/ecs-pro/cost-explorer.png";
+import ec2ContainersMetrics from "@/assets/projects/ecs-pro/ec2-containers-metrics.png";
 import devcurate from "@/assets/projects/Devcurate.jpeg";
 import taskerly from "@/assets/projects/Taskerly.png";
 
@@ -215,6 +217,19 @@ export const projects: Array<{
   stack: icons;
   live?: string;
   internal?: boolean;
+  caseStudy?: {
+    enabled: boolean;
+    headline: string;
+    role: string;
+    problem: string;
+    constraints: string[];
+    solution: string;
+    outcomes: string[];
+    screenshots: StaticImageData[];
+    architecture: string[];
+    techStack: string[];
+    nextStep: string;
+  };
 }> = [
   {
     name: "Observability Stack",
@@ -237,6 +252,53 @@ export const projects: Array<{
     repo: "",
     stack: [next, node, typescript, tailwind, git],
     internal: true,
+    caseStudy: {
+      enabled: true,
+      headline: "Centralized cloud operations for a startup engineering team",
+      role: "Sole engineer - product, frontend, backend, AWS integrations, deployment architecture, and Terraform infrastructure.",
+      problem:
+        "The team needed one place to understand ECS health, task status, CloudWatch logs, AWS spend, user operations, applicant workflows, geo-blocking, and email campaigns. Without a central platform, engineering and operations work was spread across AWS consoles, Cloudflare, resumes, spreadsheets, and manual checks.",
+      constraints: [
+        "Startup cost sensitivity before launch",
+        "Private internal system with sensitive applicant and infrastructure data",
+        "Needed real-time operational visibility without adding heavy platform overhead",
+        "Frontend had to be secure, fast, and cheap to host",
+      ],
+      solution:
+        "I designed and built ECS MonitorPro as an internal cloud management platform with a static Next.js frontend, NestJS backend, AWS SDK integrations, CloudWatch and Cost Explorer views, Cloudflare geo-blocking controls, employee and applicant workflows, resume viewing, and Resend-powered bulk emails.",
+      outcomes: [
+        "Centralized ECS cluster visibility, container health, task status, logs, and cost analytics",
+        "Reduced day-to-day DevOps operational overhead for engineering workflows",
+        "Combined infrastructure and business operations into one internal dashboard",
+        "Secured static frontend delivery through private S3, CloudFront, and Origin Access Control",
+      ],
+      screenshots: [ecsMonitorPro, costExplorer, ec2ContainersMetrics],
+      architecture: [
+        "Static Next.js frontend built and uploaded to a private S3 bucket",
+        "CloudFront CDN in front of S3 with Origin Access Control",
+        "NestJS backend deployed separately on AWS",
+        "AWS SDK integrations for ECS, CloudWatch Logs, and Cost Explorer",
+        "Cloudflare API and Resend integrations for operations workflows",
+        "Terraform-provisioned infrastructure",
+      ],
+      techStack: [
+        "Next.js",
+        "TypeScript",
+        "NestJS",
+        "AWS SDK",
+        "ECS",
+        "CloudWatch",
+        "Cost Explorer",
+        "S3",
+        "CloudFront",
+        "OAC",
+        "Cloudflare API",
+        "Resend",
+        "Terraform",
+      ],
+      nextStep:
+        "Continue expanding cloud operations workflows as the product moves from pre-launch operations into broader production usage.",
+    },
   },
   {
     name: "Startup Admin Platform",

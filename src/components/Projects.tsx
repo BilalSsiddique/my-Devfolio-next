@@ -1,8 +1,10 @@
 import Link from "next/link";
 import { projects } from "@/data/website-data";
 import Image from "next/image";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import OtherProject from "./OtherProject";
+import ProjectCaseStudy from "./ProjectCaseStudy";
 import { useAppDispatch } from "@/store/hook";
 import { setSelectedPage } from "@/store/slices/navbarSlice";
 import {
@@ -76,6 +78,9 @@ const ProjectCover = ({
 
 const Projects = () => {
   const dispatch = useAppDispatch();
+  const [caseStudyProject, setCaseStudyProject] = useState<
+    typeof projects[0] | null
+  >(null);
   const featuredProjects = projects.slice(0, FEATURED_COUNT);
   const leadProject = featuredProjects[0];
   const supportingProjects = featuredProjects.slice(1);
@@ -191,6 +196,15 @@ const Projects = () => {
 
               <div className="mt-8 flex flex-wrap gap-3">
                 <ProjectAction project={leadProject} />
+                {leadProject.caseStudy?.enabled && (
+                  <button
+                    onClick={() => setCaseStudyProject(leadProject)}
+                    className="inline-flex items-center gap-2 rounded-lg bg-gradient-rainblue px-5 py-3 font-outfit font-semibold text-deep-blue transition duration-300 hover:shadow-[0_0_24px_rgba(36,203,255,0.3)]"
+                  >
+                    View Case Study
+                    <FiArrowUpRight />
+                  </button>
+                )}
                 <Link
                   href="/#contact"
                   onClick={() => dispatch(setSelectedPage("contact"))}
@@ -261,6 +275,15 @@ const Projects = () => {
 
               <div className="mt-6 flex flex-wrap items-center justify-between gap-3">
                 <ProjectAction project={project} compact />
+                {project.caseStudy?.enabled && (
+                  <button
+                    onClick={() => setCaseStudyProject(project)}
+                    className="inline-flex items-center gap-2 rounded-lg bg-gradient-rainblue px-4 py-2 font-outfit text-sm font-semibold text-deep-blue transition duration-300 hover:shadow-[0_0_20px_rgba(36,203,255,0.25)]"
+                  >
+                    Case Study
+                    <FiArrowUpRight />
+                  </button>
+                )}
               </div>
             </div>
           </motion.article>
@@ -302,6 +325,13 @@ const Projects = () => {
           <OtherProject featuredCount={FEATURED_COUNT} limit={3} />
         </div>
       </motion.div>
+
+      {caseStudyProject && (
+        <ProjectCaseStudy
+          project={caseStudyProject}
+          onClose={() => setCaseStudyProject(null)}
+        />
+      )}
     </div>
   );
 };
