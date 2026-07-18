@@ -25,9 +25,9 @@ const Skills = () => {
 
       <div className="mb-8 grid grid-cols-1 md:grid-cols-3 gap-4">
         {[
-          ["Primary role", "DevOps / Cloud"],
+          ["Primary role", "Full-Stack Engineering"],
           ["Delivery model", "IaC + CI/CD + Observability"],
-          ["Product edge", "Full-stack dashboards"],
+          ["Cloud focus", "AWS + DevOps ownership"],
         ].map(([label, value]) => (
           <div
             key={label}

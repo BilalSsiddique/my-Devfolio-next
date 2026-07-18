@@ -11,8 +11,13 @@ import {
   SiDocker,
   SiGithubactions,
   SiGrafana,
+  SiNestjs,
+  SiNextdotjs,
+  SiPostgresql,
   SiPrometheus,
+  SiReact,
   SiTerraform,
+  SiTypescript,
 } from "react-icons/si";
 import { HiOutlineTerminal, HiOutlineCloud } from "react-icons/hi";
 import { MdOutlineLocationOn } from "react-icons/md";
@@ -45,6 +50,10 @@ const terminalLines = [
 ];
 
 const devOpsStack = [
+  { name: "Next.js", icon: SiNextdotjs, color: "text-white" },
+  { name: "TypeScript", icon: SiTypescript, color: "text-blue" },
+  { name: "NestJS", icon: SiNestjs, color: "text-red-400" },
+  { name: "PostgreSQL", icon: SiPostgresql, color: "text-sky-300" },
   { name: "AWS", icon: SiAmazonaws, color: "text-orange-400" },
   { name: "Terraform", icon: SiTerraform, color: "text-purple-400" },
   { name: "Docker", icon: SiDocker, color: "text-blue-400" },
@@ -54,7 +63,8 @@ const devOpsStack = [
 ];
 
 const metrics = [
-  { label: "Experience", value: "1+ Yr Cloud/DevOps" },
+  { label: "Full-Stack", value: "2+ Yrs Delivery" },
+  { label: "Cloud / DevOps", value: "1+ Yr Hands-on" },
   { label: "CI/CD Impact", value: "80% Less Manual Work" },
   { label: "Docker Opt.", value: "930 MB → 220 MB" },
 ];
@@ -115,7 +125,7 @@ const Landing = () => {
               <div className="flex items-center gap-2">
                 <HiOutlineCloud className="text-blue text-lg" />
                 <p className="font-outfit text-sm sm:text-base uppercase tracking-[0.2em] text-blue font-medium">
-                  Junior DevOps / Cloud Engineer
+                  Full-Stack Engineer + Cloud/DevOps
                 </p>
               </div>
               <div className="flex items-center gap-1 text-white/40">
@@ -134,9 +144,9 @@ const Landing = () => {
 
             {/* Tagline — from resume summary */}
             <p className="font-outfit mt-6 mb-8 text-sm sm:text-base text-white/60 text-center ss:text-left max-w-lg leading-relaxed">
-              Architecting AWS infrastructure with Terraform, automating CI/CD via
-              GitHub Actions, and building observability platforms with Prometheus,
-              Grafana, Loki, Tempo, and OpenTelemetry across microservices.
+              2+ years building full-stack products with Next.js, TypeScript,
+              NestJS, and PostgreSQL, plus 1+ year owning AWS infrastructure,
+              Terraform, CI/CD, Docker, and observability for startup systems.
             </p>
 
             {/* DevOps stack pills */}
@@ -153,7 +163,7 @@ const Landing = () => {
             </div>
 
             {/* Resume-backed metrics */}
-            <div className="grid grid-cols-3 gap-3 w-full max-w-md mb-8">
+            <div className="grid grid-cols-2 gap-3 w-full max-w-lg mb-8 sm:grid-cols-4">
               {metrics.map(({ label, value }) => (
                 <div
                   key={label}
@@ -292,10 +302,10 @@ const Landing = () => {
                 Code Reroute · Remote · Canada
               </p>
               <p className="text-[11px] sm:text-xs text-blue/80 mt-1">
-                Junior DevOps / Cloud & Full-Stack Engineer
+                Full-Stack Engineer · Cloud/DevOps focus
               </p>
               <div className="flex flex-wrap gap-2 mt-2">
-                {["ECS", "EC2", "Loki", "Tempo", "OTLP"].map((tag) => (
+                {["Next.js", "NestJS", "AWS", "Terraform", "OTLP"].map((tag) => (
                   <span
                     key={tag}
                     className="text-[10px] sm:text-xs px-2 py-0.5 rounded-md bg-blue/10 text-blue border border-blue/20"

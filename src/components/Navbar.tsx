@@ -49,7 +49,7 @@ const Navbar = () => {
                   Bilal Siddique
                 </p>
                 <p className="mt-1 font-outfit text-[11px] leading-none text-white/45">
-                  DevOps / Cloud Engineer
+                  Full-Stack + Cloud/DevOps
                 </p>
               </div>
             </div>

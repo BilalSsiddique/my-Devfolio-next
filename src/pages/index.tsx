@@ -20,19 +20,19 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Bilal Siddique | DevOps & Cloud Engineer</title>
+        <title>Bilal Siddique | Full-Stack & Cloud/DevOps Engineer</title>
         <meta
           name="description"
-          content="Junior DevOps / Cloud Engineer specializing in AWS (ECS, EC2, VPC), Terraform, Docker, GitHub Actions, and observability with Prometheus, Grafana, Loki, and OpenTelemetry. Based in Karachi."
+          content="Full-Stack Engineer with 2+ years of product delivery and 1+ year of Cloud/DevOps experience across AWS, Terraform, Docker, GitHub Actions, and observability."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           property="og:title"
-          content="Bilal Siddique | DevOps & Cloud Engineer"
+          content="Bilal Siddique | Full-Stack & Cloud/DevOps Engineer"
         />
         <meta
           property="og:description"
-          content="Architecting AWS infrastructure, automating CI/CD pipelines, and building full-stack observability platforms."
+          content="Building full-stack products, AWS infrastructure, CI/CD pipelines, and observability platforms for startup systems."
         />
       </Head>
 
@@ -57,7 +57,7 @@ export default function Home() {
             id="about"
             number="01"
             title="About Me"
-            subtitle="DevOps culture, cloud infrastructure, and full-stack delivery."
+            subtitle="Full-stack product delivery with cloud and DevOps ownership."
           >
             <About />
           </Section>
@@ -78,7 +78,7 @@ export default function Home() {
             id="experience"
             number="03"
             title="Experience"
-            subtitle="From startup DevOps adoption to production AWS deployments."
+            subtitle="Full-stack delivery, startup DevOps adoption, and AWS deployments."
           >
             <Experience />
           </Section>

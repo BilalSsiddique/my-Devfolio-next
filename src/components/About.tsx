@@ -12,9 +12,9 @@ const HighlightedText = ({ children }: { children: React.ReactNode }) => (
 );
 
 const impactStats = [
+  { value: "2+ yrs", label: "full-stack product delivery" },
   { value: "1+ yr", label: "Cloud / DevOps experience" },
   { value: "80%", label: "less manual release effort" },
-  { value: "930 -> 220 MB", label: "Docker image optimization" },
 ];
 
 const About = () => {
@@ -33,7 +33,7 @@ const About = () => {
     {
       title: "Experience Snapshot",
       items: [
-        "Junior DevOps / Cloud & Full-Stack Engineer at Code Reroute, Remote - Canada.",
+        "Full-Stack Engineer with Cloud/DevOps focus at Code Reroute, Remote - Canada.",
         "Assistant Python Lecturer at Usman Institute of Technology.",
         "Software Engineer Intern at RadicalX, contributing to a CRUD apprenticeship portal.",
       ],
@@ -103,10 +103,10 @@ const About = () => {
                     Bilal <span className="text-yellow-200">Siddique</span>
                   </h2>
                   <p className="text-lg text-white/80 font-outfit leading-relaxed">
-                    <HighlightedText>Junior DevOps / Cloud Engineer</HighlightedText>{" "}
-                    focused on AWS infrastructure, CI/CD automation,
-                    containerization, observability, and full-stack internal
-                    tooling.
+                    <HighlightedText>Full-Stack Engineer</HighlightedText> with
+                    2+ years of product delivery and 1+ year focused on AWS
+                    infrastructure, CI/CD automation, containerization, and
+                    observability.
                   </p>
                 </div>
 

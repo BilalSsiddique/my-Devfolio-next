@@ -623,7 +623,7 @@ type experience = {
 export const experience: Array<experience> = [
   {
     name: "Code Reroute",
-    title: "Junior DevOps / Cloud & Full-Stack Engineer",
+    title: "Full-Stack Engineer · Cloud/DevOps Focus",
     from: "Apr",
     to: "Present",
     year: "2024 - Present",
