@@ -299,7 +299,7 @@ const Projects = () => {
         </div>
 
         <div className="mt-8">
-          <OtherProject featuredCount={FEATURED_COUNT} />
+          <OtherProject featuredCount={FEATURED_COUNT} limit={3} />
         </div>
       </motion.div>
     </div>

@@ -3,16 +3,24 @@ import { FaGithub } from "react-icons/fa";
 import { FiFolder, FiExternalLink } from "react-icons/fi";
 import Link from "next/link";
 import { projects } from "@/data/website-data";
-import { Fragment } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-const OtherProject = ({ featuredCount = 7 }: { featuredCount?: number }) => {
+const OtherProject = ({
+  featuredCount = 7,
+  limit,
+}: {
+  featuredCount?: number;
+  limit?: number;
+}) => {
+  const archivePreview = projects.slice(
+    featuredCount,
+    limit ? featuredCount + limit : undefined
+  );
+
   return (
-    <div className="grid grid-cols-[repeat(auto-fill,minmax(340px,1fr))] gap-8 pt-6 w-full">
-      {projects.map(
-        (project, idx) =>
-          idx >= featuredCount && (
+    <div className="grid grid-cols-1 gap-5 pt-6 w-full sm:grid-cols-2 xl:grid-cols-3">
+      {archivePreview.map((project, idx) => (
             <motion.div
               key={idx}
               initial={{ opacity: 0, y: 20 }}
@@ -21,7 +29,7 @@ const OtherProject = ({ featuredCount = 7 }: { featuredCount?: number }) => {
               transition={{ duration: 0.5, delay: (idx % 3) * 0.1 }}
               className="group relative"
             >
-              <div className="p-6 flex flex-col h-full w-full gap-5 glass-card backdrop-blur-md bg-white/5 border border-white/10 hover:border-white/20 rounded-xl transition-all duration-300">
+              <div className="p-5 sm:p-6 flex flex-col h-full w-full gap-5 glass-card backdrop-blur-md bg-white/5 border border-white/10 hover:border-white/20 rounded-xl transition-all duration-300">
                 {/* Header */}
                 <div className="flex justify-between items-center">
                   <motion.div 
@@ -92,8 +100,7 @@ const OtherProject = ({ featuredCount = 7 }: { featuredCount?: number }) => {
               {/* Glow Effect */}
               <div className="absolute -inset-0.5 bg-gradient-rainbow opacity-0 group-hover:opacity-15 blur-lg transition-opacity duration-300 -z-10 rounded-xl" />
             </motion.div>
-          )
-      )}
+      ))}
     </div>
   );
 };
